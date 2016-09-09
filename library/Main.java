@@ -1,4 +1,3 @@
-/***/
 package library;
 
 import library.hardware.CardReader;
