@@ -1,6 +1,5 @@
 package library.hardware;
 
-/** */
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
