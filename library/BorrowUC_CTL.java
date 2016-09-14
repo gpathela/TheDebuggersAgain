@@ -1,11 +1,10 @@
 /** Stating the package in resides the class */
 package library;
 
+/** Import necessary libraries for the code */
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.JPanel;
-
 import library.interfaces.EBorrowState;
 import library.interfaces.IBorrowUI;
 import library.interfaces.IBorrowUIListener;
@@ -23,28 +22,35 @@ import library.interfaces.hardware.IPrinter;
 import library.interfaces.hardware.IScanner;
 import library.interfaces.hardware.IScannerListener;
 
-public class BorrowUC_CTL implements ICardReaderListener, 
-									 IScannerListener, 
-									 IBorrowUIListener {
+/**
+*@author Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.1
+*
+*The BorrowUC_CTL class will .....
+*/
+
+/** Start of the class BorrowUC_CTL */
+public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBorrowUIListener {
 	
+	/** Declare the variables that will be used in the class with private access modifiers */
 	private ICardReader reader;
 	private IScanner scanner; 
 	private IPrinter printer; 
 	private IDisplay display;
-	//private String state;
 	private int scanCount = 0;
 	private IBorrowUI ui;
 	private EBorrowState state; 
 	private IBookDAO bookDAO;
 	private IMemberDAO memberDAO;
 	private ILoanDAO loanDAO;
-	
 	private List<IBook> bookList;
 	private List<ILoan> loanList;
 	private IMember borrower;
-	
 	private JPanel previous;
-
 
 	public BorrowUC_CTL(ICardReader reader, IScanner scanner, 
 			IPrinter printer, IDisplay display,
