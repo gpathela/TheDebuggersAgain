@@ -31,7 +31,7 @@ import java.awt.event.KeyEvent;
 
 /** Start of the class CardReader */
 public class CardReader extends JFrame implements ICardReader {
-	/** Declare the variables that will be used in the class with private access modifiers */
+	/** Declare and initialise the variables that will be used in the class with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JTextField textField;
 	private JButton btnReadCard;
