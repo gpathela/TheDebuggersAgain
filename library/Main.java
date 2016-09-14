@@ -1,13 +1,13 @@
+/** Specifying the package in which the class resides */
 package library;
 
+/** Import necessary libraries for the code */
 import library.hardware.CardReader;
 import library.hardware.Display;
 import library.hardware.Printer;
 import library.hardware.Scanner;
-
 import java.util.Calendar;
 import java.util.Date;
-
 import library.interfaces.IMainListener;
 import library.interfaces.daos.IBookDAO;
 import library.interfaces.daos.ILoanDAO;
@@ -17,8 +17,20 @@ import library.interfaces.entities.ILoan;
 import library.interfaces.entities.IMember;
 import library.panels.MainPanel;
 
-public class Main implements IMainListener {
+/**
+*@author Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.2
+*
+*	The Main ....
+*/
 
+/** Start of the class Main */
+public class Main implements IMainListener {
+	/** Declare the variables that will be used in the class with private access modifiers */
 	private CardReader reader;
 	private Scanner scanner;
 	private Printer printer;
@@ -27,16 +39,16 @@ public class Main implements IMainListener {
 	private ILoanDAO loanDAO;
 	private IMemberDAO memberDAO;
 	
+	/** Constructor for a Main object */
 	public Main() {
 		reader = new CardReader();
 		scanner = new Scanner();
 		printer = new Printer();
-		display = new Display();
-		
+		display = new Display();	
 		//setupTestData();
 	}
 
-
+	/** This method makes the GUI visible */
 	public void showGUI() {		
 		reader.setVisible(true);
 		scanner.setVisible(true);
@@ -44,8 +56,9 @@ public class Main implements IMainListener {
 		display.setVisible(true);
 	}
 
-	
+	/** Override the borrowBooks() method */
 	@Override
+	/** This method allows the user to borrow books */
 	public void borrowBooks() {
 		BorrowUC_CTL ctl = new BorrowUC_CTL(reader, scanner, printer, display, 
 				 null, null, null);
@@ -56,10 +69,10 @@ public class Main implements IMainListener {
         });		
 	}
 
-	
+	/** This method sets up different data tests containing a calendar, some books and members */
 	private void setupTestData() {
-        IBook[] book = new IBook[15];
-		IMember[] member = new IMember[6];
+        IBook[] book = new IBook[15]; // Create an array of books 
+		IMember[] member = new IMember[6]; // Create an array of members
 		
 		book[0]  = bookDAO.addBook("author1", "title1", "callNo1");
 		book[1]  = bookDAO.addBook("author1", "title2", "callNo2");
@@ -87,7 +100,7 @@ public class Main implements IMainListener {
 		Calendar cal = Calendar.getInstance();
 		Date now = cal.getTime();
 				
-		//create a member with overdue loans		
+		/** create a member with overdue loans */		
 		for (int i=0; i<2; i++) {
 			ILoan loan = loanDAO.createLoan(member[1], book[i]);
 			loanDAO.commitLoan(loan);
@@ -97,37 +110,34 @@ public class Main implements IMainListener {
 		Date checkDate = cal.getTime();		
 		loanDAO.updateOverDueStatus(checkDate);
 		
-		//create a member with maxed out unpaid fines
+		/** create a member with maxed out unpaid fines */
 		member[2].addFine(10.0f);
 		
-		//create a member with maxed out loans
+		/** create a member with maxed out loans */
 		for (int i=2; i<7; i++) {
 			ILoan loan = loanDAO.createLoan(member[3], book[i]);
 			loanDAO.commitLoan(loan);
 		}
 		
-		//a member with a fine, but not over the limit
+		/** a member with a fine, but not over the limit */
 		member[4].addFine(5.0f);
 		
-		//a member with a couple of loans but not over the limit
+		/** a member with a couple of loans but not over the limit */
 		for (int i=7; i<9; i++) {
 			ILoan loan = loanDAO.createLoan(member[5], book[i]);
 			loanDAO.commitLoan(loan);
 		}
 	}
 
-	
-	public static void main(String[] args) {
-		
-        // start the GUI
+	/** Start of the main method */
+	public static void main(String[] args) {	
+        /** start the GUI */
 		Main main = new Main();
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
             	main.display.setDisplay(new MainPanel(main), "Main Menu");
                 main.showGUI();
-            }
+            } // End of the run method
         });
-	}
-
-	
-}
+	} // End of the main method 	
+} // End of the class Main

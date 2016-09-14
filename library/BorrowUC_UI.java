@@ -23,13 +23,9 @@ import library.panels.borrow.SwipeCardPanel;
 *@due date 23.09.2016
 *@version 1.1
 *
-*	The BorrowUC_UI ......
-*	class allows the instantiation of an object of type BorrowUC_CTL
-* 	which is a collection of windows which represents the user interface that is displayed
-*	when the project is run in an IDE. The collection consists of a Card Reader, Scanner, 
-*	Printer, and the Main Menu display windows. The BorrowUC_CTL class also accommodates all
-*	the methods to initialise and close windows, swipe/read cards, scan books, borrow books, 
-*	set states, confirm or reject loans, and build a list of loans that can be displayed.
+*	The BorrowUC_UI class is a program that sets the state of different processes and 
+*	displays different useful details and messages to the user when prompted.
+*	
 */
 
 /** Start of the class BorrowUC_UI */
@@ -66,7 +62,6 @@ public class BorrowUC_UI extends JPanel implements IBorrowUI {
 	/** This method sets the state of a book depending on different use case */
 	public void setState(EBorrowState state) {
 		CardLayout cl = (CardLayout) (this.getLayout());
-
 		switch (state) {
 		case INITIALIZED:
 			cl.show(this, state.toString());
