@@ -1,11 +1,11 @@
+/** Specifying the package in which the class resides */
 package library;
 
+/** Import necessary libraries for the code */
 import java.awt.CardLayout;
 import javax.swing.JPanel;
-
 import java.util.Map;
 import java.util.HashMap;
-
 import library.interfaces.EBorrowState;
 import library.interfaces.IBorrowUI;
 import library.interfaces.IBorrowUIListener;
@@ -15,8 +15,27 @@ import library.panels.borrow.RestrictedPanel;
 import library.panels.borrow.ScanningPanel;
 import library.panels.borrow.SwipeCardPanel;
 
+/**
+*@author Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.1
+*
+*	The BorrowUC_UI ......
+*	class allows the instantiation of an object of type BorrowUC_CTL
+* 	which is a collection of windows which represents the user interface that is displayed
+*	when the project is run in an IDE. The collection consists of a Card Reader, Scanner, 
+*	Printer, and the Main Menu display windows. The BorrowUC_CTL class also accommodates all
+*	the methods to initialise and close windows, swipe/read cards, scan books, borrow books, 
+*	set states, confirm or reject loans, and build a list of loans that can be displayed.
+*/
+
+/** Start of the class BorrowUC_UI */
 public class BorrowUC_UI extends JPanel implements IBorrowUI {
 
+	/** Declare the variables that will be used in the class with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	@SuppressWarnings("unused")
 	private IBorrowUIListener listener;
@@ -145,6 +164,4 @@ public class BorrowUC_UI extends JPanel implements IBorrowUI {
 		IBorrowUI ui = panels.get(state);
 		ui.displayErrorMessage(errorMesg);		
 	}
-
-
-}
+} // End of the class BorrowUC_UI
