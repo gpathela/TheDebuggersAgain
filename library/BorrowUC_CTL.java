@@ -1,3 +1,4 @@
+/** Stating the package in resides the class */
 package library;
 
 import java.util.ArrayList;
