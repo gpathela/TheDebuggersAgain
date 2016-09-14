@@ -30,7 +30,12 @@ import library.interfaces.hardware.IScannerListener;
 *@due date 23.09.2016
 *@version 1.1
 *
-*The BorrowUC_CTL class will .....
+*	The BorrowUC_CTL class allows the instantiation of an object of type BorrowUC_CTL
+* 	which is a collection of windows which represents the user interface that is displayed
+*	when the project is run in an IDE. The collection consists of a Card Reader, Scanner, 
+*	Printer, and the Main Menu display windows. The BorrowUC_CTL class also accommodates all
+*	the methods to initialise and close windows, swipe/read cards, scan books, borrow books, 
+*	set states, confirm or reject loans, and build a list of loans that can be displayed.
 */
 
 /** Start of the class BorrowUC_CTL */
@@ -52,61 +57,68 @@ public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBor
 	private IMember borrower;
 	private JPanel previous;
 
-	public BorrowUC_CTL(ICardReader reader, IScanner scanner, 
-			IPrinter printer, IDisplay display,
+	/** Constructor for BorrowUC_CTL object */
+	public BorrowUC_CTL(ICardReader reader, IScanner scanner, IPrinter printer, IDisplay display,
 			IBookDAO bookDAO, ILoanDAO loanDAO, IMemberDAO memberDAO ) {
-
 		this.display = display;
 		this.ui = new BorrowUC_UI(this);
 		state = EBorrowState.CREATED;
 	}
 	
+	/** The initialise() method gets the display of the previous window and sets a new one */
 	public void initialise() {
 		previous = display.getDisplay();
 		display.setDisplay((JPanel) ui, "Borrow UI");		
 	}
 	
+	/** The method close() closes all the windows and displays the "Main Menu" */
 	public void close() {
 		display.setDisplay(previous, "Main Menu");
 	}
 
+	/** Override the cardSwiped() method */
 	@Override
 	public void cardSwiped(int memberID) {
 		throw new RuntimeException("Not implemented yet");
 	}
 	
-	
-	
+	/** Override the bookScanned() method */
 	@Override
 	public void bookScanned(int barcode) {
 		throw new RuntimeException("Not implemented yet");
 	}
 
-	
+	/** The method setState sets the of a borrowed book */
 	private void setState(EBorrowState state) {
 		throw new RuntimeException("Not implemented yet");
 	}
 
+	/** Override the cancelled() method */
 	@Override
 	public void cancelled() {
 		close();
 	}
 	
+	/** Override the scansCompleted() method */
 	@Override
 	public void scansCompleted() {
 		throw new RuntimeException("Not implemented yet");
 	}
 
+	/** Override the loansConfirmed() method */
 	@Override
 	public void loansConfirmed() {
 		throw new RuntimeException("Not implemented yet");
 	}
 
+	/** Override the loansRejected() method */
 	@Override
 	public void loansRejected() {
 		throw new RuntimeException("Not implemented yet");
 	}
 
+	/** The method buildLoanListDisplay returns a list of loan that is built by 
+		the method buildLoanListDisplay */
 	private String buildLoanListDisplay(List<ILoan> loans) {
 		StringBuilder bld = new StringBuilder();
 		for (ILoan ln : loans) {
@@ -115,5 +127,4 @@ public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBor
 		}
 		return bld.toString();		
 	}
-
-}
+} // End of the class BorrowUC_CTL
