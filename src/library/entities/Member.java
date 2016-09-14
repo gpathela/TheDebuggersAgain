@@ -1,3 +1,4 @@
+
 package library.entities;
 
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.List;
 import library.interfaces.entities.ILoan;
 import library.interfaces.entities.IMember;
 import library.interfaces.entities.EMemberState;
+
 
 public class Member implements IMember {
 
