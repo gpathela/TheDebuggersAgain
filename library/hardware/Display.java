@@ -15,8 +15,7 @@ import java.awt.CardLayout;
 *@due date 23.09.2016
 *@version 1.1
 *
-*	The Display class is a program that contains the code to display a GUI and collects
-*	a member's ID when he or she swipes their card.
+*	The Display class is a program that allows other programs to be displayed on the screen.
 */
 
 /** Start of the class Display */
