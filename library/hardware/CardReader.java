@@ -1,15 +1,15 @@
+/** Specifying the package in which the class resides */
 package library.hardware;
 
+/** Import necessary libraries for the code */
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
-
 import library.interfaces.hardware.ICardReader;
 import library.interfaces.hardware.ICardReaderListener;
-
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -17,13 +17,27 @@ import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class CardReader extends JFrame implements ICardReader {
+/**
+*@author Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.1
+*
+*	The CardReader class is a program that contains the code to display a GUI and collects
+*	a member's ID when he or she swipes their card.
+*/
 
+/** Start of the class CardReader */
+public class CardReader extends JFrame implements ICardReader {
+	/** Declare the variables that will be used in the class with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JTextField textField;
 	private JButton btnReadCard;
 	private ICardReaderListener listener;
 
+	/** Constructor for a CardReader object */
 	public CardReader() {
 		setTitle("Card Reader");
         setBounds(50, 50, 400, 200);
@@ -85,16 +99,18 @@ public class CardReader extends JFrame implements ICardReader {
 		panel.add(btnReadCard);
 	}
 
-
+	/** Override the setEnabled() method */
 	@Override
+	/** This method enables the button that reads the swiped card */
 	public void setEnabled(boolean enabled) {
 		btnReadCard.setEnabled(enabled);
 		textField.setEditable(enabled);
 	}
 
-
+	/** Override the addListener() method */
 	@Override
+	/** This method enables an object to react to user actions */
 	public void addListener(ICardReaderListener listener) {
 		this.listener = listener;		
 	}
-}
+} // End of the class CardReader

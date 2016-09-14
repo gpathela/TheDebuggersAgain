@@ -25,12 +25,11 @@ import library.panels.borrow.SwipeCardPanel;
 *
 *	The BorrowUC_UI class is a program that sets the state of different processes and 
 *	displays different useful details and messages to the user when prompted.
-*	
 */
 
 /** Start of the class BorrowUC_UI */
 public class BorrowUC_UI extends JPanel implements IBorrowUI {
-
+	
 	/** Declare the variables that will be used in the class with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	@SuppressWarnings("unused")
@@ -38,7 +37,7 @@ public class BorrowUC_UI extends JPanel implements IBorrowUI {
 	private EBorrowState state;
 	private Map<EBorrowState,IBorrowUI> panels;
 
-	/** Constructor for BorrowUC_UI object */
+	/** Constructor for a BorrowUC_UI object */
 	public BorrowUC_UI(IBorrowUIListener listener) {
 		this.listener = listener;
 		this.panels = new HashMap<EBorrowState,IBorrowUI>();		

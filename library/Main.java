@@ -26,8 +26,8 @@ import library.panels.MainPanel;
 *@version 1.2
 *
 *	The class Main is the program that makes the GUI visible and contains other methods 
-*	that allow a user to borrow books, creates some books and members for testing purposes,  
-*	and most importantly, it contains the main method which starts the whole project.
+*	that allow a user to borrow books, create an array of books and members for testing  
+*	purposes, and most importantly, it contains the main method which starts the whole project.
 */
 
 /** Start of the class Main */
