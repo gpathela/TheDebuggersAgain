@@ -42,27 +42,28 @@ public class BorrowUC_UI extends JPanel implements IBorrowUI {
 	private EBorrowState state;
 	private Map<EBorrowState,IBorrowUI> panels;
 
-	
+	/** Constructor for BorrowUC_UI object */
 	public BorrowUC_UI(IBorrowUIListener listener) {
 		this.listener = listener;
 		this.panels = new HashMap<EBorrowState,IBorrowUI>();		
 		this.setLayout(new CardLayout());
-
-		addPanel(new SwipeCardPanel(listener),   EBorrowState.INITIALIZED);
-		addPanel(new ScanningPanel(listener),    EBorrowState.SCANNING_BOOKS);
-		addPanel(new RestrictedPanel(listener),  EBorrowState.BORROWING_RESTRICTED);
+		addPanel(new SwipeCardPanel(listener), EBorrowState.INITIALIZED);
+		addPanel(new ScanningPanel(listener), EBorrowState.SCANNING_BOOKS);
+		addPanel(new RestrictedPanel(listener), EBorrowState.BORROWING_RESTRICTED);
 		addPanel(new ConfirmLoanPanel(listener), EBorrowState.CONFIRMING_LOANS);
 		//addPanel(new CancelledPanel(),           EBorrowState.CANCELLED);
 		//addPanel(new CompletedPanel(),           EBorrowState.COMPLETED);
 	}
 	
+	/** This method adds a panel to the screen */
 	private void addPanel(ABorrowPanel panel, EBorrowState state) {
         this.panels.put(state, panel);
         this.add(panel, state.toString());
  	}
 
-
+	/** Override the setState() method */
 	@Override
+	/** This method sets the state of a book depending on different use case */
 	public void setState(EBorrowState state) {
 		CardLayout cl = (CardLayout) (this.getLayout());
 
@@ -95,71 +96,81 @@ public class BorrowUC_UI extends JPanel implements IBorrowUI {
 		this.state = state;
 	}
 
-
+	/** Override the displayMemberDetails() method */
 	@Override
+	/** This method displays the details of a member */
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		IBorrowUI ui = panels.get(state);
 		ui.displayMemberDetails( memberID,  memberName, memberPhone);		
 	}
 
-
+	/** Override the displayOverDueMessage() method */
 	@Override
+	/** This method displays the message if a book is over due */
 	public void displayOverDueMessage() {
 		IBorrowUI ui = panels.get(state);
 		ui.displayOverDueMessage();		
 	}
 
-
+	/** Override the displayAtLoanLimitMessage() method */
 	@Override
+	/** This method displays the loan limit message */
 	public void displayAtLoanLimitMessage() {
 		IBorrowUI ui = panels.get(state);
 		ui.displayAtLoanLimitMessage();		
 	}
 
-
+	/** Override the displayOutstandingFineMessage() method */
 	@Override
+	/** This method displays a message if the user has any outstanding fine */
 	public void displayOutstandingFineMessage(float amountOwing) {
 		IBorrowUI ui = panels.get(state);
 		ui.displayOutstandingFineMessage(amountOwing);		
 	}
 
-	
+	/** Override the displayOverFineLimitMessage() method */
 	@Override
+	/** This method displays a message if an over fine limit is reached*/
 	public void displayOverFineLimitMessage(float amountOwing) {
 		IBorrowUI ui = panels.get(state);
 		ui.displayOverFineLimitMessage(amountOwing);				
 	}
 
-	
+	/** Override the displayOutstandingFineMessage() method */
 	@Override
+	/** This method displays the details of an existing loan of a user */
 	public void displayExistingLoan(String loanDetails) {
 		IBorrowUI ui = panels.get(state);
 		ui.displayExistingLoan(loanDetails);		
 	}
 
-	
+	/** Override the displayOutstandingFineMessage() method */
 	@Override
+	/** This method displays the details of a scanned book */
 	public void displayScannedBookDetails(String bookDetails) {
 		IBorrowUI ui = panels.get(state);
 		ui.displayScannedBookDetails(bookDetails);		
 	}
 
-	
+	/** Override the displayOutstandingFineMessage() method */
 	@Override
+	/** This method displays the details of a pending loan */
 	public void displayPendingLoan(String loanDetails) {
 		IBorrowUI ui = panels.get(state);
 		ui.displayPendingLoan(loanDetails);		
 	}
 
-	
+	/** Override the displayOutstandingFineMessage() method */
 	@Override
+	/** This method displays a window requesting the user to confirm a loan */
 	public void displayConfirmingLoan(String loanDetails) {
 		IBorrowUI ui = panels.get(state);
 		ui.displayConfirmingLoan(loanDetails);		
 	}
 
-	
+	/** Override the displayOutstandingFineMessage() method */
 	@Override
+	/** This method displays an error message if a user makes a mistake */
 	public void displayErrorMessage(String errorMesg) {
 		IBorrowUI ui = panels.get(state);
 		ui.displayErrorMessage(errorMesg);		
