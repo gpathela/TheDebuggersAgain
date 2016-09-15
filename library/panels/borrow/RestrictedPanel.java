@@ -1,23 +1,35 @@
+/** Specifying the package in which the class resides */
 package library.panels.borrow;
 
+/** Import necessary libraries for the code */
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.UIManager;
 import javax.swing.border.TitledBorder;
-
 import library.interfaces.IBorrowUIListener;
-
 import javax.swing.JButton;
 import javax.swing.JLabel;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.1
+*
+*	The Printer class is a program that creates an interface and prints the data that a user requests.
+*/
+
+/** Start of the class RestrictedPanel */
 public class RestrictedPanel extends ABorrowPanel {
 
+	/** Declare and initialise the variables that will be used in the class with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JLabel lblBorrowerId;
 	private JLabel lblBorrowerName;
@@ -30,9 +42,7 @@ public class RestrictedPanel extends ABorrowPanel {
 	private JTextArea existingLoanListTA;
 	private JLabel lblErrMesg;
 
-	/**
-	 * Create the panel.
-	 */
+	/** Constructor for a RestrictedPanel object */
 	public RestrictedPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(null, "Scanning", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -176,7 +186,8 @@ public class RestrictedPanel extends ABorrowPanel {
 		this.add(lblErrMesg);
 		
 	}
-
+	
+	/** Override the displayMemberDetails() method */
 	@Override
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		lblBorrowerId.setText(Integer.valueOf(memberID).toString());
@@ -184,38 +195,40 @@ public class RestrictedPanel extends ABorrowPanel {
 		lblBorrowerContact.setText(memberPhone);
 	}
 
+	/** Override the displayOverDueMessage() method */
 	@Override
 	public void displayOverDueMessage() {
 		lblOverdue.setText("Borrower has overdue loans");
 	}
 
-	
+	/** Override the displayAtLoanLimitMessage() method */
 	@Override
 	public void displayAtLoanLimitMessage() {
 		lblLoanLimit.setText("Borrower has reached maximum number of borrowed items");
 	}
 
-	
+	/** Override the displayOutstandingFineMessage() method */
 	@Override
 	public void displayOutstandingFineMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has outstanding fines. Amount owing: $%.2f", amountOwing ));
 	}
 
-
+	/** Override the displayOverFineLimitMessage() method */
  	@Override
 	public void displayOverFineLimitMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has exceeded fine limit. Amount owing: $%.2f", amountOwing ));
 	}
 	
+	/** Override the displayExistingLoan() method */
 	@Override
 	public void displayExistingLoan(String loanDetails) {
 		existingLoanListTA.setText(loanDetails);
 		existingLoanListTA.setCaretPosition(0);		
 	}
-
+	
+	/** Override the displayErrorMessage() method */
 	@Override
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
 	}
-
-}
+} // End of the class RestrictedPanel
