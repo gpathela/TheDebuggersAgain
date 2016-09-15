@@ -16,7 +16,7 @@ import library.panels.borrow.ScanningPanel;
 import library.panels.borrow.SwipeCardPanel;
 
 /**
-*@author Jean Claude Jino Rousseau
+*@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy

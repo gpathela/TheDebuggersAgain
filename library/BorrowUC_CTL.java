@@ -23,12 +23,12 @@ import library.interfaces.hardware.IScanner;
 import library.interfaces.hardware.IScannerListener;
 
 /**
-*@author Jean Claude Jino Rousseau
+*@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy
 *@due date 23.09.2016
-*@version 1.1
+*@version 1.2
 *
 *	The BorrowUC_CTL class allows the instantiation of an object of type BorrowUC_CTL
 * 	which is a collection of windows which represents the user interface that is displayed

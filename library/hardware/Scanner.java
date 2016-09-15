@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 
 /**
-*@author Jean Claude Jino Rousseau
+*@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy
