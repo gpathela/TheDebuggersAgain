@@ -1,5 +1,7 @@
+/** Specifying the package in which the class resides */
 package library.panels.borrow;
 
+/** Import necessary libraries for the code */
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -7,19 +9,28 @@ import javax.swing.border.TitledBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import library.interfaces.IBorrowUIListener;
-
 import java.awt.Font;
 
-public class ConfirmLoanPanel extends ABorrowPanel {
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.1
+*
+*	The ConfirmLoanPanel class is a program that allows ....
+*/
 
+/** Start of the class ConfirmLoanPanel */
+public class ConfirmLoanPanel extends ABorrowPanel {
+	
+	/** Declare and initialise the variables that will be used in the class with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JTextArea loanListTA;
 
-	/**
-	 * Create the panel.
-	 */
+	 /** Constructor for a ConfirmLoanPanel object */
 	public ConfirmLoanPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(null, "Confirm Loans", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -70,12 +81,11 @@ public class ConfirmLoanPanel extends ABorrowPanel {
 		add(button);
 	}
 
-
+	/** Override the displayConfirmingLoan() method */
 	@Override
+	/** The method displayConfirmingLoan receives the details of a loan and displays it to the screen */
 	public void displayConfirmingLoan(String loanDetails) {
 		loanListTA.setText(loanDetails);
 		loanListTA.setCaretPosition(0);
 	}
-
-
-}
+} // End of the class ConfirmLoanPanel
