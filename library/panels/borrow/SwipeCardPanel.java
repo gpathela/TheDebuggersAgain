@@ -1,10 +1,10 @@
+/** Specifying the package in which the class resides */
 package library.panels.borrow;
 
+/** Import necessary libraries for the code */
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
-
 import library.interfaces.IBorrowUIListener;
-
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
@@ -13,15 +13,25 @@ import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
 import java.awt.Color;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.1
+*
+*	The SwipeCardPanel class is a program that ....
+*/
 
+/** Start of the class SwipeCardPanel */
 public class SwipeCardPanel extends ABorrowPanel {
 
+	/** Declare and initialise the variables that will be used in the class with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JLabel lblErrMesg;
 
-	/**
-	 * Create the panel.
-	 */
+	/** Constructor for a SwipeCardPanel object */
 	public SwipeCardPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Borrow Book - Initialized", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
@@ -52,10 +62,10 @@ public class SwipeCardPanel extends ABorrowPanel {
 
 	}
 
+	/** Override the displayMemberDetails() method */
 	@Override
+	/** The method displayErrorMessage() displays an error message to the screen */
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
 	}
-
-	
-}
+} // End of the class SwipeCardPanel

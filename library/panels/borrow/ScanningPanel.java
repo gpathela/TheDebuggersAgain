@@ -23,7 +23,10 @@ import library.interfaces.IBorrowUIListener;
 *@due date 23.09.2016
 *@version 1.1
 *
-*	The ScanningPanel class is a program that ....
+*	The ScanningPanel class is a program that create an object that displays a panel together 
+*	as well as multiple displays including the details of a member, existing loan, outstanding fine,
+*	scanned books, pending loans, error messages, and finally it allows the insertion of words in 
+*	the text area.
 */
 
 /** Start of the class ScanningPanel */
