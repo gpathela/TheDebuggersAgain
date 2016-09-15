@@ -189,6 +189,7 @@ public class RestrictedPanel extends ABorrowPanel {
 	
 	/** Override the displayMemberDetails() method */
 	@Override
+	/** The method displayMemberDetails() displays the details of a member */
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		lblBorrowerId.setText(Integer.valueOf(memberID).toString());
 		lblBorrowerName.setText(memberName);
@@ -196,6 +197,7 @@ public class RestrictedPanel extends ABorrowPanel {
 	}
 
 	/** Override the displayOverDueMessage() method */
+	/** The method displayOverDueMessage() displays an overdue message if the borrower has one */
 	@Override
 	public void displayOverDueMessage() {
 		lblOverdue.setText("Borrower has overdue loans");
@@ -203,24 +205,30 @@ public class RestrictedPanel extends ABorrowPanel {
 
 	/** Override the displayAtLoanLimitMessage() method */
 	@Override
+	/** The method displayAtLoanLimitMessage() displays a loan limit message to a borrower 
+		if he/sh reaches a limit */
 	public void displayAtLoanLimitMessage() {
 		lblLoanLimit.setText("Borrower has reached maximum number of borrowed items");
 	}
 
 	/** Override the displayOutstandingFineMessage() method */
 	@Override
+	/** The method displayOutstandingFineMessage() displays a fine that a the borrower has not fixed */
 	public void displayOutstandingFineMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has outstanding fines. Amount owing: $%.2f", amountOwing ));
 	}
 
 	/** Override the displayOverFineLimitMessage() method */
  	@Override
+ 	/** The method displayOverFineLimitMessage() displays a message telling the borrower that he/she
+ 		has exceeded the fine limit */
 	public void displayOverFineLimitMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has exceeded fine limit. Amount owing: $%.2f", amountOwing ));
 	}
 	
 	/** Override the displayExistingLoan() method */
 	@Override
+	/** The method displayExistingLoan() displays the loan details to the screen */
 	public void displayExistingLoan(String loanDetails) {
 		existingLoanListTA.setText(loanDetails);
 		existingLoanListTA.setCaretPosition(0);		
@@ -228,6 +236,7 @@ public class RestrictedPanel extends ABorrowPanel {
 	
 	/** Override the displayErrorMessage() method */
 	@Override
+	/** The method displayErrorMessage() displays an error message to the screen */
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
 	}
