@@ -44,7 +44,12 @@ public class TestLoan { // A class to test loan class
 		/*Testing Book in Loan Class */
 		
 		System.out.println("I am checking Book Id of the Book I created. It should be 27");
-		System.out.println("Book ID is: " + testBook.getID());
+		if(testBook.getID() == 27){
+		System.out.println("Result: Success");		
+		}
+		else {
+			System.out.println("Result: Fail");
+		}
 		
 		
 	}
