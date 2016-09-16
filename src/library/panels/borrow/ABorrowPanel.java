@@ -2,7 +2,6 @@
 package library.panels.borrow;
 
 import javax.swing.JPanel;
-
 import library.interfaces.EBorrowState;
 import library.interfaces.IBorrowUI;
 
