@@ -40,17 +40,13 @@ public class TestLoan { // A class to test loan class
 																					// Book
 
 		System.out.println("Made a test book");
-		
-		/*Testing Book in Loan Class */
-		
-		System.out.println("I am checking Book Id of the Book I created. It should be 27");
-		if(testBook.getID() == 27){
-		System.out.println("Result: Success");		
-		}
-		else {
-			System.out.println("Result: Fail");
-		}
-		
-		
+
+		Member testMember = new Member("testFirstName", "testLastName", "0424XXX", "test@test.com", 27); // Creating
+																											// a
+																											// test
+																											// member
+
+		System.out.println("Made a test Member");
+
 	}
 }
