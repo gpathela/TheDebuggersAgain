@@ -38,48 +38,8 @@ public class TestLoan { // A class to test loan class
 																					// a
 																					// test
 																					// Book
-		Member testMember = new Member("testFirstName", "testLastName", "0424XXX", "test@test.com", 27); // Creating
-																											// a
-																											// test
-																											// Member
 
-		Loan testLoanConstructor = new Loan(testBook, testMember, issueDate, dueDate); // Calling
-																						// Loan
-																						// constructor
-																						// with
-																						// test
-																						// book
-																						// and
-																						// members
-																						// created
-		System.out.println("Succeesfully loaned. Loan id: " + testLoanConstructor.getID());
+		System.out.println("Made a test book");
 
-		IMember borrower = testLoanConstructor.getBorrower(); // Calling
-																// getBorrower
-																// method to
-																// check the
-																// output and
-																// input.
-																// Expected
-																// output should
-																// be
-																// 'testFirstName'
-																// and
-																// 'testLastName'
-		System.out.println("Borrower Name: " + borrower.getFirstName() + " " + borrower.getLastName());
-
-		IBook book = testLoanConstructor.getBook(); // Calling getBook method to
-													// check the output and
-													// input. Expected output
-													// should be 'testTitle' and
-													// 'testAuthor'
-		System.out.println("Book Name: " + book.getTitle() + " Author: " + book.getAuthor());
-
-		ELoanState state = testLoanConstructor.getState();	//Calling getState method. Output should be 'PENDING'
-		System.out.println("Loan State: " + state.toString());
-
-		System.out.println("Is book overdue: " + testLoanConstructor.isOverDue());// Testing isOverdue method . Output should be 'false'
-																					
 	}
-
 }
