@@ -1,6 +1,7 @@
 /** Specify the package in which this code resides */
 package library.panels.borrow;
 
+/** Import some libraries to be used in the code */
 import javax.swing.JPanel;
 import library.interfaces.EBorrowState;
 import library.interfaces.IBorrowUI;
