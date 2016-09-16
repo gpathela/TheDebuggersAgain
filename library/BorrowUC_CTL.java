@@ -1,4 +1,4 @@
-/** Specifying the package in which the class resides */
+/** Specifying the package in which the class resides. */
 package library;
 
 /** Import necessary libraries for the code */
