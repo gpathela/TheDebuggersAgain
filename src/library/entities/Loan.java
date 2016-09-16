@@ -52,7 +52,7 @@ public class Loan implements ILoan {
 
 	/*
 	 * A method to test if all variables are available. It throws exception if
-	 * something is null.
+	 * something is null
 	 */
 	private boolean sane(IBook book, IMember member, Date issueDate, Date dueDate) {
 		return (book != null && member != null && issueDate != null && dueDate != null
@@ -90,7 +90,7 @@ public class Loan implements ILoan {
 		return (state == ELoanState.OVERDUE);
 	}
 
-	/* A method to check if book is overdue. */
+	/* A method to check if book is overdue.= */
 	@Override
 	public boolean checkOverDue(Date currentDate) {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
@@ -126,7 +126,7 @@ public class Loan implements ILoan {
 		return state;
 	}
 
-	/* To String method to display & return results in desired format. */
+	/* To String method to display & return results in desired format */
 	@Override
 	public String toString() {
 		return (String.format("Loan ID:  %d\nAuthor:   %s\nTitle:    %s\nMember: %s %s\nIssued On: %s\nDue Date: %s",
