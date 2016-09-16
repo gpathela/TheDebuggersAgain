@@ -43,10 +43,9 @@ public class TestLoan { // A class to test loan class
 		
 		/*Testing Book in Loan Class */
 		
-		System.out.println("I am checking author of the Book I created. It should be 'testAuthor'");
+		System.out.println("I am checking Call Numberr of the Book I created. It should be 'testCallNumber'");
 		System.out.println("Author is: " + testBook.getAuthor());
 		
-		System.out.println("I am checking title of the Book I created. It should be 'testTitle'");
-		System.out.println("Title is: " + testBook.getTitle());
+		
 	}
 }
