@@ -1,3 +1,4 @@
+/** Specify the package in which this code resides */
 package library.panels.borrow;
 
 import javax.swing.JPanel;
