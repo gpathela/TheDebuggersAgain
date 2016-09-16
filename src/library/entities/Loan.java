@@ -27,7 +27,7 @@ import library.interfaces.entities.ELoanState;
 /** Start of the class Loan */
 /** first attempt */
 public class Loan implements ILoan {
-	/**
+	/*
 	 * Declare and initialize the variable for the class with private visibility
 	 * modifiers
 	 */
@@ -59,7 +59,7 @@ public class Loan implements ILoan {
 				&& issueDate.compareTo(dueDate) <= 0);
 	}
 
-	/* A method to save the loan. */
+	/* A method to save the loan */
 	@Override
 	public void commit(int loanId) {
 		if (!(state == ELoanState.PENDING)) {
@@ -75,7 +75,7 @@ public class Loan implements ILoan {
 		member.addLoan(this);
 	}
 
-	/* A method to release the loan. Called when book is returned. */
+	/* A method to release the loan. Called when book is returned */
 	@Override
 	public void complete() {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
