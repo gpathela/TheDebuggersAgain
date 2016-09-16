@@ -7,10 +7,9 @@ import library.interfaces.EBorrowState;
 import library.interfaces.IBorrowUI;
 
 public abstract class ABorrowPanel extends JPanel implements IBorrowUI {
-
+	/** Declare and initialise variables with private access modifiers */
 	private static final long serialVersionUID = 1L;
 
-	
 	@Override
 	public void setState(EBorrowState state) {
 		throw new RuntimeException("Illegal operation in current state");		
