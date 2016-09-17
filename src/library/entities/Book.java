@@ -131,7 +131,7 @@ public class Book implements IBook {//the Book class implements IBook
 		return author;
 	}
 
-	
+	/** the method return the title of the book */
 	@Override
 	public String getTitle() {
 		return title;
