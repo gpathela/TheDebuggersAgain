@@ -10,7 +10,7 @@ import library.interfaces.entities.IMember;
 import library.interfaces.entities.ELoanState;
 
 /**
-*@author Gourav Pathela
+*@author Ramanpreet Kaur
 *@course Master of Information Technology
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy
