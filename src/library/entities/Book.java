@@ -46,7 +46,9 @@ public class Book implements IBook {//the Book class implements IBook
 		this.loan = null;
 	}//End of the constructor
 
-
+	/** the method test the variables and throw exception if any of the parameter is null or blank
+	* and the ID is less than or equal to zero
+`	*/
 	private boolean sane(String author, String title, String callNumber, int bookID) {
 		return  ( author != null     && !author.isEmpty()     &&
 				  title != null      && !title.isEmpty()      &&
