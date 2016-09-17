@@ -107,7 +107,7 @@ public class Book implements IBook {//the Book class implements IBook
 		if (!(state == EBookState.DAMAGED)) {	//throws exception if book is not currently damaged
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
 		}
-		state = EBookState.AVAILABLE;
+		state = EBookState.AVAILABLE;	//set the book state to available
 	}
 
 	
