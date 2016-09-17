@@ -125,7 +125,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 		return state;
 	}
 
-	/* To String method to display & return results in desired format. */
+	/* To String method to display & return results in desired format */
 	@Override
 	public String toString() {
 		return (String.format("Loan ID:  %d\nAuthor:   %s\nTitle:    %s\nMember: %s %s\nIssued On: %s\nDue Date: %s",
