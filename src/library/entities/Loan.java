@@ -108,7 +108,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 		return member;
 	}
 
-	/* Get method to return book which has been borrowed */
+	/* This method to return book which has been borrowed */
 	@Override
 	public IBook getBook() {
 		return book;
