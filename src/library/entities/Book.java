@@ -88,7 +88,7 @@ public class Book implements IBook {//the Book class implements IBook
 			state = EBookState.DAMAGED;	//set the book state to damaged
 		}
 		else {
-			state = EBookState.AVAILABLE;
+			state = EBookState.AVAILABLE;	//set the book state to available 
 		}
 	}
 
