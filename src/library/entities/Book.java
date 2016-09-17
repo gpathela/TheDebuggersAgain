@@ -21,7 +21,7 @@ import library.interfaces.entities.ILoan;
 */
 
 /** Start of the Book Class */
-public class Book implements IBook {
+public class Book implements IBook {//the Book class implements IBook
 
 	
 	private String author;
