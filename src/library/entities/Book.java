@@ -112,7 +112,7 @@ public class Book implements IBook {//the Book class implements IBook
 
 	
 	@Override
-	public void dispose() {
+	public void dispose() {	//throws exception if the book is not currently available, damaged or lost
 		if (!(state == EBookState.AVAILABLE || state == EBookState.DAMAGED || state == EBookState.LOST)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
 		}
