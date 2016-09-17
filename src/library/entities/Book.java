@@ -1,3 +1,4 @@
+/** Import some Java libraries and specify the package in which the classes resides */
 package library.entities;
 
 import library.interfaces.entities.EBookState;
