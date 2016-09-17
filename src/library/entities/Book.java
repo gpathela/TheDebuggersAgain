@@ -57,7 +57,7 @@ public class Book implements IBook {//the Book class implements IBook
 				);
 	}
 
-	
+	/** the method associates the loan with the book and throws exception if the book is not available */
 	@Override
 	public void borrow(ILoan loan) {
 		if (loan == null) {
