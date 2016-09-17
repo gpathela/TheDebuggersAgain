@@ -47,6 +47,17 @@ public class TestLoan { // A class to test loan class
 																											// member
 
 		System.out.println("Made a test Member");
+		
+		/* Testing the member contact number */
+		System.out.println("Test to check Contact Number. Output shoule be '0424XXX'");
+		System.out.println("Output is: "+testMember.getContactPhone());
+		if(testMember.getContactPhone().equals("0424XXX")){
+			
+			System.out.println("Result: Successfull");
+		}
+		else {
+			System.out.println("Result: Failed");
+		}
 
 	}
 }
