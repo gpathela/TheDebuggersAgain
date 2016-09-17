@@ -33,7 +33,7 @@ public class Book implements IBook {//the Book class implements IBook
 	private ILoan loan;
 	private EBookState state;
 	
-	
+	/** Construct an Book object with the specified attribute. */
 	public Book(String author, String title, String callNumber, int bookID) {
 		if ( !sane(author, title, callNumber, bookID)) {
 			throw new IllegalArgumentException("Member: constructor : bad parameters");
