@@ -47,5 +47,18 @@ public class TestLoan { // A class to test loan class
 																											// member
 
 		System.out.println("Made a test Member");
+		
+		//Testing member Email
+		
+		System.out.println("Test to check Email. Output shoule be 'test@test.com'");
+		System.out.println("Output is: "+testMember.getEmailAddress());
+		if(testMember.getEmailAddress().equals("test@test.com")){
+			
+			System.out.println("Result: Successfull");
+		}
+		else {
+			System.out.println("Result: Failed");
+		}
+		
 	}
 }
