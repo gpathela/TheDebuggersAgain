@@ -44,7 +44,7 @@ public class Book implements IBook {//the Book class implements IBook
 		this.id = bookID;
 		this.state = EBookState.AVAILABLE;
 		this.loan = null;
-	}
+	}//End of the constructor
 
 
 	private boolean sane(String author, String title, String callNumber, int bookID) {
