@@ -98,7 +98,7 @@ public class Book implements IBook {//the Book class implements IBook
 		if (!(state == EBookState.ON_LOAN)) {	//throws an exception if the book is not currently ON_LOAN
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
 		}
-		state = EBookState.LOST;
+		state = EBookState.LOST;	//set the book state to lost
 	}
 
 	
