@@ -102,7 +102,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 		return isOverDue();
 	}
 
-	/* Get method to return member who borrowed */
+	/* This method to return member who borrowed the book*/
 	@Override
 	public IMember getBorrower() {
 		return member;
