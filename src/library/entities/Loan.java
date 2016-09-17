@@ -36,7 +36,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 	private Date dueDate;
 	private ELoanState state;
 
-	/* Public constructor to create object of Loan class */
+	/** Construct an Loan object with the specified attribute. */
 	public Loan(IBook book, IMember member, Date issueDate, Date dueDate) {
 		if (!sane(book, member, issueDate, dueDate)) {
 			throw new IllegalArgumentException("Loan: constructor : bad parameters");
