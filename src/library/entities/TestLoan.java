@@ -9,7 +9,7 @@ import library.interfaces.entities.IBook;
 import library.interfaces.entities.IMember;
 
 /**
-*@author Gourav Pathela
+*@reviewer Chiranjivi Bashyal
 *@course Master of Information Technology
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy
