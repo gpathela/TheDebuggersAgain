@@ -48,10 +48,9 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 		this.state = ELoanState.PENDING;
 	}//End of the constructor
 
-	/*
-	 * A method to test if all variables are available. It throws exception if
-	 * something is null.
-	 */
+	/** the method test the variables and throw exception if any of the parameter is null or blank
+	* and the ID is less than or equal to zero
+`	*/
 	private boolean sane(IBook book, IMember member, Date issueDate, Date dueDate) {
 		return (book != null && member != null && issueDate != null && dueDate != null
 				&& issueDate.compareTo(dueDate) <= 0);
