@@ -24,73 +24,73 @@ public abstract class ABorrowPanel extends JPanel implements IBorrowUI {
 	/** Declare and initialise variables with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	
-	/** Override the  method */
+	/** Override the setState method */
 	@Override
 	public void setState(EBorrowState state) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-	/** Override the  method */
+	/** Override the displayMemberDetails method */
 	@Override
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-	/** Override the  method */
+	/** Override the displayExistingLoan method */
 	@Override
 	public void displayExistingLoan(String loanDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-	/** Override the  method */
+	/** Override the displayOverDueMessage method */
 	@Override
 	public void displayOverDueMessage() {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-	/** Override the  method */
+	/** Override the displayAtLoanLimitMessage method */
 	@Override
 	public void displayAtLoanLimitMessage() {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-	/** Override the  method */
+	/** Override the displayOutstandingFineMessage method */
 	@Override
 	public void displayOutstandingFineMessage(float amountOwing) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	
-	/** Override the  method */
+	/** Override the displayOverFineLimitMessage method */
 	@Override
 	public void displayOverFineLimitMessage(float amountOwing) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 
-	/** Override the  method */
+	/** Override the displayScannedBookDetails method */
 	@Override
 	public void displayScannedBookDetails(String bookDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	
-	/** Override the  method */
+	/** Override the displayPendingLoan method */
 	@Override
 	public void displayPendingLoan(String loanDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	
-	/** Override the  method */
+	/** Override the displayConfirmingLoan method */
 	@Override
 	public void displayConfirmingLoan(String loanDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-	/** Override the  method */
+	/** Override the displayErrorMessage method */
 	@Override
 	public void displayErrorMessage(String errorMesg) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}	
-}
+} // End of the class ABorrowPanel
