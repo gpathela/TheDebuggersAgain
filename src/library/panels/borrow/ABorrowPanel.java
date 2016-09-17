@@ -26,36 +26,42 @@ public abstract class ABorrowPanel extends JPanel implements IBorrowUI {
 	
 	/** Override the setState method */
 	@Override
+	/** The method  */
 	public void setState(EBorrowState state) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayMemberDetails method */
 	@Override
+	/** The method  */
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayExistingLoan method */
 	@Override
+	/** The method  */
 	public void displayExistingLoan(String loanDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayOverDueMessage method */
 	@Override
+	/** The method  */
 	public void displayOverDueMessage() {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayAtLoanLimitMessage method */
 	@Override
+	/** The method  */
 	public void displayAtLoanLimitMessage() {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayOutstandingFineMessage method */
 	@Override
+	/** The method  */
 	public void displayOutstandingFineMessage(float amountOwing) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
@@ -63,6 +69,7 @@ public abstract class ABorrowPanel extends JPanel implements IBorrowUI {
 	
 	/** Override the displayOverFineLimitMessage method */
 	@Override
+	/** The method  */
 	public void displayOverFineLimitMessage(float amountOwing) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
@@ -70,6 +77,7 @@ public abstract class ABorrowPanel extends JPanel implements IBorrowUI {
 
 	/** Override the displayScannedBookDetails method */
 	@Override
+	/** The method  */
 	public void displayScannedBookDetails(String bookDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
@@ -77,6 +85,7 @@ public abstract class ABorrowPanel extends JPanel implements IBorrowUI {
 	
 	/** Override the displayPendingLoan method */
 	@Override
+	/** The method  */
 	public void displayPendingLoan(String loanDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
@@ -84,12 +93,14 @@ public abstract class ABorrowPanel extends JPanel implements IBorrowUI {
 	
 	/** Override the displayConfirmingLoan method */
 	@Override
+	/** The method  */
 	public void displayConfirmingLoan(String loanDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayErrorMessage method */
 	@Override
+	/** The method  */
 	public void displayErrorMessage(String errorMesg) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}	
