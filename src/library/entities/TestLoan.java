@@ -46,7 +46,7 @@ public class TestLoan { // A class to test loan class
 																											// test
 																											// member
 
-		System.out.println("Made a test Member"); //Print output when test member is made
+		System.out.println("Made a test Member");
 
 	}
 }
