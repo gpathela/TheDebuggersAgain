@@ -71,7 +71,7 @@ public class Book implements IBook {//the Book class implements IBook
 
 	}
 
-	
+	/** the method return the loan associated with the book and return null if the book is not current ON_LOAN */
 	@Override
 	public ILoan getLoan() {
 		return loan;
