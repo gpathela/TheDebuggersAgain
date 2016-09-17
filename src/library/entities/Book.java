@@ -20,6 +20,7 @@ import library.interfaces.entities.ILoan;
 *
 */
 
+/** Start of the Book Class */
 public class Book implements IBook {
 
 	
