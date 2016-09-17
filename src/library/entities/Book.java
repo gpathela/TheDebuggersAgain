@@ -125,7 +125,7 @@ public class Book implements IBook {//the Book class implements IBook
 		return state;
 	}
 
-	
+	/** the method return the author of the book */
 	@Override
 	public String getAuthor() {
 		return author;
