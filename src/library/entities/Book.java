@@ -149,7 +149,7 @@ public class Book implements IBook {//the Book class implements IBook
 		return id;
 	}
 
-	
+	/* To String method to display & return results in desired format. */
 	@Override
 	public String toString() {
 		return String.format("Id: %d\nAuthor: %s\nTitle: %s\nCall Number %s",
