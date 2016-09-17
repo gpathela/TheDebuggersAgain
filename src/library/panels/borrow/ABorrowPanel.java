@@ -26,81 +26,77 @@ public abstract class ABorrowPanel extends JPanel implements IBorrowUI {
 	
 	/** Override the setState method */
 	@Override
-	/** The method  */
+	/** The method setState sets the state of a borrowed book */
 	public void setState(EBorrowState state) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayMemberDetails method */
 	@Override
-	/** The method  */
+	/** The method displayMemberDetails displays the details of a member */
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayExistingLoan method */
 	@Override
-	/** The method  */
+	/** The method displayExistingLoan displays the loan details of a member */
 	public void displayExistingLoan(String loanDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayOverDueMessage method */
 	@Override
-	/** The method  */
+	/** The method displayOverDueMessage displays an overdue of a member */
 	public void displayOverDueMessage() {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayAtLoanLimitMessage method */
 	@Override
-	/** The method  */
+	/** The method displayAtLoanLimitMessage displays a message about the limit of a loan */
 	public void displayAtLoanLimitMessage() {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayOutstandingFineMessage method */
 	@Override
-	/** The method  */
+	/** The method displayOutstandingFineMessage displays any outstanding fine about a book */
 	public void displayOutstandingFineMessage(float amountOwing) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-	
 	/** Override the displayOverFineLimitMessage method */
 	@Override
-	/** The method  */
+	/** The method displayOverFineLimitMessage displays a message if there is an overfine limit */
 	public void displayOverFineLimitMessage(float amountOwing) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-
 	/** Override the displayScannedBookDetails method */
 	@Override
-	/** The method  */
+	/** The method displayScannedBookDetails displays the details of a scanned book */
 	public void displayScannedBookDetails(String bookDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-	
 	/** Override the displayPendingLoan method */
 	@Override
-	/** The method  */
+	/** The method displayPendingLoan displays a message about any pending loan */
 	public void displayPendingLoan(String loanDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
-	
 	/** Override the displayConfirmingLoan method */
 	@Override
-	/** The method  */
+	/** The method displayConfirmingLoan displays a message confirming a loan */
 	public void displayConfirmingLoan(String loanDetails) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}
 
 	/** Override the displayErrorMessage method */
 	@Override
-	/** The method  */
+	/** The method displayErrorMessage displays an error message */
 	public void displayErrorMessage(String errorMesg) {
 		throw new RuntimeException("Illegal operation in current state");		
 	}	
