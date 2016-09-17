@@ -133,4 +133,4 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 				DateFormat.getDateInstance().format(issueDate), DateFormat.getDateInstance().format(dueDate)));
 	}
 
-}
+}//End of Loan class
