@@ -103,7 +103,7 @@ public class Book implements IBook {//the Book class implements IBook
 
 	
 	@Override
-	public void repair() {
+	public void repair() {	//throws exception if the book is not currently available, damaged or lost
 		if (!(state == EBookState.DAMAGED)) {	//throws exception if book is not currently damaged
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
 		}
