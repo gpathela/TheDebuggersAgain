@@ -5,6 +5,21 @@ import library.interfaces.entities.EBookState;
 import library.interfaces.entities.IBook;
 import library.interfaces.entities.ILoan;
 
+/**
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.0
+*
+*
+* The Book class is a program that uses variables having private visibility to create instances
+* with a constructor having specific attributes. The Book class implements IBook interface. We use 
+* different method to check the availability or the status of the book. 
+*
+*/
+
 public class Book implements IBook {
 
 	
