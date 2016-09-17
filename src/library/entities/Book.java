@@ -119,7 +119,7 @@ public class Book implements IBook {//the Book class implements IBook
 		state = EBookState.DISPOSED;	//set the book state to disposed
 	}
 
-	
+	/** get method return the current book state */
 	@Override
 	public EBookState getState() {
 		return state;
