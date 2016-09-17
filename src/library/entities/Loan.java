@@ -74,7 +74,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 		member.addLoan(this);
 	}
 
-	/* A method to release the loan. Called when book is returned. */
+	/* A method to release the loan. This method is called when book is returned. */
 	@Override
 	public void complete() {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
