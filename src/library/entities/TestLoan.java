@@ -48,11 +48,11 @@ public class TestLoan { // A class to test loan class
 
 		System.out.println("Made a test Member");
 		
-		//Testing member Contact Number
+		//Testing member Email
 		
-		System.out.println("Test to check Contact Number. Output shoule be '0424XXX'");
-		System.out.println("Output is: "+testMember.getContactPhone());
-		if(testMember.getContactPhone().equals("0424XXX")){
+		System.out.println("Test to check Email. Output shoule be 'test@test.com'");
+		System.out.println("Output is: "+testMember.getEmailAddress());
+		if(testMember.getEmailAddress().equals("test@test.com")){
 			
 			System.out.println("Result: Successfull");
 		}
