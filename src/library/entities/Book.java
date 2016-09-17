@@ -85,7 +85,7 @@ public class Book implements IBook {//the Book class implements IBook
 		}
 		loan = null;
 		if (damaged) {
-			state = EBookState.DAMAGED;
+			state = EBookState.DAMAGED;	//set the book state to damaged
 		}
 		else {
 			state = EBookState.AVAILABLE;
