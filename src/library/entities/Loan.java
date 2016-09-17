@@ -10,18 +10,17 @@ import library.interfaces.entities.IMember;
 import library.interfaces.entities.ELoanState;
 
 /**
-*@author Ramanpreet Kaur
-*@course Master of Information Technology
-*@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy
-*@due date 23.09.2016
-*@version 1.0
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.0
 *
-*		The Loan class is a program that uses private variables to create instances
-*		with a constructor. It implements ILoan interface. 
-*		It has many methods, mainly related to issue a book. 
-*		This class with help of all the methods issue a particular book 
-*		to a particular member. 
+* The Loan class is a program that uses variables having private visibility to create instances
+* with a constructor having specific attributes. The Loan class implements ILoan interface. We use 
+* different method to check the availability or the status of the book. 
+*		 
 */
 
 /** Start of the class Loan */
