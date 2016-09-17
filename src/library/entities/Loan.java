@@ -46,7 +46,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 		this.issueDate = issueDate;
 		this.dueDate = dueDate;
 		this.state = ELoanState.PENDING;
-	}
+	}//End of the constructor
 
 	/*
 	 * A method to test if all variables are available. It throws exception if
