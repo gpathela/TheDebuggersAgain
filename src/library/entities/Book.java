@@ -23,7 +23,8 @@ import library.interfaces.entities.ILoan;
 /** Start of the Book Class */
 public class Book implements IBook {//the Book class implements IBook
 
-	
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private String author;
 	private String title;
 	private String callNumber;
