@@ -143,7 +143,7 @@ public class Book implements IBook {//the Book class implements IBook
 		return callNumber;
 	}
 
-	
+	/** the method return the book's unique id */
 	@Override
 	public int getID() {
 		return id;
