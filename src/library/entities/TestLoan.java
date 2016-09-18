@@ -48,16 +48,15 @@ public class TestLoan { // A class to test loan class
 
 		System.out.println("Made a test Member");
 		
-		//Testing member Email
+		//Testing fines for test Member
 		
-		System.out.println("Test to check Email. Output shoule be 'test@test.com'");
-		System.out.println("Output is: "+testMember.getEmailAddress());
-		if(testMember.getEmailAddress().equals("test@test.com")){
-			
-			System.out.println("Result: Successfull");
+		System.out.println("Test to check fines. As there is no loan yet. Output shoule be 'false'");
+		System.out.println("Output is: "+testMember.hasFinesPayable());
+		if(testMember.hasFinesPayable()){
+			System.out.println("Result: Failed");
 		}
 		else {
-			System.out.println("Result: Failed");
+			System.out.println("Result: Successfull");
 		}
 		
 	}
