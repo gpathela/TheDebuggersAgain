@@ -152,7 +152,7 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public void commitLoan(ILoan loan) { // Method to commit loan to loan Map
+	public void commitLoan(ILoan loan) { 
 		int id = getNextId();
 		loan.commit(id);
 		loanMap.put(id, loan);
