@@ -27,7 +27,7 @@ import library.interfaces.entities.IMember;
 *		it finds all loans for the book etc. 
 */
 
-/** Start of the class LoanMapDAO */
+
 public class LoanMapDAO implements ILoanDAO {
 
 	/**
