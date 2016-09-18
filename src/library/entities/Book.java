@@ -11,7 +11,7 @@ import library.interfaces.entities.ILoan;
 *@course Master of Information Technology
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
-*@due date 29.08.2016
+*@due date 29.09.2016
 *@version 1.2
 *
 *The GradeProcessing class will display a GUI with a title appearing on top of 
