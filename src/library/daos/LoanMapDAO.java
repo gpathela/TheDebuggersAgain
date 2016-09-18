@@ -87,9 +87,7 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public List<ILoan> findLoansByBorrower(IMember borrower) { // Method to find
-																// all loans by
-																// a member
+	public List<ILoan> findLoansByBorrower(IMember borrower) { 
 		if (borrower == null) {
 			throw new IllegalArgumentException(
 					String.format("LoanMapDAO : findLoansByBorrower : borrower cannot be null."));
