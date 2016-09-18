@@ -15,7 +15,12 @@ import library.interfaces.entities.IBook;
 import library.interfaces.entities.ILoan;
 import library.interfaces.entities.IMember;
 
+/**
+*@author Gourav Pathela
 
+*/
+
+/** Start of the class LoanMapDAO */
 public class LoanMapDAO implements ILoanDAO {
 
 	/**
