@@ -102,7 +102,7 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public List<ILoan> findLoansByBookTitle(String title) { 
+	public List<ILoan> findLoansByBookTitle(String title) { // Method to find loans on book title 
 		if (title == null || title.isEmpty()) {
 			throw new IllegalArgumentException(
 					String.format("LoanMapDAO : findLoansByBookTitle : title cannot be null or blank."));
