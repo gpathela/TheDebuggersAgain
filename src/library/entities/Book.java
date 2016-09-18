@@ -51,7 +51,7 @@ public class Book implements IBook {
 				);
 	}
 
-	
+	/** Override the borrow method */
 	@Override
 	public void borrow(ILoan loan) {
 		if (loan == null) {
@@ -65,13 +65,13 @@ public class Book implements IBook {
 
 	}
 
-	
+	/** Override the getLoan method */
 	@Override
 	public ILoan getLoan() {
 		return loan;
 	}
 
-	
+	/** Override the returnBook method */
 	@Override
 	public void returnBook(boolean damaged) {
 		if (!(state == EBookState.ON_LOAN || state == EBookState.LOST)) {
@@ -86,7 +86,7 @@ public class Book implements IBook {
 		}
 	}
 
-	
+	/** Override the lose method */
 	@Override
 	public void lose() {
 		if (!(state == EBookState.ON_LOAN)) {
@@ -95,7 +95,7 @@ public class Book implements IBook {
 		state = EBookState.LOST;
 	}
 
-	
+	/** Override the repair method */
 	@Override
 	public void repair() {
 		if (!(state == EBookState.DAMAGED)) {
@@ -104,7 +104,7 @@ public class Book implements IBook {
 		state = EBookState.AVAILABLE;
 	}
 
-	
+	/** Override the dispose method */
 	@Override
 	public void dispose() {
 		if (!(state == EBookState.AVAILABLE || state == EBookState.DAMAGED || state == EBookState.LOST)) {
@@ -113,41 +113,40 @@ public class Book implements IBook {
 		state = EBookState.DISPOSED;
 	}
 
-	
+	/** Override the getState method */
 	@Override
 	public EBookState getState() {
 		return state;
 	}
 
-	
+	/** Override the getAuthor method */
 	@Override
 	public String getAuthor() {
 		return author;
 	}
 
-	
+	/** Override the getTitle method */
 	@Override
 	public String getTitle() {
 		return title;
 	}
 
-	
+	/** Override the getCallNumber method */
 	@Override
 	public String getCallNumber() {
 		return callNumber;
 	}
 
-	
+	/** Override the getID method */
 	@Override
 	public int getID() {
 		return id;
 	}
 
-	
+	/** Override the toString method */
 	@Override
 	public String toString() {
 		return String.format("Id: %d\nAuthor: %s\nTitle: %s\nCall Number %s",
 				id, author, title, callNumber);
 	}
-
 }
