@@ -141,7 +141,8 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public ILoan createLoan(IMember borrower, IBook book) { 
+	public ILoan createLoan(IMember borrower, IBook book) { // Method to create loan
+		
 		Date borrowDate = new Date();
 		cal.setTime(borrowDate);
 		cal.add(Calendar.DATE, ILoan.LOAN_PERIOD);
