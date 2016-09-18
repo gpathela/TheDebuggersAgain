@@ -53,6 +53,7 @@ public class Book implements IBook {
 
 	/** Override the borrow method */
 	@Override
+	/** The method  */
 	public void borrow(ILoan loan) {
 		if (loan == null) {
 			throw new IllegalArgumentException(String.format("Book: borrow : Bad parameter: loan cannot be null"));
@@ -67,12 +68,14 @@ public class Book implements IBook {
 
 	/** Override the getLoan method */
 	@Override
+	/** The method  */
 	public ILoan getLoan() {
 		return loan;
 	}
 
 	/** Override the returnBook method */
 	@Override
+	/** The method  */
 	public void returnBook(boolean damaged) {
 		if (!(state == EBookState.ON_LOAN || state == EBookState.LOST)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
@@ -88,6 +91,7 @@ public class Book implements IBook {
 
 	/** Override the lose method */
 	@Override
+	/** The method  */
 	public void lose() {
 		if (!(state == EBookState.ON_LOAN)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
@@ -97,6 +101,7 @@ public class Book implements IBook {
 
 	/** Override the repair method */
 	@Override
+	/** The method  */
 	public void repair() {
 		if (!(state == EBookState.DAMAGED)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
@@ -106,6 +111,7 @@ public class Book implements IBook {
 
 	/** Override the dispose method */
 	@Override
+	/** The method  */
 	public void dispose() {
 		if (!(state == EBookState.AVAILABLE || state == EBookState.DAMAGED || state == EBookState.LOST)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
@@ -115,36 +121,42 @@ public class Book implements IBook {
 
 	/** Override the getState method */
 	@Override
+	/** The method  */
 	public EBookState getState() {
 		return state;
 	}
 
 	/** Override the getAuthor method */
 	@Override
+	/** The method getAuthor returns the author of a book */
 	public String getAuthor() {
 		return author;
 	}
 
 	/** Override the getTitle method */
 	@Override
+	/** The method getTitle returns the title of a book */
 	public String getTitle() {
 		return title;
 	}
 
 	/** Override the getCallNumber method */
 	@Override
+	/** The method getCallNumber returns the call number of a book */
 	public String getCallNumber() {
 		return callNumber;
 	}
 
 	/** Override the getID method */
 	@Override
+	/** The method getID returns the id of a book */
 	public int getID() {
 		return id;
 	}
 
 	/** Override the toString method */
 	@Override
+	/** The method toString returns the details of a book object */
 	public String toString() {
 		return String.format("Id: %d\nAuthor: %s\nTitle: %s\nCall Number %s",
 				id, author, title, callNumber);
