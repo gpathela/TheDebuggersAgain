@@ -49,8 +49,9 @@ public class LoanMapDAO implements ILoanDAO {
 		cal = Calendar.getInstance();
 	}
 
-	public LoanMapDAO(ILoanHelper helper, Map<Integer, ILoan> loanMap) { 
-		this(helper);
+	public LoanMapDAO(ILoanHelper helper, Map<Integer, ILoan> loanMap) { // Public constructor that take
+																		// object of ILoanHelper class and
+																	    // Map objects of ILoan this(helper);
 		if (loanMap == null) {
 			throw new IllegalArgumentException(String.format("LoanMapDAO : constructor : loanMap cannot be null."));
 		}
@@ -58,7 +59,7 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public ILoan getLoanByID(int id) {	//Method to get loan by Id
+	public ILoan getLoanByID(int id) { // Method to get loan by Id
 		if (loanMap.containsKey(Integer.valueOf(id))) {
 			return loanMap.get(Integer.valueOf(id));
 		}
@@ -66,7 +67,7 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public ILoan getLoanByBook(IBook book) {	//Method to get loan by book
+	public ILoan getLoanByBook(IBook book) { // Method to get loan by book
 		if (book == null) {
 			throw new IllegalArgumentException(String.format("LoanMapDAO : getLoanByBook : book cannot be null."));
 		}
@@ -80,13 +81,15 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public List<ILoan> listLoans() {	//Method to generate list of all loans
+	public List<ILoan> listLoans() { // Method to generate list of all loans
 		List<ILoan> list = new ArrayList<ILoan>(loanMap.values());
 		return Collections.unmodifiableList(list);
 	}
 
 	@Override
-	public List<ILoan> findLoansByBorrower(IMember borrower) {	//Method to find all loans by a member
+	public List<ILoan> findLoansByBorrower(IMember borrower) { // Method to find
+																// all loans by
+																// a member
 		if (borrower == null) {
 			throw new IllegalArgumentException(
 					String.format("LoanMapDAO : findLoansByBorrower : borrower cannot be null."));
@@ -101,7 +104,9 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public List<ILoan> findLoansByBookTitle(String title) {	//Method to find loans on book title
+	public List<ILoan> findLoansByBookTitle(String title) { // Method to find
+															// loans on book
+															// title
 		if (title == null || title.isEmpty()) {
 			throw new IllegalArgumentException(
 					String.format("LoanMapDAO : findLoansByBookTitle : title cannot be null or blank."));
@@ -117,14 +122,15 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public void updateOverDueStatus(Date currentDate) {	//Method to update status of a loan
+	public void updateOverDueStatus(Date currentDate) { // Method to update
+														// status of a loan
 		for (ILoan loan : loanMap.values()) {
 			loan.checkOverDue(currentDate);
 		}
 	}
 
 	@Override
-	public List<ILoan> findOverDueLoans() {	//Method to find all overdue loans
+	public List<ILoan> findOverDueLoans() { // Method to find all overdue loans
 		List<ILoan> list = new ArrayList<ILoan>();
 		for (ILoan loan : loanMap.values()) {
 			if (loan.isOverDue()) {
@@ -139,7 +145,8 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public ILoan createLoan(IMember borrower, IBook book) {	//Method to create loan
+	public ILoan createLoan(IMember borrower, IBook book) { // Method to create
+															// loan
 		Date borrowDate = new Date();
 		cal.setTime(borrowDate);
 		cal.add(Calendar.DATE, ILoan.LOAN_PERIOD);
@@ -149,7 +156,7 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public void commitLoan(ILoan loan) {	//Method to commit loan to loan Map
+	public void commitLoan(ILoan loan) { // Method to commit loan to loan Map
 		int id = getNextId();
 		loan.commit(id);
 		loanMap.put(id, loan);
