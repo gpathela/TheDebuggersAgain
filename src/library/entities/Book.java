@@ -7,7 +7,7 @@ import library.interfaces.entities.IBook;
 import library.interfaces.entities.ILoan;
 
 /**
-*@author Jean Claude Jino Rousseau
+*@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
@@ -53,7 +53,7 @@ public class Book implements IBook {
 
 	/** Override the borrow method */
 	@Override
-	/** The method  */
+	/** The method borrow sets the state of a book to on loan */
 	public void borrow(ILoan loan) {
 		if (loan == null) {
 			throw new IllegalArgumentException(String.format("Book: borrow : Bad parameter: loan cannot be null"));
@@ -68,14 +68,14 @@ public class Book implements IBook {
 
 	/** Override the getLoan method */
 	@Override
-	/** The method  */
+	/** The method getLoan returns the laon of a book */
 	public ILoan getLoan() {
 		return loan;
 	}
 
 	/** Override the returnBook method */
 	@Override
-	/** The method  */
+	/** The method returnBook sets the state of a book to available or damaged */
 	public void returnBook(boolean damaged) {
 		if (!(state == EBookState.ON_LOAN || state == EBookState.LOST)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
@@ -91,7 +91,7 @@ public class Book implements IBook {
 
 	/** Override the lose method */
 	@Override
-	/** The method  */
+	/** The method lose sets the state of a book to lost */
 	public void lose() {
 		if (!(state == EBookState.ON_LOAN)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
@@ -101,7 +101,7 @@ public class Book implements IBook {
 
 	/** Override the repair method */
 	@Override
-	/** The method  */
+	/** The method repair sets the state of a book to available */
 	public void repair() {
 		if (!(state == EBookState.DAMAGED)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
@@ -111,7 +111,7 @@ public class Book implements IBook {
 
 	/** Override the dispose method */
 	@Override
-	/** The method  */
+	/** The method dispose sets the state of a book to disposed */
 	public void dispose() {
 		if (!(state == EBookState.AVAILABLE || state == EBookState.DAMAGED || state == EBookState.LOST)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
@@ -121,7 +121,7 @@ public class Book implements IBook {
 
 	/** Override the getState method */
 	@Override
-	/** The method  */
+	/** The method getState returns the state of a book */
 	public EBookState getState() {
 		return state;
 	}
