@@ -30,9 +30,7 @@ import library.interfaces.entities.IMember;
 /** Start of the class LoanMapDAO */
 public class LoanMapDAO implements ILoanDAO {
 
-	/**
-	 * Declare the variable for the class with private visibility modifiers
-	 */
+	
 	private int nextID;
 	private Map<Integer, ILoan> loanMap;
 	private ILoanHelper helper;
