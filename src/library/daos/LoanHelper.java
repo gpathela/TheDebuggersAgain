@@ -18,10 +18,10 @@ import library.interfaces.entities.IMember;
 *@version 2.0
 *
 *		The LoanHelper class is a class that implements ILoanHelper. 
-
+*		This class makes a object of ILoanHelper and returns new Loan.  
 */
 
-/** Start of the LoanHelper */
+
 public class LoanHelper implements ILoanHelper {
 
 	@Override
