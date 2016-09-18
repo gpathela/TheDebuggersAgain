@@ -38,7 +38,8 @@ public class LoanMapDAO implements ILoanDAO {
 	private ILoanHelper helper;
 	private Calendar cal;
 
-	public LoanMapDAO(ILoanHelper helper) { 
+	public LoanMapDAO(ILoanHelper helper) { // Public constructor that take
+											// object of ILoanHelper class
 		if (helper == null) {
 			throw new IllegalArgumentException(String.format("LoanMapDAO : constructor : helper cannot be null."));
 		}
