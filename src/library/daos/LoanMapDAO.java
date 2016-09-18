@@ -21,7 +21,8 @@ import library.interfaces.entities.IMember;
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy
 *@due date 23.09.2016
-
+*@version 2.0
+ 
 */
 
 /** Start of the class LoanMapDAO */
