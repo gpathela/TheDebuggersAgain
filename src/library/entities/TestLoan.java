@@ -34,10 +34,7 @@ public class TestLoan { // A class to test loan class
 		cal.add(Calendar.DATE, 14);
 		Date dueDate = cal.getTime();
 
-		Book testBook = new Book("testAuthor", "testTitle", "testCallNumber", 27); // Creating
-																					// a
-																					// test
-																					// Book
+		Book testBook = new Book("testAuthor", "testTitle", "testCallNumber", 27); // Creating a test Book
 
 		System.out.println("Made a test book");
 
@@ -48,17 +45,7 @@ public class TestLoan { // A class to test loan class
 
 		System.out.println("Made a test Member");
 		
-		//Testing member Last Name
-		
-		System.out.println("Test to check Last Name. Out put shoule be 'testLastName'");
-		System.out.println("Output is: "+testMember.getLastName());
-		if(testMember.getLastName().equals("testLastName")){
-			
-			System.out.println("Result: Successfull");
-		}
-		else {
-			System.out.println("Result: Failed");
-		}
+
 
 	}
 }
