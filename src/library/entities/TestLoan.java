@@ -48,16 +48,10 @@ public class TestLoan { // A class to test loan class
 
 		System.out.println("Made a test Member");
 		
-		//Testing fines for test Member
+		//Testing Loans for test Member
 		
-		System.out.println("Test to check fines. As there is no loan yet. Output shoule be 'false'");
-		System.out.println("Output is: "+testMember.hasFinesPayable());
-		if(testMember.hasFinesPayable()){
-			System.out.println("Result: Failed");
-		}
-		else {
-			System.out.println("Result: Successfull");
-		}
+		System.out.println("Test to check Loans. As there is no loan yet. Output shoule be '[]'");
+		System.out.println("Output is: "+testMember.getLoans());
 		
 	}
 }
