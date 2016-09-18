@@ -9,19 +9,7 @@ import library.interfaces.entities.IBook;
 import library.interfaces.entities.ILoan;
 import library.interfaces.entities.IMember;
 
-/**
-*@author Gourav Pathela
-*@course Master of Information Technology
-*@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy
-*@due date 23.09.2016
-*@version 1.0
-*
-*		The LoanHelper class is a class that implements ILoanHelper. 
-*		This class makes a object of ILoanHelper and returns new Loan.  
-*/
 
-/** Start of the LoanHelper */
 public class LoanHelper implements ILoanHelper {
 
 	@Override
