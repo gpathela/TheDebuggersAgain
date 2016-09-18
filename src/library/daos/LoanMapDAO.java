@@ -67,7 +67,7 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	@Override
-	public ILoan getLoanByBook(IBook book) { 
+	public ILoan getLoanByBook(IBook book) { // Method to get loan by book
 		if (book == null) {
 			throw new IllegalArgumentException(String.format("LoanMapDAO : getLoanByBook : book cannot be null."));
 		}
