@@ -21,17 +21,15 @@ import library.interfaces.entities.ILoan;
 
 /** Start of the class ABorrowPanel */
 public class Book implements IBook {
-
-	
+	/** Declare and initialise variables with private access modifiers */
 	private String author;
 	private String title;
 	private String callNumber;
 	private int id;
-	
 	private ILoan loan;
 	private EBookState state;
 	
-	
+	/** The constructor for a Book object which takes a parameter of variables */
 	public Book(String author, String title, String callNumber, int bookID) {
 		if ( !sane(author, title, callNumber, bookID)) {
 			throw new IllegalArgumentException("Member: constructor : bad parameters");
@@ -44,7 +42,7 @@ public class Book implements IBook {
 		this.loan = null;
 	}
 
-
+	/** The method sane returns true or false if the parameter does not contain the right variables */
 	private boolean sane(String author, String title, String callNumber, int bookID) {
 		return  ( author != null     && !author.isEmpty()     &&
 				  title != null      && !title.isEmpty()      &&
