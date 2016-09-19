@@ -22,7 +22,7 @@ public class BookHelper implements IBookHelper {
 
 	/** Override the borrow method */
 	@Override
-	/** The method makeBook returns the details of a created book object */
+	/** The method makeBook creates a book and returns the details of the created book object */
 	public IBook makeBook(String author, String title, String callNumber, int id) {
 		return new Book(author, title, callNumber, id);		
 	}
