@@ -30,14 +30,16 @@ import library.interfaces.hardware.IScannerListener;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The GradeProcessing class will display a GUI with a title appearing on top of 
-*the main frame, six text fields with appropriate labels to take user inputs, 
-*two buttons that will be used to trigger actions for calculations.
+*The BorrowUC_CTL implements the ICardReaderListener, IScannerListener, and IBorrowUIListener 
+*interfaces. The class contains several variables that will be used to create a user control 
+*object. It contains the necessary methods to enable the users to initialise and close windows, 
+*scan and swipe cards, and other operations about the loans. 
 */
 
 /** Start of the class BorrowUC_CTL */
 public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBorrowUIListener {
 	
+	/** Declare and initialise variables with private access modifiers */
 	private ICardReader reader;
 	private IScanner scanner; 
 	private IPrinter printer; 
@@ -49,8 +51,7 @@ public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBor
 	private EBorrowState state; 
 	private IBookDAO bookDAO;
 	private IMemberDAO memberDAO;
-	private ILoanDAO loanDAO;
-	
+	private ILoanDAO loanDAO;	
 	private List<IBook> bookList;
 	private List<ILoan> loanList;
 	private IMember borrower;
