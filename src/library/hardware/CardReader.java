@@ -31,11 +31,13 @@ import java.awt.event.KeyEvent;
 /** Start of the class CardReader */
 public class CardReader extends JFrame implements ICardReader {
 
+	/** Declare and initialise a variable with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JTextField textField;
 	private JButton btnReadCard;
 	private ICardReaderListener listener;
 
+	/** The no args-constructor to create a CardReader object  */
 	public CardReader() {
 		setTitle("Card Reader");
         setBounds(50, 50, 400, 200);
@@ -97,16 +99,18 @@ public class CardReader extends JFrame implements ICardReader {
 		panel.add(btnReadCard);
 	}
 
-
+	/** Override the  method */
 	@Override
+	/** This method sets the read card button and text field to enable */
 	public void setEnabled(boolean enabled) {
 		btnReadCard.setEnabled(enabled);
 		textField.setEditable(enabled);
 	}
 
-
+	/** Override the addListener method */
 	@Override
+	/** This method adds a listener to the card reader panel*/
 	public void addListener(ICardReaderListener listener) {
 		this.listener = listener;		
 	}
-}
+} // End of the class CardReader
