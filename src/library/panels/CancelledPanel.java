@@ -15,7 +15,7 @@ import java.awt.Font;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The BorrowUC_UI 
+*The CancelledPanel create a panel that allows the user to cancel actions. 
 */
 
 /** Start of the class CancelledPanel */
