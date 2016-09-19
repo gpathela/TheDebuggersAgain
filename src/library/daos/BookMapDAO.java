@@ -51,9 +51,9 @@ public class BookMapDAO implements IBookDAO {
 		this.bookMap = bookMap;
 	}
 	
-	/** Override the  method */
+	/** Override the addBook method */
 	@Override
-	/** The method  returns  */
+	/** The method addBook returns a book that has been added to a collection */
 	public IBook addBook(String author, String title, String callNo) {
 		int id = getNextId();
 		IBook book = helper.makeBook(author, title, callNo, id);
@@ -61,9 +61,9 @@ public class BookMapDAO implements IBookDAO {
 		return book;
 	}
 
-	/** Override the  method */
+	/** Override the getBookByID method */
 	@Override
-	/** The method  returns  */
+	/** The method getBookByID returns a list of books by ID */
 	public IBook getBookByID(int id) {
 		if (bookMap.containsKey(Integer.valueOf(id))) {
 			return bookMap.get(Integer.valueOf(id));
@@ -71,18 +71,18 @@ public class BookMapDAO implements IBookDAO {
 		return null;
 	}
 
-	/** Override the  method */
+	/** Override the listBooks method */
 	@Override
-	/** The method  returns  */
+	/** The method listBooks returns a list of books */
 	public List<IBook> listBooks() {
 		List<IBook> list = new ArrayList<IBook>(bookMap.values());
 		return Collections.unmodifiableList(list);
 	}
 
 	
-	/** Override the  method */
+	/** Override the findBooksByAuthor method */
 	@Override
-	/** The method  returns  */
+	/** The method findBooksByAuthor returns a collection of books by author name */
 	public List<IBook> findBooksByAuthor(String author) {
 		if ( author == null || author.isEmpty()) {
 			throw new IllegalArgumentException(
@@ -97,9 +97,9 @@ public class BookMapDAO implements IBookDAO {
 		return Collections.unmodifiableList(list);
 	}
 
-	/** Override the  method */
+	/** Override the findBooksByTitle method */
 	@Override
-	/** The method  returns  */
+	/** The method findBooksByTitle returns a collection of books by title */
 	public List<IBook> findBooksByTitle(String title) {
 		if ( title == null || title.isEmpty()) {
 			throw new IllegalArgumentException(
@@ -114,9 +114,9 @@ public class BookMapDAO implements IBookDAO {
 		return Collections.unmodifiableList(list);
 	}
 
-	/** Override the  method */
+	/** Override the findBooksByAuthorTitle method  */
 	@Override
-	/** The method  returns  */
+	/** The method findBooksByAuthorTitle returns a collection of books by author title */
 	public List<IBook> findBooksByAuthorTitle(String author, String title) {
 		if ( title == null || title.isEmpty() ||  author == null || author.isEmpty()) {
 			throw new IllegalArgumentException(
@@ -131,7 +131,7 @@ public class BookMapDAO implements IBookDAO {
 		return Collections.unmodifiableList(list);
 	}
 	
-	/** The method  returns  */
+	/** The method getNextId returns the next ID */
 	private int getNextId() {
 		return nextId++;
 	}
