@@ -19,7 +19,7 @@ import library.interfaces.entities.IBook;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The GradeProcessing class will display a GUI with a title appearing on top of 
+*The BookMapDAO class will display a GUI with a title appearing on top of 
 *the main frame, six text fields with appropriate labels to take user inputs, 
 *two buttons that will be used to trigger actions for calculations.
 */
