@@ -1,21 +1,38 @@
+/** Specify the package in which this code resides */
 package library.daos;
 
+/** Import some libraries to be used in the code */
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import library.interfaces.daos.IBookDAO;
 import library.interfaces.daos.IBookHelper;
 import library.interfaces.entities.IBook;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*
+*The GradeProcessing class will display a GUI with a title appearing on top of 
+*the main frame, six text fields with appropriate labels to take user inputs, 
+*two buttons that will be used to trigger actions for calculations.
+*/
+
+/** Start of the class BookMapDAO */
 public class BookMapDAO implements IBookDAO {
 
+	/** Declare and initialise variables with private access modifiers */
 	private int nextId;
 	private Map<Integer, IBook> bookMap;
 	private IBookHelper helper;
 
+	/** The constructor for a BookMapDAO database object which takes a parameter of variable */
 	public BookMapDAO(IBookHelper helper) {
 		if (helper == null ) {
 			throw new IllegalArgumentException(String.format("BookDAO : constructor : helper cannot be null."));
@@ -25,6 +42,7 @@ public class BookMapDAO implements IBookDAO {
 		bookMap = new HashMap<Integer, IBook>();
 	}
 	
+	/** The constructor for a BookMapDAO database object which takes a parameter of variables */
 	public BookMapDAO(IBookHelper helper, Map<Integer, IBook> bookMap) {
 		this(helper);
 		if (helper == null ) {
