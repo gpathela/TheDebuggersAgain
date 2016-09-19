@@ -14,9 +14,9 @@ import library.interfaces.entities.ILoan;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The GradeProcessing class will display a GUI with a title appearing on top of 
-*the main frame, six text fields with appropriate labels to take user inputs, 
-*two buttons that will be used to trigger actions for calculations.
+*The Book class implements the interface IBook. It contains the variables to create a book.
+*The object book created can use all the methods that reside in the class to help a user 
+*accomplish their tasks.
 */
 
 /** Start of the class ABorrowPanel */
