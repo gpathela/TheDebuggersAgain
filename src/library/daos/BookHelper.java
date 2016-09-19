@@ -1,14 +1,29 @@
+/** Specify the package in which this code resides */
 package library.daos;
 
+/** Import some libraries to be used in the code */
 import library.entities.Book;
 import library.interfaces.daos.IBookHelper;
 import library.interfaces.entities.IBook;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.1
+*
+*The BookHelper .....
+*/
+
+/** Start of the class BookHelper */
 public class BookHelper implements IBookHelper {
 
+	/** Override the borrow method */
 	@Override
+	/** The method makeBook returns the details of a created book object */
 	public IBook makeBook(String author, String title, String callNumber, int id) {
 		return new Book(author, title, callNumber, id);		
 	}
-
-}
+} // End of the class BookHelper
