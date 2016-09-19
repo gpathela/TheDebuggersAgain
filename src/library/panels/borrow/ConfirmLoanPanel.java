@@ -1,5 +1,7 @@
-package library.panels.borrow;
+/** Import some Java libraries and specify the package in which the classes are organized */
+package library.panels;
 
+/** Import some libraries to be used in the code */
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -7,11 +9,22 @@ import javax.swing.border.TitledBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import library.interfaces.IBorrowUIListener;
-
 import java.awt.Font;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*
+*The ConfirmLoanPanel class creates an object that displays a panel in which a message is 
+*sent to the user when a loan is confirmed.
+*/
+
+/** Start of the class ConfirmLoanPanel */
 public class ConfirmLoanPanel extends ABorrowPanel {
 
 	private static final long serialVersionUID = 1L;
@@ -70,12 +83,13 @@ public class ConfirmLoanPanel extends ABorrowPanel {
 		add(button);
 	}
 
-
+	/** Override the displayConfirmingLoan method */
 	@Override
+	/** This method displays the confirmation of a loan to the screen */
 	public void displayConfirmingLoan(String loanDetails) {
-		loanListTA.setText(loanDetails);
+		StringBuilder bld = new StringBuilder(loanListTA.getText());
+		bld.append(loanDetails + "\n\n");
+		loanListTA.setText(bld.toString());
 		loanListTA.setCaretPosition(0);
 	}
-
-
-}
+} // End of the class ConfirmLoanPanel

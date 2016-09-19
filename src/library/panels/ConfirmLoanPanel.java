@@ -20,7 +20,8 @@ import java.awt.Font;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The ConfirmLoanPanel
+*The ConfirmLoanPanel class creates an object that displays a panel in which a message is 
+*sent to the user when a loan is confirmed.
 */
 
 /** Start of the class ConfirmLoanPanel */
