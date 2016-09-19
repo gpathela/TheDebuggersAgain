@@ -51,7 +51,9 @@ public class BookMapDAO implements IBookDAO {
 		this.bookMap = bookMap;
 	}
 	
+	/** Override the  method */
 	@Override
+	/** The method  returns  */
 	public IBook addBook(String author, String title, String callNo) {
 		int id = getNextId();
 		IBook book = helper.makeBook(author, title, callNo, id);
@@ -59,7 +61,9 @@ public class BookMapDAO implements IBookDAO {
 		return book;
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  returns  */
 	public IBook getBookByID(int id) {
 		if (bookMap.containsKey(Integer.valueOf(id))) {
 			return bookMap.get(Integer.valueOf(id));
@@ -67,13 +71,18 @@ public class BookMapDAO implements IBookDAO {
 		return null;
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  returns  */
 	public List<IBook> listBooks() {
 		List<IBook> list = new ArrayList<IBook>(bookMap.values());
 		return Collections.unmodifiableList(list);
 	}
 
+	
+	/** Override the  method */
 	@Override
+	/** The method  returns  */
 	public List<IBook> findBooksByAuthor(String author) {
 		if ( author == null || author.isEmpty()) {
 			throw new IllegalArgumentException(
@@ -88,7 +97,9 @@ public class BookMapDAO implements IBookDAO {
 		return Collections.unmodifiableList(list);
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  returns  */
 	public List<IBook> findBooksByTitle(String title) {
 		if ( title == null || title.isEmpty()) {
 			throw new IllegalArgumentException(
@@ -103,7 +114,9 @@ public class BookMapDAO implements IBookDAO {
 		return Collections.unmodifiableList(list);
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  returns  */
 	public List<IBook> findBooksByAuthorTitle(String author, String title) {
 		if ( title == null || title.isEmpty() ||  author == null || author.isEmpty()) {
 			throw new IllegalArgumentException(
@@ -118,8 +131,8 @@ public class BookMapDAO implements IBookDAO {
 		return Collections.unmodifiableList(list);
 	}
 	
+	/** The method  returns  */
 	private int getNextId() {
 		return nextId++;
 	}
-
-}
+} // End of the class class BookMapDAO

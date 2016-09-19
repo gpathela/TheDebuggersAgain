@@ -161,4 +161,4 @@ public class Book implements IBook {
 		return String.format("Id: %d\nAuthor: %s\nTitle: %s\nCall Number %s",
 				id, author, title, callNumber);
 	}
-}
+} // End of the class ABorrowPanel
