@@ -25,7 +25,7 @@ import java.awt.event.KeyEvent;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The CardReader
+*The CardReader creates a card reader panel 
 */
 
 /** Start of the class CardReader */
@@ -99,7 +99,7 @@ public class CardReader extends JFrame implements ICardReader {
 		panel.add(btnReadCard);
 	}
 
-	/** Override the  method */
+	/** Override the setEnabled method */
 	@Override
 	/** This method sets the read card button and text field to enable */
 	public void setEnabled(boolean enabled) {
