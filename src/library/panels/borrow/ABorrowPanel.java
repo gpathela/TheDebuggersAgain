@@ -14,9 +14,8 @@ import library.interfaces.IBorrowUI;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The GradeProcessing class will display a GUI with a title appearing on top of 
-*the main frame, six text fields with appropriate labels to take user inputs, 
-*two buttons that will be used to trigger actions for calculations.
+*The ABorrowPanel class extens the JPanel class and implements the interface IBorrowUI.
+*It sets the state of a borrowed object and displays information to the user of the system. 
 */
 
 /** Start of the class ABorrowPanel */

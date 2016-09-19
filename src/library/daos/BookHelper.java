@@ -14,7 +14,8 @@ import library.interfaces.entities.IBook;
 *@due date 29.09.2016
 *@version 1.1
 *
-*The BookHelper .....
+*The BookHelper class implements the interface IBookHelper. It displays the details about a 
+*book that it creates.
 */
 
 /** Start of the class BookHelper */

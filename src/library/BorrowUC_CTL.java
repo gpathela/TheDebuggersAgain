@@ -1,11 +1,10 @@
 /** Import some Java libraries and specify the package in which the classes are organized */
 package library;
 
+/** Import some libraries to be used in the code */
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.JPanel;
-
 import library.interfaces.EBorrowState;
 import library.interfaces.IBorrowUI;
 import library.interfaces.IBorrowUIListener;
@@ -23,10 +22,21 @@ import library.interfaces.hardware.IPrinter;
 import library.interfaces.hardware.IScanner;
 import library.interfaces.hardware.IScannerListener;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*
+*The GradeProcessing class will display a GUI with a title appearing on top of 
+*the main frame, six text fields with appropriate labels to take user inputs, 
+*two buttons that will be used to trigger actions for calculations.
+*/
 
-public class BorrowUC_CTL implements ICardReaderListener, 
-									 IScannerListener, 
-									 IBorrowUIListener {
+/** Start of the class BorrowUC_CTL */
+public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBorrowUIListener {
 	
 	private ICardReader reader;
 	private IScanner scanner; 
