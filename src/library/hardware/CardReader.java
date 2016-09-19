@@ -1,15 +1,15 @@
+/** Import some Java libraries and specify the package in which the classes are organized */
 package library.hardware;
 
+/** Import some libraries to be used in the code */
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
-
 import library.interfaces.hardware.ICardReader;
 import library.interfaces.hardware.ICardReaderListener;
-
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -17,6 +17,18 @@ import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*
+*The CardReader
+*/
+
+/** Start of the class CardReader */
 public class CardReader extends JFrame implements ICardReader {
 
 	private static final long serialVersionUID = 1L;
