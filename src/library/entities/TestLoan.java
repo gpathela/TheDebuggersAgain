@@ -26,8 +26,7 @@ public class TestLoan { // A class to test loan class
 	public static void main(String[] args) {
 
 		/*
-		 * Getting issue date i.e. current date and due date i.e. 14 days after
-		 * issue date
+		 * Getting issue date i.e. current date and due date i.e. 14 days after issue date
 		 */
 		Calendar cal = Calendar.getInstance();
 		Date issueDate = cal.getTime();
