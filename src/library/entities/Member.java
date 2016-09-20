@@ -17,7 +17,8 @@ import library.interfaces.entities.EMemberState;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The class Member
+*The class Member contains several variables, some getters and setters 
+*methods that enable the creation and modification of a Member object.
 */
 
 /** Start of the class Member */
@@ -60,9 +61,9 @@ public class Member implements IMember {
 	}
 
 
-	/** Override the  method */
+	/** Override the hasOverDueLoans method */
 	@Override
-	/** The method  */
+	/** The method hasOverDueLoans returns true or false if a member has overdue loans */
 	public boolean hasOverDueLoans() {
 		for (ILoan loan : loanList) {
 			if (loan.isOverDue()) {
@@ -72,40 +73,40 @@ public class Member implements IMember {
 		return false;
 	}
 
-	/** Override the  method */
+	/** Override the hasReachedLoanLimit method */
 	@Override
-	/** The method  */
+	/** The method hasReachedLoanLimit returns true or false if a member has reached their loan limit */
 	public boolean hasReachedLoanLimit() {
 		boolean b = loanList.size() >= IMember.LOAN_LIMIT;
 		return b;
 	}
 
-	/** Override the  method */
+	/** Override the hasFinesPayable method */
 	@Override
-	/** The method  */
+	/** The method hasFinesPayable returns true or false if a member fines to pay */
 	public boolean hasFinesPayable() {
 		boolean b = totalFines > 0.0f;
 		return b;
 	}
 
-	/** Override the  method */
+	/** Override the hasReachedFineLimit method */
 	@Override
-	/** The method  */
+	/** The method hasReachedFineLimit returns true or false if a member has reached their limit */
 	public boolean hasReachedFineLimit() {
 		boolean b = totalFines >= IMember.FINE_LIMIT;
 		return b;
 	}
 
-	/** Override the  method */
+	/** Override the getFineAmount method */
 	@Override
-	/** The method  */
+	/** The method getFineAmount returns the amount of fine paid by a member */
 	public float getFineAmount() {
 		return totalFines;
 	}
 
-	/** Override the  method */
+	/** Override the addFine method */
 	@Override
-	/** The method  */
+	/** The method addFine adds a fine to the total of fines and updates the state of a member */
 	public void addFine(float fine) {
 		if (fine < 0) {
 			throw new RuntimeException(String.format("Member: addFine : fine cannot be negative"));
@@ -114,9 +115,10 @@ public class Member implements IMember {
 		updateState();
 	}
 
-	/** Override the  method */
+	/** Override the payFine method */
 	@Override
-	/** The method  */
+	/** The method payFine modifies the total of fines depending on the payment made by a member 
+		and updates the state of a member */
 	public void payFine(float payment) {
 		if (payment < 0 || payment > totalFines) {
 			throw new RuntimeException(String.format("Member: addFine : payment cannot be negative or greater than totalFines"));
@@ -125,9 +127,9 @@ public class Member implements IMember {
 		updateState();
 	}
 
-	/** Override the  method */
+	/** Override the addLoan method */
 	@Override
-	/** The method  */
+	/** The method addLoan adds and updates the list of loans  */
 	public void addLoan(ILoan loan) {
 		if (!borrowingAllowed()) {
 			throw new RuntimeException(String.format("Member: addLoan : illegal operation in state: %s", state));
@@ -136,16 +138,16 @@ public class Member implements IMember {
 		updateState();
 	}
 
-	/** Override the  method */
+	/** Override the getLoans method */
 	@Override
-	/** The method  */
+	/** The method getLoans returns a collection of loans of a member */
 	public List<ILoan> getLoans() {
 		return Collections.unmodifiableList(loanList);
 	}
 
-	/** Override the  method */
+	/** Override the removeLoan method */
 	@Override
-	/** The method  */
+	/** The method removeLoan removes the loan of a Member object */
 	public void removeLoan(ILoan loan) {
 		if (loan == null || !loanList.contains(loan)) {
 			throw new RuntimeException(String.format("Member: removeLoan : loan is null or not found in loanList"));
@@ -154,58 +156,58 @@ public class Member implements IMember {
 		updateState();
 	}
 
-	/** Override the  method */
+	/** Override the getState method */
 	@Override
-	/** The method  */
+	/** The method getState returns the state of a member */
 	public EMemberState getState() {
 		return state;
 	}
 
-	/** Override the  method */
+	/** Override the getFirstName method */
 	@Override
-	/** The method  */
+	/** The method getFirstName returns the first name of a member */
 	public String getFirstName() {
 		return firstName;
 	}
 
-	/** Override the  method */
+	/** Override the getLastName method */
 	@Override
-	/** The method  */
+	/** The method getLastName returns the last name of a member */
 	public String getLastName() {
 		return lastName;
 	}
 
-	/** Override the  method */
+	/** Override the getContactPhone method */
 	@Override
-	/** The method  */
+	/** The method getContactPhone returns the contact phone number of a member */
 	public String getContactPhone() {
 		return contactPhone;
 	}
 
-	/** Override the  method */
+	/** Override the getEmailAddress method */
 	@Override
-	/** The method  */
+	/** The method getEmailAddress returns the email address of a member */
 	public String getEmailAddress() {
 		return emailAddress;
 	}
 
-	/** Override the  method */
+	/** Override the getID method */
 	@Override
-	/** The method  */
+	/** The method getID returns the ID of member */
 	public int getID() {
 		return id;
 	}
 
-	/** Override the  method */
+	/** Override the toString method */
 	@Override
-	/** The method  */
+	/** The method toString returns the details of a Member object */
 	public String toString() {
 		return String.format(
 				"Id: %d\nName: %s %s\nContact Phone: %s\nEmail: %s\nOutstanding Charges: %0.2f", id,
 				firstName, lastName, contactPhone, emailAddress, totalFines);
 	}
 
-	/** The method  */
+	/** The method borrowingAllowed checks if a Member object is allowed to borrow */
 	private Boolean borrowingAllowed() {
 		boolean b = !hasOverDueLoans() &&
 				!hasReachedFineLimit() &&
@@ -213,7 +215,7 @@ public class Member implements IMember {
 		return b;
 	}
 
-	/** The method  */
+	/** The method updateState sets the state of a Member object to allowed or disallowed */
 	private void updateState() {
 		if (borrowingAllowed()) {
 			state = EMemberState.BORROWING_ALLOWED;
