@@ -25,7 +25,7 @@ import library.interfaces.entities.ELoanState;
 *		to a particular member. 
 */
 
-/** Start of the class Loan */
+/** Start of the class Loan*/
 public class Loan implements ILoan {
 	/*
 	 * Declare and initialize the variable for the class with private visibility
