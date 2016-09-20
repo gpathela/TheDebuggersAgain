@@ -9,7 +9,7 @@ package library.interfaces.hardware;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The interface ICardReader contains several static method.
+*The interface ICardReader contains several static method to enable a card reading.
 */
 
 public interface ICardReader {

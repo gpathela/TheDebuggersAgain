@@ -9,7 +9,7 @@ package library.interfaces;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The interface IBorrowUI contains several static method.
+*The interface IBorrowUI contains several static method to enable the IBorrow user interface.
 */
 
 public interface IBorrowUIListener {
