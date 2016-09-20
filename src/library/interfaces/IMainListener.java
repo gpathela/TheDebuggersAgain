@@ -13,7 +13,6 @@ package library.interfaces;
 */
 
 public interface IMainListener {
-
 	/** Static method for the ILoanDAO interface */	
 	public void borrowBooks();
 }
