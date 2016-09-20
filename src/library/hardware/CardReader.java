@@ -1,4 +1,4 @@
-/** Import some Java libraries and specify the package in which the classes are organized */
+/** Specify the package in which the class resides */
 package library.hardware;
 
 /** Import some libraries to be used in the code */

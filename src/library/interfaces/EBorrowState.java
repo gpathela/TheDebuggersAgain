@@ -1,5 +1,14 @@
-/** Import some Java libraries and specify the package in which the classes are organized */
+/** Specify the package in which the class resides */
 package library.interfaces;
+
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*/
 
 /** Start of the enumeration class which holds a collection of constants */
 public enum EBorrowState {
