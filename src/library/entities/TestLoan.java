@@ -42,6 +42,5 @@ public class TestLoan { // A class to test loan class
 		System.out.println("Made a test Member");
 		
 
-
 	}
 }
