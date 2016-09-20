@@ -26,13 +26,11 @@ import java.awt.Font;
 
 /** Start of the class ConfirmLoanPanel */
 public class ConfirmLoanPanel extends ABorrowPanel {
-
+	/** Declare and initialise a variable with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JTextArea loanListTA;
 
-	/**
-	 * Create the panel.
-	 */
+	/** The constructor to create a ConfirmLoanPanel object  */
 	public ConfirmLoanPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(null, "Confirm Loans", TitledBorder.LEADING, TitledBorder.TOP, null, null));
