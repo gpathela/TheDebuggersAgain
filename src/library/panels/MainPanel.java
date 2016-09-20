@@ -20,7 +20,7 @@ import java.awt.event.ActionEvent;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The class MainPanel  
+*The class MainPanel sets the border, layout, creates two labels and one button for the main panel.  
 */
 
 /** Start of the class MainPanel */
