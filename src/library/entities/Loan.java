@@ -1,35 +1,26 @@
-/** Import some Java libraries and specify the package in which the classes are organized */
+/** Specify the package in which the class resides */
 package library.entities;
 
+/** Import some libraries to be used in the code */
 import java.text.DateFormat;
 import java.util.Date;
-
 import library.interfaces.entities.IBook;
 import library.interfaces.entities.ILoan;
 import library.interfaces.entities.IMember;
 import library.interfaces.entities.ELoanState;
 
 /**
-*@author Gourav Pathela
+*@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
 *@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy
-*@due date 23.09.2016
-*@version 1.0
-*
-*		The Loan class is a program that uses private variables to create instances
-*		with a constructor. It implements ILoan interface. 
-*		It has many methods, mainly related to issue a book. 
-*		This class with help of all the methods issue a particular book 
-*		to a particular member. 
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
 */
 
 /** Start of the class Loan */
 public class Loan implements ILoan {
-	/**
-	 * Declare and initialize the variable for the class with private visibility
-	 * modifiers
-	 */
+	/** Declare and initialise variables with private access modifiers */
 	private int id;
 	private final IMember member;
 	private final IBook book;
@@ -37,7 +28,7 @@ public class Loan implements ILoan {
 	private Date dueDate;
 	private ELoanState state;
 
-	/* Public constructor to create object of Loan class */
+	/** The constructor for a Loan object which takes a parameter of variables */
 	public Loan(IBook book, IMember member, Date issueDate, Date dueDate) {
 		if (!sane(book, member, issueDate, dueDate)) {
 			throw new IllegalArgumentException("Loan: constructor : bad parameters");
@@ -49,10 +40,7 @@ public class Loan implements ILoan {
 		this.state = ELoanState.PENDING;
 	}
 
-	/*
-	 * A method to test if all variables are available. It throws exception if
-	 * something is null.
-	 */
+	/** The method sane returns true or false if the parameter does not contain the right variables */
 	private boolean sane(IBook book, IMember member, Date issueDate, Date dueDate) {
 		return (book != null && member != null && issueDate != null && dueDate != null
 				&& issueDate.compareTo(dueDate) <= 0);
