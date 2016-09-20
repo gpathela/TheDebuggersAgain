@@ -1,29 +1,40 @@
-
+/** Specify the package in which the class resides */
 package library.entities;
 
+/** Import some libraries to be used in the code */
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import library.interfaces.entities.ILoan;
 import library.interfaces.entities.IMember;
 import library.interfaces.entities.EMemberState;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*
+*The class Member
+*/
 
+/** Start of the class Member */
 public class Member implements IMember {
 
+	/** Declare the variables with private access modifiers */
 	private final String firstName;
 	private final String lastName;
 	private final String contactPhone;
 	private final String emailAddress;
 	private final int id;
-	
 	private EMemberState state;
 	private List<ILoan> loanList;
 	private float totalFines;
 	
-	public Member(String firstName, String lastName, String contactPhone,
-			String email, int memberID) {
+	/** The constructor for a Member object which takes a parameter of variables */
+	public Member(String firstName, String lastName, String contactPhone, String email, int memberID) {
 		if ( !sane(firstName, lastName, contactPhone, email, memberID)) {
 			throw new IllegalArgumentException("Member: constructor : bad parameters");
 		}
@@ -37,7 +48,7 @@ public class Member implements IMember {
 		this.state = EMemberState.BORROWING_ALLOWED;
 	}
 
-	
+	/** The method sane returns true or false if the parameter does not contain the right variables */
 	private boolean sane(String firstName, String lastName, String contactPhone,
 			String emailAddress, int memberID) {
 		return  ( firstName != null    && !firstName.isEmpty()    &&
@@ -49,7 +60,9 @@ public class Member implements IMember {
 	}
 
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public boolean hasOverDueLoans() {
 		for (ILoan loan : loanList) {
 			if (loan.isOverDue()) {
@@ -59,30 +72,40 @@ public class Member implements IMember {
 		return false;
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public boolean hasReachedLoanLimit() {
 		boolean b = loanList.size() >= IMember.LOAN_LIMIT;
 		return b;
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public boolean hasFinesPayable() {
 		boolean b = totalFines > 0.0f;
 		return b;
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public boolean hasReachedFineLimit() {
 		boolean b = totalFines >= IMember.FINE_LIMIT;
 		return b;
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public float getFineAmount() {
 		return totalFines;
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public void addFine(float fine) {
 		if (fine < 0) {
 			throw new RuntimeException(String.format("Member: addFine : fine cannot be negative"));
@@ -91,7 +114,9 @@ public class Member implements IMember {
 		updateState();
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public void payFine(float payment) {
 		if (payment < 0 || payment > totalFines) {
 			throw new RuntimeException(String.format("Member: addFine : payment cannot be negative or greater than totalFines"));
@@ -100,7 +125,9 @@ public class Member implements IMember {
 		updateState();
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public void addLoan(ILoan loan) {
 		if (!borrowingAllowed()) {
 			throw new RuntimeException(String.format("Member: addLoan : illegal operation in state: %s", state));
@@ -109,12 +136,16 @@ public class Member implements IMember {
 		updateState();
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public List<ILoan> getLoans() {
 		return Collections.unmodifiableList(loanList);
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public void removeLoan(ILoan loan) {
 		if (loan == null || !loanList.contains(loan)) {
 			throw new RuntimeException(String.format("Member: removeLoan : loan is null or not found in loanList"));
@@ -123,50 +154,58 @@ public class Member implements IMember {
 		updateState();
 	}
 
-	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public EMemberState getState() {
 		return state;
 	}
 
-	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public String getFirstName() {
 		return firstName;
 	}
 
-	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public String getLastName() {
 		return lastName;
 	}
 
-	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public String getContactPhone() {
 		return contactPhone;
 	}
 
-	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public String getEmailAddress() {
 		return emailAddress;
 	}
 
-	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public int getID() {
 		return id;
 	}
 
-	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public String toString() {
 		return String.format(
 				"Id: %d\nName: %s %s\nContact Phone: %s\nEmail: %s\nOutstanding Charges: %0.2f", id,
 				firstName, lastName, contactPhone, emailAddress, totalFines);
 	}
 
+	/** The method  */
 	private Boolean borrowingAllowed() {
 		boolean b = !hasOverDueLoans() &&
 				!hasReachedFineLimit() &&
@@ -174,6 +213,7 @@ public class Member implements IMember {
 		return b;
 	}
 
+	/** The method  */
 	private void updateState() {
 		if (borrowingAllowed()) {
 			state = EMemberState.BORROWING_ALLOWED;
@@ -182,6 +222,4 @@ public class Member implements IMember {
 			state = EMemberState.BORROWING_DISALLOWED;
 		}
 	}
-
-
-}
+} // End of the class Member
