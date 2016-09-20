@@ -20,8 +20,10 @@ import library.interfaces.hardware.IDisplay;
 /** Start of the class Display */
 public class Display extends JFrame implements IDisplay {
 
+	/** Declare and initialise a variable with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	
+	/** The no-args constructor to create a Display object  */
 	public Display() {
 		setTitle("Display");
 		setBounds(500, 50, 470, 680);
@@ -29,8 +31,9 @@ public class Display extends JFrame implements IDisplay {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
 	}
 
-
+	/** Override the setDisplay method */
 	@Override
+	/** The method setDisplay sets a pane to the content pane */
 	public void setDisplay(JPanel panel) {
         getContentPane().add(panel, null);		
 	}	
