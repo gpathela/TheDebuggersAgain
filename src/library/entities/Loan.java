@@ -48,7 +48,7 @@ public class Loan implements ILoan {
 
 	/** Override the commit method */
 	@Override
-	/** The method commit allows a book to be committed to a loan */
+	/** The method commit commit a loan based on its ID */
 	public void commit(int loanId) {
 		if (!(state == ELoanState.PENDING)) {
 			throw new RuntimeException(String.format("Loan : commit : incorrect state transition  : %s -> %s\n", state,
@@ -63,10 +63,9 @@ public class Loan implements ILoan {
 		member.addLoan(this);
 	}
 
-	/* A method to release the loan. Called when book is returned. */
 	/** Override the complete method */
 	@Override
-	/** The method complete */
+	/** The method complete sets the state of a loan to complete */
 	public void complete() {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
 			throw new RuntimeException(String.format("Loan : complete : incorrect state transition  : %s -> %s\n",
@@ -75,17 +74,16 @@ public class Loan implements ILoan {
 		state = ELoanState.COMPLETE;
 	}
 
-	/** Override the  method */
+	/** Override the isOverDue method */
 	@Override
-	/** The method */
+	/** The method returns the state of a loan as overdue */
 	public boolean isOverDue() {
 		return (state == ELoanState.OVERDUE);
 	}
 
-	/* A method to check if book is overdue. */
-	/** Override the  method */
+	/** Override the checkOverDue method */
 	@Override
-	/** The method */
+	/** The method checkOverDue checks if a loan is overdue and returns true or false if it is */
 	public boolean checkOverDue(Date currentDate) {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
 			throw new RuntimeException(String.format("Loan : checkOverDue : incorrect state transition  : %s -> %s\n",
@@ -97,26 +95,23 @@ public class Loan implements ILoan {
 		return isOverDue();
 	}
 
-	/* Get method to return member who borrowed */
-	/** Override the  method */
-	/** The method */
+	/** Override the getBorrower method */
 	@Override
+	/** The method getBorrower returns the borrower of a book */
 	public IMember getBorrower() {
 		return member;
 	}
 
-	/* Get method to return book which has been borrowed */
-	/** Override the  method */
+	/** Override the getBook method */
 	@Override
-	/** The method */
+	/** The method getBook returns a Book object */
 	public IBook getBook() {
 		return book;
 	}
 
-	/* Get method to return loan ID */
-	/** Override the  method */
+	/** Override the getID method */
 	@Override
-	/** The method */
+	/** The method getID returns the ID of a loan*/
 	public int getID() {
 		return id;
 	}
