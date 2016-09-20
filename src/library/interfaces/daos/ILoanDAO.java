@@ -21,7 +21,7 @@ import library.interfaces.entities.IMember;
 
 public interface ILoanDAO {
 	
-	/** Static method for the ILoanDAO interface */	
+	/** Static methods for the ILoanDAO interface */	
 	public ILoan createLoan(IMember borrower, IBook book);
 	public void commitLoan(ILoan loan);
 	public ILoan getLoanByID(int id);
