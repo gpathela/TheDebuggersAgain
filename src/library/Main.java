@@ -1,14 +1,13 @@
-/** Import some Java libraries and specify the package in which the classes are organized */
+/** Specify the package in which the class resides */
 package library;
 
+/** Import some libraries to be used in the code */
 import library.hardware.CardReader;
 import library.hardware.Display;
 import library.hardware.Printer;
 import library.hardware.Scanner;
-
 import java.util.Calendar;
 import java.util.Date;
-
 import library.daos.BookHelper;
 import library.daos.BookMapDAO;
 import library.daos.LoanHelper;
@@ -23,24 +22,21 @@ import library.interfaces.entities.ILoan;
 import library.interfaces.entities.IMember;
 
 /**
-*@author Gourav Pathela
+*@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
 *@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy
-*@due date 23.09.2016
-*@version 1.0
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
 *
-*		The Main class is a program that is starting point of whole of the program. Here we populate IBook and IMember with sample data, also we made sample
-*		loans to test all methods like maxed out fine, overdue loans, member with fine but not over limit. 
+*The Main class sets several GUI objects to visible and creates an array of books and members
+*with different statuses. 
 */
 
 /** Start of the class Main */
 public class Main {
 
-	/**
-	 * Declare the variable for the class with private visibility
-	 * modifiers
-	 */
+	/** Declare and initialise variables with private access modifiers */
 	private static CardReader reader;
 	private static Scanner scanner;
 	private static Printer printer;
@@ -50,17 +46,17 @@ public class Main {
 	private static IMemberDAO memberDAO;
 	// private static BorrowUC_CTL control;
 
-	public static void showGUI() { // Setting visibility of all GUI components
-									// to true.
+	/** The method showGUI displays the reader, scanner, printer, and display GUIs to visible */
+	public static void showGUI() { 
 		reader.setVisible(true);
 		scanner.setVisible(true);
 		printer.setVisible(true);
 		display.setVisible(true);
 	}
 
-	public static void main(String[] args) { // Making objects of the classes we
-												// need to run the program
-
+	/** Start of the main method */
+	public static void main(String[] args) { 
+		/** Declare variables */
 		bookDAO = new BookMapDAO(new BookHelper());
 		loanDAO = new LoanMapDAO(new LoanHelper());
 		memberDAO = new MemberMapDAO(new MemberHelper());
@@ -71,16 +67,11 @@ public class Main {
 		display = new Display();
 		new BorrowUC_CTL(reader, scanner, printer, display, bookDAO, loanDAO, memberDAO);
 
-		IBook[] book = new IBook[10]; // Declaring an array of IBook type with
-										// size of 10
-		IMember[] member = new IMember[6]; // Declaring an array of IMember with
-											// size of 6
+		/** Create an array of 10 IBook objects and 6 IMember objects */
+		IBook[] book = new IBook[10]; 
+		IMember[] member = new IMember[6];
 
-		book[0] = bookDAO.addBook("Leo Tolstoy", "Anna Karenina", "CA001"); // Populating
-																			// array
-																			// with
-																			// sample
-																			// data
+		book[0] = bookDAO.addBook("Leo Tolstoy", "Anna Karenina", "CA001"); 
 		book[1] = bookDAO.addBook("Gustave Flaubert", "Madame Bovary", "CA002");
 		book[2] = bookDAO.addBook("Leo Tolstoy", "War and Peace", "CA003");
 		book[3] = bookDAO.addBook("F. Scott Fitzgerald", "The Great Gatsby", "CA004");
@@ -92,17 +83,17 @@ public class Main {
 		book[9] = bookDAO.addBook("William Shakespeare", "Hamlet", "CA010");
 
 		member[0] = memberDAO.addMember("Gourav", "Pathela", "0001", "gpathela@yahoo.com");
-		member[1] = memberDAO.addMember("Jino", "Rousseau", "0002", "jinoRousseau@hotmail.com");
+		member[1] = memberDAO.addMember("Jino", "Rousseau", "0002", "jinorousseau@hotmail.com");
 		member[2] = memberDAO.addMember("Chiranjivi", "Bashyal", "0003", "chiranjivi@gmail.com");
 		member[3] = memberDAO.addMember("Ramanpreet", "Kaur", "0004", "rpreet@gmail.com");
 		member[4] = memberDAO.addMember("Tom", "Cruise", "0005", "tom@cruise.com");
 		member[5] = memberDAO.addMember("Brad", "Pitt", "0006", "bradpitt@live.com");
 
-		Calendar cal = Calendar.getInstance(); // Making an object of Calendar
-												// class to get current date
+		/** Create an object Calendar and get the current time */
+		Calendar cal = Calendar.getInstance(); 
 		Date now = cal.getTime();
 
-		// create a member with overdue loans
+		/** Create a member with overdue loans */
 		for (int i = 0; i < 2; i++) {
 			ILoan loan = loanDAO.createLoan(member[1], book[i]);
 			loanDAO.commitLoan(loan);
@@ -112,30 +103,29 @@ public class Main {
 		Date checkDate = cal.getTime();
 		loanDAO.updateOverDueStatus(checkDate);
 
-		// create a member with maxed out unpaid fines
+		/** create a member with maxed out unpaid fines */
 		member[2].addFine(10.0f);
 
-		// create a member with maxed out loans
+		/** create a member with maxed out loans */
 		for (int i = 2; i < 7; i++) {
 			ILoan loan = loanDAO.createLoan(member[3], book[i]);
 			loanDAO.commitLoan(loan);
 		}
 
-		// a member with a fine, but not over the limit
+		/** a member with a fine, but not over the limit */
 		member[4].addFine(5.0f);
 
-		// a member with a couple of loans but not over the limit
+		/** a member with a couple of loans but not over the limit */
 		for (int i = 7; i < 9; i++) {
 			ILoan loan = loanDAO.createLoan(member[5], book[i]);
 			loanDAO.commitLoan(loan);
 		}
 
-		// start the GUI
+		/** Start the GUI */
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				showGUI();
 			}
 		});
-	}
-
-}
+	} // End of the main method
+} // End of the class Main
