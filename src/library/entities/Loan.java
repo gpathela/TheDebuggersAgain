@@ -46,8 +46,9 @@ public class Loan implements ILoan {
 				&& issueDate.compareTo(dueDate) <= 0);
 	}
 
-	/* A method to save the loan. */
+	/** Override the commit method */
 	@Override
+	/** The method commit allows a book to be committed to a loan */
 	public void commit(int loanId) {
 		if (!(state == ELoanState.PENDING)) {
 			throw new RuntimeException(String.format("Loan : commit : incorrect state transition  : %s -> %s\n", state,
@@ -63,7 +64,9 @@ public class Loan implements ILoan {
 	}
 
 	/* A method to release the loan. Called when book is returned. */
+	/** Override the complete method */
 	@Override
+	/** The method complete */
 	public void complete() {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
 			throw new RuntimeException(String.format("Loan : complete : incorrect state transition  : %s -> %s\n",
@@ -72,13 +75,17 @@ public class Loan implements ILoan {
 		state = ELoanState.COMPLETE;
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method */
 	public boolean isOverDue() {
 		return (state == ELoanState.OVERDUE);
 	}
 
 	/* A method to check if book is overdue. */
+	/** Override the  method */
 	@Override
+	/** The method */
 	public boolean checkOverDue(Date currentDate) {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
 			throw new RuntimeException(String.format("Loan : checkOverDue : incorrect state transition  : %s -> %s\n",
@@ -91,34 +98,40 @@ public class Loan implements ILoan {
 	}
 
 	/* Get method to return member who borrowed */
+	/** Override the  method */
+	/** The method */
 	@Override
 	public IMember getBorrower() {
 		return member;
 	}
 
 	/* Get method to return book which has been borrowed */
+	/** Override the  method */
 	@Override
+	/** The method */
 	public IBook getBook() {
 		return book;
 	}
 
 	/* Get method to return loan ID */
+	/** Override the  method */
 	@Override
+	/** The method */
 	public int getID() {
 		return id;
 	}
 
-	/* Get method to return status of the loan */
+	/** The method getState return the state of a Loan object */
 	public ELoanState getState() {
 		return state;
 	}
 
-	/* To String method to display & return results in desired format. */
+	/** Override the toString method */
 	@Override
+	/** The method toString returns the details of a Loan object */
 	public String toString() {
 		return (String.format("Loan ID:  %d\nAuthor:   %s\nTitle:    %s\nMember: %s %s\nIssued On: %s\nDue Date: %s",
 				id, book.getAuthor(), book.getTitle(), member.getFirstName(), member.getLastName(),
 				DateFormat.getDateInstance().format(issueDate), DateFormat.getDateInstance().format(dueDate)));
 	}
-
-}
+} // End of the Loan class
