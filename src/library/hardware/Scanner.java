@@ -25,12 +25,12 @@ import javax.swing.JButton;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The class Scanner 
+*The class Scanner creates a Scanner object, has a method to enable a button and text field
+*and has a method to add a listener.  
 */
 
 /** Start of the class Scanner */
 public class Scanner extends JFrame implements IScanner {
-
 	/** Declare and initialise variables with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JTextField textField;

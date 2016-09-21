@@ -1,10 +1,11 @@
+/** Specify the package in which the class resides */
 package library.panels.borrow;
 
+/** Import some libraries to be used in the code */
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -14,9 +15,20 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import library.interfaces.IBorrowUIListener;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*
+*The class ScanningPanel 
+*/
 
+/** Start of the class ScanningPanel */
 public class ScanningPanel extends ABorrowPanel {
-
+	/** Declare and initialise variables with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JLabel lblBorrowerId;
 	private JLabel lblBorrowerName;
@@ -31,10 +43,7 @@ public class ScanningPanel extends ABorrowPanel {
 	private JTextArea currentBookTA;
 	private JTextArea pendingLoanListTA;
 	
-
-	/**
-	 * Create the panel.
-	 */
+	/** The constructor for a ScanningPanel object has a parameter of one variable */
 	public ScanningPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(null, "Scanning", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -174,11 +183,10 @@ public class ScanningPanel extends ABorrowPanel {
 		lblErrMesg.setForeground(Color.RED);
 		lblErrMesg.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblErrMesg.setBounds(12, 592, 434, 29);
-		this.add(lblErrMesg);
-		
+		this.add(lblErrMesg);	
 	}
-
-
+	
+	/** Override the  method */
 	@Override
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		lblBorrowerId.setText(Integer.valueOf(memberID).toString());
@@ -186,25 +194,25 @@ public class ScanningPanel extends ABorrowPanel {
 		lblBorrowerContact.setText(memberPhone);
 	}
 
-
+	/** Override the  method */
 	@Override
 	public void displayExistingLoan(String loanDetails) {
 		insertStringInTA(loanDetails, existingLoanListTA, true);
 	}
 	
-
+	/** Override the  method */
 	@Override
 	public void displayOutstandingFineMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has outstanding fines. Amount owing: $%.2f", amountOwing ));
 	}
 	
-
+	/** Override the  method */
 	@Override
 	public void displayScannedBookDetails(String bookDetails) {
 		currentBookTA.setText(bookDetails);
 	}
 
-
+	/** Override the  method */
 	@Override
 	public void displayPendingLoan(String loanDetails) {
 		pendingLoanListTA.setText(loanDetails);
@@ -223,10 +231,9 @@ public class ScanningPanel extends ABorrowPanel {
 		ta.setCaretPosition(0);		
 	}
 	
+	/** Override the  method */
 	@Override
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
 	}
-
-
-}
+} // End of the class ScanningPanel
