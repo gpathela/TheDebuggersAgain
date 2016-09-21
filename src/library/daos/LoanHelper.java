@@ -13,7 +13,7 @@ import library.interfaces.entities.IMember;
 *@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
 *@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@lecturer Dr Recep Ulusoy
 *@due date 29.09.2016
 *@version 1.2
 */
@@ -25,7 +25,6 @@ public class LoanHelper implements ILoanHelper {
 	@Override
 	/** The method makeLoan makes a loan and returns the new made loan */
 	public ILoan makeLoan(IBook book, IMember borrower, Date borrowDate, Date dueDate) {
-
 		return new Loan(book, borrower, borrowDate, dueDate);
 	}
 } // End of the class LoanHelper
