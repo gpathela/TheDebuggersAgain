@@ -23,7 +23,8 @@ import java.awt.event.ActionListener;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The class RestrictedPanel
+*The class RestrictedPanel creates a panel and contains methods to display existing loans, 
+*loan limits, fine limits, outstanding fines, member details, and overdue messages.
 */
 
 /** Start of the class RestrictedPanel */
@@ -171,27 +172,27 @@ public class RestrictedPanel extends ABorrowPanel {
 		lblErrMesg.setForeground(Color.RED);
 		lblErrMesg.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblErrMesg.setBounds(12, 592, 434, 29);
-		this.add(lblErrMesg);
-		
+		this.add(lblErrMesg);	
 	}
 
-	/** Override the  method */
+	/** Override the displayMemberDetails method */
 	@Override
+	/** The method displayMemberDetails output the details of a member to the screen */
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		lblBorrowerName.setText(memberID + " " + memberName);
 		lblBorrowerContact.setText(memberPhone);
 	}
 
-	/** Override the  method */
+	/** Override the displayOverDueMessage method */
 	@Override
-	/** The method  */
+		/** The method displayOverDueMessage output a message to the screen when a borrower has overdue loans */
 	public void displayOverDueMessage() {
 		lblOverdue.setText("Borrower has overdue loans");
 	}
 
-	/** Override the  method */
+	/** Override the displayAtLoanLimitMessage method */
 	@Override
-	/** The method  */
+	/** The method displayAtLoanLimitMessage outputs a message to the screen when a borrower reaches their limit */
 	public void displayAtLoanLimitMessage() {
 		lblLoanLimit.setText("Borrower has reached maximum number of borrowed items");
 	}
