@@ -23,7 +23,8 @@ import library.interfaces.IBorrowUIListener;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The class ScanningPanel 
+*The class ScanningPanel creates a ScanningPanel object and displays the details of a member,
+*existing loans, outstanding fine message, scanned books, pending loans, and error messages to the screen.
 */
 
 /** Start of the class ScanningPanel */
@@ -186,38 +187,44 @@ public class ScanningPanel extends ABorrowPanel {
 		this.add(lblErrMesg);	
 	}
 	
-	/** Override the  method */
+	/** Override the displayMemberDetails method */
 	@Override
+	/** The method displayMemberDetails outputs the details of a member to the screen */
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		lblBorrowerId.setText(Integer.valueOf(memberID).toString());
 		lblBorrowerName.setText(memberName);
 		lblBorrowerContact.setText(memberPhone);
 	}
 
-	/** Override the  method */
+	/** Override the displayExistingLoan method */
 	@Override
+	/** The method displayExistingLoan outputs the details on an existing loan to the screen */
 	public void displayExistingLoan(String loanDetails) {
 		insertStringInTA(loanDetails, existingLoanListTA, true);
 	}
 	
-	/** Override the  method */
+	/** Override the displayOutstandingFineMessage method */
 	@Override
+	/** The method displayOutstandingFineMessage outputs a message of outstanding fine to the screen */
 	public void displayOutstandingFineMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has outstanding fines. Amount owing: $%.2f", amountOwing ));
 	}
 	
-	/** Override the  method */
+	/** Override the displayScannedBookDetails method */
 	@Override
+	/** The method displayScannedBookDetails outputs the details of a scanned book to the screen */
 	public void displayScannedBookDetails(String bookDetails) {
 		currentBookTA.setText(bookDetails);
 	}
 
-	/** Override the  method */
+	/** Override the displayPendingLoan method */
 	@Override
+	/** The method displayPendingLoan outputs a list of pending loans to the screen */
 	public void displayPendingLoan(String loanDetails) {
 		pendingLoanListTA.setText(loanDetails);
 	}
 
+	/** The method insertStringInTA appends a text to a text area in the created panel */
 	private void insertStringInTA(String string, JTextArea ta, boolean append) {
 		StringBuilder bld = new StringBuilder();
 		if (append) {
@@ -231,8 +238,9 @@ public class ScanningPanel extends ABorrowPanel {
 		ta.setCaretPosition(0);		
 	}
 	
-	/** Override the  method */
+	/** Override the displayErrorMessage method */
 	@Override
+	/** The method displayErrorMessage outputs an error message to the screen */
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
 	}
