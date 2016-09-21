@@ -21,18 +21,17 @@ import java.awt.Color;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The class SwipeCardPanel
+*The class SwipeCardPanel creates a SwipeCardPanel object and displays an error message 
+*when needed.
 */
 
 /** Start of the class SwipeCardPanel */
 public class SwipeCardPanel extends ABorrowPanel {
-
+	/** Declare and initialise variables with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JLabel lblErrMesg;
 
-	/**
-	 * Create the panel.
-	 */
+	/** The constructor for a SwipeCardPanel object which takes a parameter of one variable */
 	public SwipeCardPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Borrow Book - Initialized", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
@@ -63,7 +62,9 @@ public class SwipeCardPanel extends ABorrowPanel {
 
 	}
 
+	/** Override the displayErrorMessage method */
 	@Override
+	/** The method displayErrorMessage outputs an error message to the screen */
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
 	}	
