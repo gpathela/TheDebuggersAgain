@@ -27,7 +27,7 @@ import library.interfaces.entities.IMember;
 */
 
 /** Start of the class LoanMapDAO */
-public class LoanMapDAO implements ILoanDAO {
+public class LoanMapDAO implements ILoanDAO { LoanMapDAO implements IMapDAO
 
 	/**
 	 * Declare the variable for the class with private visibility modifiers
