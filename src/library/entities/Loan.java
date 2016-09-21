@@ -114,7 +114,7 @@ public class Loan implements ILoan {
 		return book;
 	}
 
-	/* Get method to return loan ID */
+	/* Get method to return loan ID*/
 	@Override
 	public int getID() {
 		return id;
