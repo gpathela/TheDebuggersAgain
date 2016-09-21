@@ -120,7 +120,7 @@ public class Loan implements ILoan {
 		return id;
 	}
 
-	/* Get method to return status of the loan */
+	/* Get method to return status of the loan*/
 	public ELoanState getState() {
 		return state;
 	}
