@@ -1,10 +1,10 @@
+/** Specify the package in which the class resides */
 package library.panels.borrow;
 
+/** Import some libraries to be used in the code */
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
-
 import library.interfaces.IBorrowUIListener;
-
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
@@ -13,7 +13,18 @@ import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
 import java.awt.Color;
 
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*
+*The class SwipeCardPanel
+*/
 
+/** Start of the class SwipeCardPanel */
 public class SwipeCardPanel extends ABorrowPanel {
 
 	private static final long serialVersionUID = 1L;
@@ -55,7 +66,5 @@ public class SwipeCardPanel extends ABorrowPanel {
 	@Override
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
-	}
-
-	
-}
+	}	
+} // End of the class SwipeCardPanel
