@@ -10,7 +10,7 @@ import library.interfaces.daos.IMemberDAO;
 import library.interfaces.entities.IMember;
 import library.interfaces.daos.IMemberHelper;
 
-public class MemberMapDAO implements IMemberDAO {
+public class MemberMapDAO implements IMemberDAO { //MemberMapDAO implements IMemberDAO
 
 	private IMemberHelper helper;
 	private Map<Integer, IMember> memberMap;
