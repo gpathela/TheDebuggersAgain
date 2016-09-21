@@ -15,11 +15,11 @@ import library.interfaces.daos.IMemberHelper;
 *@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
 *@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@lecturer Dr Recep Ulusoy 
 *@due date 29.09.2016
 *@version 1.2
 *
-*The class MemberMapDAO
+*The class MemberMapDAO creates member map objects and contains methods to manipulate the map.
 */
 
 /** Start of the class MemberMapDAO */
