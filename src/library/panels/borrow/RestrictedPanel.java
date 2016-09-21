@@ -1,23 +1,34 @@
+/** Specify the package in which the class resides */
 package library.panels.borrow;
 
+/** Import some libraries to be used in the code */
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.UIManager;
 import javax.swing.border.TitledBorder;
-
 import library.interfaces.IBorrowUIListener;
-
 import javax.swing.JButton;
 import javax.swing.JLabel;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class RestrictedPanel extends ABorrowPanel {
+/**
+*@reviewer Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*
+*The class RestrictedPanel
+*/
 
+/** Start of the class RestrictedPanel */
+public class RestrictedPanel extends ABorrowPanel {
+	/** Declare and initialise variables with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JLabel lblBorrowerId;
 	private JLabel lblBorrowerName;
@@ -217,5 +228,4 @@ public class RestrictedPanel extends ABorrowPanel {
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
 	}
-
-}
+} // End of the class RestrictedPanel
