@@ -47,8 +47,7 @@ public class LoanMapDAO implements ILoanDAO {
 		cal = Calendar.getInstance();
 	}
 
-	public LoanMapDAO(ILoanHelper helper, Map<Integer, ILoan> loanMap) { // Public constructor that take
-																			// object
+	public LoanMapDAO(ILoanHelper helper, Map<Integer, ILoan> loanMap) { // Public constructor that take object
 																			// of
 																			// ILoanHelper
 																			// class
