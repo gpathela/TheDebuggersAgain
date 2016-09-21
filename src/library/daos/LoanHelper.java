@@ -22,7 +22,7 @@ import library.interfaces.entities.IMember;
 */
 
 /** Start of the LoanHelper*/
-public class LoanHelper implements ILoanHelper {
+public class LoanHelper implements ILoanHelper { //LoanHelper implements ILoanHelper
 
 	@Override
 	public ILoan makeLoan(IBook book, IMember borrower, Date borrowDate, Date dueDate) {
