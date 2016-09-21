@@ -41,6 +41,7 @@ public class TestLoan { // A class to test loan class
 
 		System.out.println("Made a test Member");
 		
+		
 		Loan testLoan = new Loan(testBook, testMember, issueDate, dueDate);
 		
 		System.out.println("Made a test Loan using testMember & testBook");
