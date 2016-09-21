@@ -51,8 +51,7 @@ public class Loan implements ILoan {
 	}
 
 	/*
-	 * A method to test if all variables are available. It throws exception if
-	 * something is null
+	 * A method to test if all variables are available. It throws exception if something is null
 	 */
 	private boolean sane(IBook book, IMember member, Date issueDate, Date dueDate) {
 		return (book != null && member != null && issueDate != null && dueDate != null
