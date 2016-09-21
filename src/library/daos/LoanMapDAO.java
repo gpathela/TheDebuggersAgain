@@ -48,8 +48,7 @@ public class LoanMapDAO implements ILoanDAO {
 	}
 
 	public LoanMapDAO(ILoanHelper helper, Map<Integer, ILoan> loanMap) { // Public constructor that take object of ILoanHelper class and Map
-																			// objects
-																			// of ILoan
+																			// objects of ILoan
 		this(helper);
 		if (loanMap == null) {
 			throw new IllegalArgumentException(String.format("LoanMapDAO : constructor : loanMap cannot be null."));
