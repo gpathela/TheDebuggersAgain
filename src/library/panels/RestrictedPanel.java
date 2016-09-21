@@ -28,7 +28,7 @@ import java.awt.event.ActionListener;
 
 /** Start of the class RestrictedPanel */
 public class RestrictedPanel extends ABorrowPanel {
-
+	/** Declare and initialise variables with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	private JLabel lblBorrowerName;
 	private JLabel lblBorrowerContact;
@@ -40,9 +40,7 @@ public class RestrictedPanel extends ABorrowPanel {
 	private JTextArea existingLoanListTA;
 	private JLabel lblErrMesg;
 
-	/**
-	 * Create the panel.
-	 */
+	/** The constructor for a RestrictedPanel object which takes a parameter on one variable */
 	public RestrictedPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(null, "Scanning", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -177,35 +175,44 @@ public class RestrictedPanel extends ABorrowPanel {
 		
 	}
 
+	/** Override the  method */
 	@Override
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		lblBorrowerName.setText(memberID + " " + memberName);
 		lblBorrowerContact.setText(memberPhone);
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public void displayOverDueMessage() {
 		lblOverdue.setText("Borrower has overdue loans");
 	}
 
-	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public void displayAtLoanLimitMessage() {
 		lblLoanLimit.setText("Borrower has reached maximum number of borrowed items");
 	}
 
-	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public void displayOutstandingFineMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has outstanding fines. Amount owing: $%.2f", amountOwing ));
 	}
 
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public void displayOverFineLimitMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has reached fine limit. Amount owing: $%.2f", amountOwing ));
 	}
 	
+	/** Override the  method */
 	@Override
+	/** The method  */
 	public void displayExistingLoan(String loanDetails) {
 		StringBuilder bld = new StringBuilder(existingLoanListTA.getText());
 		bld.append(loanDetails).append("\n\n");

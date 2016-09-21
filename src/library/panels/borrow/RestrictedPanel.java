@@ -41,9 +41,7 @@ public class RestrictedPanel extends ABorrowPanel {
 	private JTextArea existingLoanListTA;
 	private JLabel lblErrMesg;
 
-	/**
-	 * Create the panel.
-	 */
+	/** The constructor for a RestrictedPanel object which takes a parameter on one variable */
 	public RestrictedPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(null, "Scanning", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -188,6 +186,7 @@ public class RestrictedPanel extends ABorrowPanel {
 		
 	}
 
+	/** Override the  method */
 	@Override
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		lblBorrowerId.setText(Integer.valueOf(memberID).toString());
@@ -195,35 +194,38 @@ public class RestrictedPanel extends ABorrowPanel {
 		lblBorrowerContact.setText(memberPhone);
 	}
 
+	/** Override the  method */
 	@Override
 	public void displayOverDueMessage() {
 		lblOverdue.setText("Borrower has overdue loans");
 	}
 
-	
+	/** Override the  method */
 	@Override
 	public void displayAtLoanLimitMessage() {
 		lblLoanLimit.setText("Borrower has reached maximum number of borrowed items");
 	}
 
-	
+	/** Override the  method */
 	@Override
 	public void displayOutstandingFineMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has outstanding fines. Amount owing: $%.2f", amountOwing ));
 	}
 
-
+	/** Override the  method */
  	@Override
 	public void displayOverFineLimitMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has exceeded fine limit. Amount owing: $%.2f", amountOwing ));
 	}
 	
+	/** Override the  method */
 	@Override
 	public void displayExistingLoan(String loanDetails) {
 		existingLoanListTA.setText(loanDetails);
 		existingLoanListTA.setCaretPosition(0);		
 	}
 
+	/** Override the  method */
 	@Override
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
