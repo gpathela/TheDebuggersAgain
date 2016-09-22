@@ -10,6 +10,15 @@ import library.interfaces.hardware.IPrinter;
 
 import javax.swing.JTextArea;
 
+/**
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
+
 public class Printer extends JFrame implements IPrinter {
 
 	private static final long serialVersionUID = 1L;
