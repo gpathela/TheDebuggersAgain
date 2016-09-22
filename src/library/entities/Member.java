@@ -89,6 +89,7 @@ public class Member implements IMember {
 	
 	/** Override the hasFinesPayable method */
 	@Override
+	/** The  hasFinesPayable method returns true or false if a member fines to pay */
 	public boolean hasFinesPayable() {
 		boolean b = totalFines > 0.0f;
 		return b;
