@@ -32,6 +32,8 @@ import javax.swing.JButton;
 /** Start of the class Scanner */
 public class Scanner extends JFrame implements IScanner {
 
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private static final long serialVersionUID = 1L;
 	private JTextField textField;
 	private JButton btnScan;
