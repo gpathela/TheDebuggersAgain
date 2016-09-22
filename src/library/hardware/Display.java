@@ -22,6 +22,7 @@ public class Display extends JFrame implements IDisplay {
 		with private visibility */
 	private static final long serialVersionUID = 1L;
 	
+	/** The no args-constructor(default constructor) to create a Display object */ 
 	public Display() {
 		setTitle("Display");
 		setBounds(500, 50, 470, 680);
