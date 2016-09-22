@@ -6,6 +6,16 @@ import library.entities.Book;
 import library.interfaces.daos.IBookHelper;
 import library.interfaces.entities.IBook;
 
+/**
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.0
+*
+*/
+
 public class BookHelper implements IBookHelper {
 
 	@Override
