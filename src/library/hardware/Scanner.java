@@ -110,7 +110,7 @@ public class Scanner extends JFrame implements IScanner {
 
 	}
 	
-	/** Override the addListener method */
+	/** Override the addListener method to adds a listener to the class */
 	@Override
 	public void addListener(IScannerListener listener) {
 		this.listener = listener;
