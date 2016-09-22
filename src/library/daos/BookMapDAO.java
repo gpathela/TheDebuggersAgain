@@ -20,9 +20,10 @@ import library.interfaces.entities.IBook;
 * @due date 23.09.2016
 * @version 1.0
 *
-*The BookMapDAO class will display a GUI with a title appearing on top of 
-*the main frame, six text fields with appropriate labels to take user inputs, 
-*two buttons that will be used to trigger actions for calculations.
+* The BookMapDAO class will display a GUI 
+* there is a title appearing on the top of the main frame of GUI
+* some text fields with appropriate labels to take user inputs, 
+* and two buttons that will be used to trigger actions for calculations.
 *
 */
 
