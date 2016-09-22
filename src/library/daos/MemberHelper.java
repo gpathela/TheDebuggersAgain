@@ -20,6 +20,7 @@ import library.interfaces.entities.IMember;
 *
 */
 
+/** Start of the class MemberHelper */
 public class MemberHelper implements IMemberHelper {
 
 	@Override
