@@ -99,7 +99,7 @@ public class CardReader extends JFrame implements ICardReader {
 		panel.add(btnReadCard);
 	}
 
-
+	/** Override the setEnabled method to enable the read cars buttn and textField */
 	@Override
 	public void setEnabled(boolean enabled) {
 		btnReadCard.setEnabled(enabled);
