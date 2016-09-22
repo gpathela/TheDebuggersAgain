@@ -81,6 +81,7 @@ public class Member implements IMember {
 	
 	/** Override the hasReachedLoanLimit method */
 	@Override
+	/** The hasReachedLoanLimit method returns true or false if a member has reached their loan limit */
 	public boolean hasReachedLoanLimit() {
 		boolean b = loanList.size() >= IMember.LOAN_LIMIT;
 		return b;
