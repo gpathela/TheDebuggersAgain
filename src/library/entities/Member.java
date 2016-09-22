@@ -131,7 +131,7 @@ public class Member implements IMember {
 		updateState();
 	}
 	
-	/** Override the addLoan method */
+	/** Override the addLoan method to adds and updates the list of loans  */
 	@Override
 	public void addLoan(ILoan loan) {
 		if (!borrowingAllowed()) {
