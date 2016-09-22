@@ -29,7 +29,9 @@ import library.interfaces.entities.IBook;
 
 /** Start of the class BookMapDAO */
 public class BookMapDAO implements IBookDAO {
-
+	
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private int nextId;
 	private Map<Integer, IBook> bookMap;
 	private IBookHelper helper;
