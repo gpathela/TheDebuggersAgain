@@ -30,7 +30,7 @@ public class Display extends JFrame implements IDisplay {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		
 	}
 
-
+	/** Override the setDisplay method */
 	@Override
 	public void setDisplay(JPanel panel) {
         getContentPane().add(panel, null);		
