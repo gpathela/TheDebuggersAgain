@@ -156,7 +156,7 @@ public class Book implements IBook {//the Book class implements IBook
 	}
 
 	/* To String method to display & return results in desired format. */
-	@Override
+	@Override	//Override the toString method
 	public String toString() {
 		return String.format("Id: %d\nAuthor: %s\nTitle: %s\nCall Number %s",
 				id, author, title, callNumber);
