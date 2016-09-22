@@ -1,3 +1,4 @@
+/** Import some Java libraries and specify the package in which the classes resides */
 package library.hardware;
 
 import javax.swing.JFrame;
@@ -17,13 +18,26 @@ import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class CardReader extends JFrame implements ICardReader {
+/**
+* @reviewer Chiranjivi Bashyal
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
 
+/** Start of the class CardReader */
+public class CardReader extends JFrame implements ICardReader {
+	
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private static final long serialVersionUID = 1L;
 	private JTextField textField;
 	private JButton btnReadCard;
 	private ICardReaderListener listener;
 
+	/** The no args-constructor(default constructor) to create a CardReader object  */
 	public CardReader() {
 		setTitle("Card Reader");
         setBounds(50, 50, 400, 200);
@@ -85,16 +99,16 @@ public class CardReader extends JFrame implements ICardReader {
 		panel.add(btnReadCard);
 	}
 
-
+	/** Override the setEnabled method to enable the read cars buttn and textField */
 	@Override
 	public void setEnabled(boolean enabled) {
 		btnReadCard.setEnabled(enabled);
 		textField.setEditable(enabled);
 	}
 
-
+	/** Override the addListener method to adds a listener to the card reader*/
 	@Override
 	public void addListener(ICardReaderListener listener) {
 		this.listener = listener;		
 	}
-}
+}// End of the class CardReader
