@@ -122,6 +122,7 @@ public class MemberMapDAO implements IMemberDAO {
 	
 	/** Override the findMembersByNames method */
 	@Override
+	/** The findMembersByNames method returns an unmodifiable list by member's name */
 	public List<IMember> findMembersByNames(String firstName, String lastName) {
 		if ( firstName == null || firstName.isEmpty() || lastName == null || lastName.isEmpty()) {
 			throw new IllegalArgumentException(
