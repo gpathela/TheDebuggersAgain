@@ -119,7 +119,8 @@ public class MemberMapDAO implements IMemberDAO {
 		}
 		return Collections.unmodifiableList(list);
 	}
-
+	
+	/** Override the findMembersByNames method */
 	@Override
 	public List<IMember> findMembersByNames(String firstName, String lastName) {
 		if ( firstName == null || firstName.isEmpty() || lastName == null || lastName.isEmpty()) {
