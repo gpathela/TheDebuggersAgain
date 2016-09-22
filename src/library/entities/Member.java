@@ -103,12 +103,13 @@ public class Member implements IMember {
 		return b;
 	}
 	
-	/** Override the getFineAmount method */
+	/** Override the getFineAmount method */ 
 	@Override
 	public float getFineAmount() {
 		return totalFines;
 	}
-
+	
+	/** Override the addFine method */
 	@Override
 	public void addFine(float fine) {
 		if (fine < 0) {
