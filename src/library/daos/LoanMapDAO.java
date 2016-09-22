@@ -176,4 +176,4 @@ public class LoanMapDAO implements ILoanDAO {
 		loanMap.put(id, loan);
 	}
 
-}
+}// End of the class LoanMapDAO
