@@ -50,27 +50,17 @@ public class LoanMapDAO implements ILoanDAO {
 		loanMap = new HashMap<Integer, ILoan>();
 		cal = Calendar.getInstance();
 	}
-
-	public LoanMapDAO(ILoanHelper helper, Map<Integer, ILoan> loanMap) { // Public
-																			// constructor
-																			// that
-																			// take
-																			// object
-																			// of
-																			// ILoanHelper
-																			// class
-																			// and
-																			// Map
-																			// objects
-																			// of
-																			// ILoan
+	
+	/** The public constructor LoanMapDAO takes an object of ILoanHelper class and Map objects of ILoan */
+	public LoanMapDAO(ILoanHelper helper, Map<Integer, ILoan> loanMap) { 
 		this(helper);
 		if (loanMap == null) {
 			throw new IllegalArgumentException(String.format("LoanMapDAO : constructor : loanMap cannot be null."));
 		}
 		this.loanMap = loanMap;
 	}
-
+	
+	/** Override the getLoanByID method */
 	@Override
 	public ILoan getLoanByID(int id) {	//Method to get loan by Id
 		if (loanMap.containsKey(Integer.valueOf(id))) {
