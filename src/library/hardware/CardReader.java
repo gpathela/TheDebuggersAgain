@@ -111,4 +111,4 @@ public class CardReader extends JFrame implements ICardReader {
 	public void addListener(ICardReaderListener listener) {
 		this.listener = listener;		
 	}
-}
+}// End of the class CardReader
