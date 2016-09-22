@@ -136,7 +136,8 @@ public class MemberMapDAO implements IMemberDAO {
 		}
 		return Collections.unmodifiableList(list);
 	}
-
+	
+	/** The getNextId method returns the next ID of a Member object */
 	private int getNextId() {
 		return nextID++;
 	}
