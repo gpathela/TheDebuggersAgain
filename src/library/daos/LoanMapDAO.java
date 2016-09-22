@@ -155,7 +155,7 @@ public class LoanMapDAO implements ILoanDAO {
 		return ++nextID;
 	}
 	
-	/** Override the  method */
+	/** Override the createLoan method */
 	@Override
 	/** The createLoan method returns a created loan based on a book and borrower objects*/
 	public ILoan createLoan(IMember borrower, IBook book) {	//Method to create loan
