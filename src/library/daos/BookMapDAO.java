@@ -139,4 +139,4 @@ public class BookMapDAO implements IBookDAO {
 		return nextId++;
 	}
 
-}
+}// End of the class class BookMapDAO
