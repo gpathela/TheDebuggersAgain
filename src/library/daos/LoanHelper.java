@@ -18,8 +18,8 @@ import library.interfaces.entities.IMember;
 * @due date 23.09.2016
 * @version 1.0
 *
-*		The LoanHelper class is a class that implements ILoanHelper. 
-*		This class makes a object of ILoanHelper and returns new Loan.  
+* The LoanHelper class is a class that implements ILoanHelper. 
+* The class creates an object of ILoanHelper and returns new Loan.  
 */
 
 /** Start of the LoanHelper  class*/
