@@ -41,9 +41,16 @@ public class TestLoan { // A class to test loan class
 
 		System.out.println("Made a test Member");
 		
+		//Testing member First Name
 		
-		Loan testLoan = new Loan(testBook, testMember, issueDate, dueDate);
-		
-		System.out.println("Made a test Loan using testMember & testBook");
+		System.out.println("Test to check First Name. Out put shoule be 'testFirstName'");
+		if(testMember.getFirstName().equals("testFirstName")){
+			System.out.println("Output is: "+testMember.getFirstName());
+			System.out.println("Result: Successfull");
+		}
+		else {
+			System.out.println("Output is: "+testMember.getFirstName());
+			System.out.println("Result: Failed");
+		}
 	}
 }
