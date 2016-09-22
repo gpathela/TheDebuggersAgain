@@ -20,9 +20,10 @@ import library.interfaces.entities.IMember;
 *
 */
 
-/** Start of the class MemberHelper */
+/** Start of the class MemberHelper */ 	
 public class MemberHelper implements IMemberHelper {
-
+	
+	/** Override the makeMember method */
 	@Override
 	public IMember makeMember(String firstName, String lastName,
 			String contactPhone, String emailAddress, int id) {
