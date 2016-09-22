@@ -1,3 +1,4 @@
+/** Import some Java libraries and specify the package in which the classes resides */
 package library.panels.borrow;
 
 import javax.swing.JPanel;
@@ -12,14 +13,25 @@ import library.interfaces.IBorrowUIListener;
 
 import java.awt.Font;
 
-public class ConfirmLoanPanel extends ABorrowPanel {
+/**
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
 
+/** Start of the class ConfirmLoanPanel */
+public class ConfirmLoanPanel extends ABorrowPanel {
+	
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private static final long serialVersionUID = 1L;
 	private JTextArea loanListTA;
 
-	/**
-	 * Create the panel.
-	 */
+	/** The constructor to create a ConfirmLoanPanel object  */
+	
 	public ConfirmLoanPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(null, "Confirm Loans", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -70,7 +82,7 @@ public class ConfirmLoanPanel extends ABorrowPanel {
 		add(button);
 	}
 
-
+	/** Override the displayConfirmingLoan method to displays the confirmation of a loan to the screen*/
 	@Override
 	public void displayConfirmingLoan(String loanDetails) {
 		loanListTA.setText(loanDetails);
@@ -78,4 +90,4 @@ public class ConfirmLoanPanel extends ABorrowPanel {
 	}
 
 
-}
+}// End of the class ConfirmLoanPanel
