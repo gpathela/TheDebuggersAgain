@@ -9,6 +9,15 @@ import library.interfaces.entities.ILoan;
 import library.interfaces.entities.IMember;
 import library.interfaces.entities.EMemberState;
 
+/**
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
+
 
 public class Member implements IMember {
 
