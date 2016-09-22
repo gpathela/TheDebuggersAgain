@@ -55,6 +55,7 @@ public class BookMapDAO implements IBookDAO {
 		this.bookMap = bookMap;
 	}
 	
+	/** Override the addBook method */
 	@Override
 	public IBook addBook(String author, String title, String callNo) {
 		int id = getNextId();
