@@ -141,7 +141,7 @@ public class Member implements IMember {
 		updateState();
 	}
 	
-	/** Override the getLoans method */
+	/** Override the getLoans method to returns a list of loans of a member */
 	@Override
 	public List<ILoan> getLoans() {
 		return Collections.unmodifiableList(loanList);
