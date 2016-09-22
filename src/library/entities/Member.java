@@ -69,6 +69,7 @@ public class Member implements IMember {
 	
 	/** Override the hasOverDueLoans method */
 	@Override
+	/** The hasOverDueLoans method returns true or false if a member has overdue loans */
 	public boolean hasOverDueLoans() {
 		for (ILoan loan : loanList) {
 			if (loan.isOverDue()) {
