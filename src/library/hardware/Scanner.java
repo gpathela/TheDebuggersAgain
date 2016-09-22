@@ -109,7 +109,8 @@ public class Scanner extends JFrame implements IScanner {
 		textField.setEditable(enabled);
 
 	}
-
+	
+	/** Override the addListener method */
 	@Override
 	public void addListener(IScannerListener listener) {
 		this.listener = listener;
