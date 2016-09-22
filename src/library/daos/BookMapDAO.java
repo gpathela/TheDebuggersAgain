@@ -27,6 +27,7 @@ import library.interfaces.entities.IBook;
 *
 */
 
+/** Start of the class BookMapDAO */
 public class BookMapDAO implements IBookDAO {
 
 	private int nextId;
