@@ -149,7 +149,8 @@ public class LoanMapDAO implements ILoanDAO {
 		}
 		return Collections.unmodifiableList(list);
 	}
-
+	
+	/** The getNextId method returns the next index of a loan */
 	private int getNextId() {
 		return ++nextID;
 	}
