@@ -25,7 +25,7 @@ import java.awt.event.KeyEvent;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The CardReader creates a card reader panel 
+*The CardReader creates a card reader panel, creates a button reader, enables and adds a listener to it.  
 */
 
 /** Start of the class CardReader */
