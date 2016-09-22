@@ -106,7 +106,7 @@ public class CardReader extends JFrame implements ICardReader {
 		textField.setEditable(enabled);
 	}
 
-
+	/** Override the addListener method */
 	@Override
 	public void addListener(ICardReaderListener listener) {
 		this.listener = listener;		
