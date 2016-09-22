@@ -1,3 +1,4 @@
+/** Import some Java libraries and specify the package in which the classes resides */
 package library.hardware;
 
 import javax.swing.JFrame;
@@ -9,11 +10,24 @@ import library.interfaces.hardware.IPrinter;
 
 import javax.swing.JTextArea;
 
+/**
+* @reviewer Chiranjivi Bashyal
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
+
+/** Start of the class Printer */
 public class Printer extends JFrame implements IPrinter {
 
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private static final long serialVersionUID = 1L;
 	private JTextArea textArea;
-
+	
+	/** The no args-constructor(default constructor) to create a Printer object */ 
 	public Printer() {
         setBounds(50, 450, 400, 350);
 		setResizable(false);
@@ -41,6 +55,7 @@ public class Printer extends JFrame implements IPrinter {
 		panel.add(textArea);		
 	}
 
+	/** Override the print method  to displays texts to the screen*/
 	@Override
 	public void print(String printData) {
 		StringBuilder bld = new StringBuilder();
@@ -52,4 +67,4 @@ public class Printer extends JFrame implements IPrinter {
 		textArea.setText(bld.toString());
 		textArea.setCaretPosition(0);		
 	}
-}
+} // End of the class Printer
