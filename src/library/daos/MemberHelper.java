@@ -14,6 +14,10 @@ import library.interfaces.entities.IMember;
 * @instructor Dr Recep Ulusoy
 * @due date 23.09.2016
 * @version 1.0
+*
+* The class MemberHelper implements the IMemberHelper,
+* creates and returns the Member object created.
+*
 */
 
 public class MemberHelper implements IMemberHelper {
