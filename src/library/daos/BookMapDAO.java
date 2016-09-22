@@ -134,6 +134,7 @@ public class BookMapDAO implements IBookDAO {
 		return Collections.unmodifiableList(list);
 	}
 	
+	/** The method getNextId returns the next ID */
 	private int getNextId() {
 		return nextId++;
 	}
