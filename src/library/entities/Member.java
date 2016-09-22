@@ -86,7 +86,8 @@ public class Member implements IMember {
 		boolean b = loanList.size() >= IMember.LOAN_LIMIT;
 		return b;
 	}
-
+	
+	/** Override the hasFinesPayable method */
 	@Override
 	public boolean hasFinesPayable() {
 		boolean b = totalFines > 0.0f;
