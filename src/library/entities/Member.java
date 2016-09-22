@@ -109,7 +109,9 @@ public class Member implements IMember {
 		return totalFines;
 	}
 	
-	/** Override the addFine method */
+	/** Override the addFine method to adds a fine to the total of fines 
+	* and updates the state of a member
+	*/
 	@Override
 	public void addFine(float fine) {
 		if (fine < 0) {
