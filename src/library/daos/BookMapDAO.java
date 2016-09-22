@@ -1,5 +1,7 @@
+/** Specify the package in which this code resides */
 package library.daos;
 
+/** Import some libraries to be used in the code */
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
