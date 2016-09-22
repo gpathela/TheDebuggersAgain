@@ -31,7 +31,7 @@ import library.interfaces.entities.IMember;
 *@version 1.0
 *
 *		The Main class is a program that is starting point of whole of the program. Here we populate IBook and IMember with sample data, also we made sample
-*		loans to test all methods like maxed out fine, overdue loans, member with fine but not over limit. 
+*		loans to test all methods like maximum fine, overdue loans, member with fine but not over limit. 
 */
 
 /** Start of the class Main */
