@@ -70,9 +70,10 @@ public class Book implements IBook {//the Book class implements IBook
 		state = EBookState.ON_LOAN;
 
 	}
-
-	/** the method return the loan associated with the book and return null if the book is not current ON_LOAN */
+	
+	/** Override the getLoan method */
 	@Override
+	/** the method return the loan associated with the book and return null if the book is not current ON_LOAN */
 	public ILoan getLoan() {
 		return loan;
 	}
