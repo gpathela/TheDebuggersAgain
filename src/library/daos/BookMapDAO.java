@@ -10,6 +10,15 @@ import library.interfaces.daos.IBookDAO;
 import library.interfaces.daos.IBookHelper;
 import library.interfaces.entities.IBook;
 
+/**
+*@reviewer Chiranjivi Bashyal
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.0
+*/
+
 public class BookMapDAO implements IBookDAO {
 
 	private int nextId;
