@@ -62,6 +62,7 @@ public class LoanMapDAO implements ILoanDAO {
 	
 	/** Override the getLoanByID method */
 	@Override
+	/** The getLoanByID method returns a loan by using ID */
 	public ILoan getLoanByID(int id) {	//Method to get loan by Id
 		if (loanMap.containsKey(Integer.valueOf(id))) {
 			return loanMap.get(Integer.valueOf(id));
