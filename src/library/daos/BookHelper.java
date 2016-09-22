@@ -1,3 +1,4 @@
+/** Specify the package in which this code resides */
 package library.daos;
 
 import library.entities.Book;
