@@ -138,7 +138,7 @@ public class Book implements IBook {//the Book class implements IBook
 	}
 
 	/** the method return the title of the book */
-	@Override
+	@Override	//Override the getTitle method
 	public String getTitle() {
 		return title;
 	}
