@@ -19,6 +19,7 @@ import library.interfaces.entities.IBook;
 *
 */
 
+/** Start of the class BookHelper */
 public class BookHelper implements IBookHelper {
 
 	@Override
