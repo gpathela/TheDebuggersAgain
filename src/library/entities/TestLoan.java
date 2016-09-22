@@ -43,7 +43,7 @@ public class TestLoan { // A class to test loan class
 
 		System.out.println("Made a test book");
 
-		Member testMember = new Member("testFirstName", "testLastName", "0424XXX", "test@test.com", 27); // Creating
+		Member testMember = new Member("testFirstName", "testLastName", "0424XXX", "chiran@test.com", 27); // Creating
 																											// a
 																											// test
 																											// member
