@@ -20,8 +20,9 @@ import library.interfaces.entities.IBook;
 * @due date 23.09.2016
 * @version 1.0
 *
-* The BookHelper class implements the IBookHelper interface. 
-* This class shows the details of the book.
+*The BookMapDAO class will display a GUI with a title appearing on top of 
+*the main frame, six text fields with appropriate labels to take user inputs, 
+*two buttons that will be used to trigger actions for calculations.
 *
 */
 
