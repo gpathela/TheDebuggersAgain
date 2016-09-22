@@ -1,4 +1,4 @@
-/** Import some Java libraries and specify the package in which the classes are organized */
+/** Import some Java libraries and specify the package in which the classes resides */
 package library;
 
 import java.util.ArrayList;
@@ -23,11 +23,20 @@ import library.interfaces.hardware.IPrinter;
 import library.interfaces.hardware.IScanner;
 import library.interfaces.hardware.IScannerListener;
 
+/**
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
 
-public class BorrowUC_CTL implements ICardReaderListener, 
-									 IScannerListener, 
-									 IBorrowUIListener {
+/** Start of the class BorrowUC_CTL */
+public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBorrowUIListener {
 	
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private ICardReader reader;
 	private IScanner scanner; 
 	private IPrinter printer; 
@@ -65,7 +74,8 @@ public class BorrowUC_CTL implements ICardReaderListener,
 		
 		setState(EBorrowState.INITIALIZED);
 	}
-
+	
+	/** Override the cardSwiped method helps the user to swipe their card and displays the member's details */
 	@Override
 	public void cardSwiped(int memberID) {
 		System.out.println("cardSwiped: got " + memberID);
@@ -91,7 +101,7 @@ public class BorrowUC_CTL implements ICardReaderListener,
 			setState(EBorrowState.SCANNING_BOOKS);
 		}
 
-		//display member details
+		/** Display the details of the member */
 		int mID = borrower.getID();
 		String mName = borrower.getFirstName() + " " + borrower.getLastName();
 		String mContact = borrower.getContactPhone();
@@ -113,17 +123,18 @@ public class BorrowUC_CTL implements ICardReaderListener,
 			ui.displayOverFineLimitMessage(amountOwing);
 		}
 		
-		//display existing loans
+		/** Display existing loans */
 		for (ILoan ln : borrower.getLoans()) {
 			ui.displayExistingLoan(ln.toString());
 		}
 		
-		//initialize scanCount with number of existing loans
-		//so that member doesn't borrow more than they should
+		/** Initialize scanCount with number of existing loans so 
+		* that member doesn't borrow more than they should
+		*/
 		scanCount = borrower.getLoans().size();
 	}
 	
-	
+	/** Override the bookScanned method to sets the state of a book */
 	@Override
 	public void bookScanned(int barcode) {
 		System.out.println("bookScanned: got " + barcode);
@@ -152,9 +163,10 @@ public class BorrowUC_CTL implements ICardReaderListener,
 		ILoan loan = loanDAO.createLoan(borrower, book);
 		loanList.add(loan);
 		
-		//display current book
+		/** Display current book */
 		ui.displayScannedBookDetails(book.toString());
-		//display pending loans
+		
+		/** Display pending loans */
 		ui.displayPendingLoan(loan.toString());
 
 		
@@ -165,7 +177,8 @@ public class BorrowUC_CTL implements ICardReaderListener,
 		
 		
 	}
-
+	
+	/** The method setState sets the state of a book */
 	private void setState(EBorrowState state) {
 		System.out.println("Setting state: " + state);
 		
@@ -219,25 +232,29 @@ public class BorrowUC_CTL implements ICardReaderListener,
 		}
 	}
 
+	/** Override the cancelled method helps to sets the state of the book to cancel */
 	@Override
 	public void cancelled() {
 		setState(EBorrowState.CANCELLED);		
 	}
 	
+	/** Override the scansCompleted method to sets the state of borrow to scan complete*/
 	@Override
 	public void scansCompleted() {
 		setState(EBorrowState.CONFIRMING_LOANS);		
 	}
-
+	
+	/** Override the loansConfirmed method to sets the state of borrow to loan confirmed*/
 	@Override
 	public void loansConfirmed() {
 		setState(EBorrowState.COMPLETED);				
 	}
-
+	
+	/** Override the loansRejected method to sets the state of a loan to reject */
 	@Override
 	public void loansRejected() {
 		System.out.println("Loans Rejected");
 		setState(EBorrowState.SCANNING_BOOKS);		
 	}
 	
-}
+}// End of the class BorrowUC_CTL
