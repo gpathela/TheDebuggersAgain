@@ -166,7 +166,8 @@ public class LoanMapDAO implements ILoanDAO {
 		ILoan loan = helper.makeLoan(book, borrower, borrowDate, dueDate);
 		return loan;
 	}
-
+	
+	/** Override the commitLoan method */
 	@Override
 	public void commitLoan(ILoan loan) {	//Method to commit loan to loan Map
 		int id = getNextId();
