@@ -15,8 +15,10 @@ import library.interfaces.entities.IMember;
 *@lecturer Dr Recep Ulusoy
 *@due date 23.09.2016
 *@version 1.0
-*
-*		The TestLoan class is a program that tests all methods of the Loan class.
+*/
+
+/*
+*The TestLoan class is a program that tests all methods of the Loan class.
 */
 
 /** Start of the class TestLoan */
