@@ -1,4 +1,4 @@
-/** Import some Java libraries and specify the package in which the classes are organized */
+/** Import some Java libraries and specify the package in which the classes resides */
 package library.entities;
 
 import java.text.DateFormat;
@@ -10,27 +10,25 @@ import library.interfaces.entities.IMember;
 import library.interfaces.entities.ELoanState;
 
 /**
-*@reviewer Chiranjivi Bashyal
-*@Student ID: 11582726
-*@course Master of Information Technology
-*@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy
-*@due date 23.09.2016
-*@version 1.0
+* @reviewer Chiranjivi Bashyal
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
 *
-*		The Loan class is a program that uses private variables to create instances
-*		with a constructor. It implements ILoan interface. 
-*		It has many methods, mainly related to issue a book. 
-*		This class with help of all the methods issue a particular book 
-*		to a particular member. 
+* The Loan class is a program that uses variables having private visibility to create instances
+* with a constructor having specific attributes. The Loan class implements ILoan interface. We use 
+* different method to check the availability or the status of the book. 
+*		 
 */
 
-/** Start of the class Loan*/
-public class Loan implements ILoan {
-	/*
-	 * Declare and initialize the variable for the class with private visibility
-	 * modifiers
-	 */
+/** Start of the class Loan */
+public class Loan implements ILoan {//the Loan class implements ILoan
+	/** 
+	* Declare and initialize the variable for the class
+	* with private visibility 
+	*/
 	private int id;
 	private final IMember member;
 	private final IBook book;
@@ -38,7 +36,7 @@ public class Loan implements ILoan {
 	private Date dueDate;
 	private ELoanState state;
 
-	/* Public constructor to create object of Loan class */
+	/** Construct an Loan object with the specified attribute. */
 	public Loan(IBook book, IMember member, Date issueDate, Date dueDate) {
 		if (!sane(book, member, issueDate, dueDate)) {
 			throw new IllegalArgumentException("Loan: constructor : bad parameters");
@@ -48,18 +46,19 @@ public class Loan implements ILoan {
 		this.issueDate = issueDate;
 		this.dueDate = dueDate;
 		this.state = ELoanState.PENDING;
-	}
+	}//End of the constructor
 
-	/*
-	 * A method to test if all variables are available. It throws exception if something is null
-	 */
+	/** the method test the variables and throw exception if any of the parameter is null or blank
+	* and the ID is less than or equal to zero
+`	*/
 	private boolean sane(IBook book, IMember member, Date issueDate, Date dueDate) {
 		return (book != null && member != null && issueDate != null && dueDate != null
 				&& issueDate.compareTo(dueDate) <= 0);
 	}
 
-	/* A method to save the loan */
+	/** Override the commit method */
 	@Override
+	/** The method commit commit a loan based on its ID */
 	public void commit(int loanId) {
 		if (!(state == ELoanState.PENDING)) {
 			throw new RuntimeException(String.format("Loan : commit : incorrect state transition  : %s -> %s\n", state,
@@ -74,8 +73,8 @@ public class Loan implements ILoan {
 		member.addLoan(this);
 	}
 
-	/* A method to release the loan. Called when book is returned */
-	@Override
+	/* A method to release the loan. This method is called when book is returned. */
+	@Override	// Override the complete method 
 	public void complete() {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
 			throw new RuntimeException(String.format("Loan : complete : incorrect state transition  : %s -> %s\n",
@@ -83,14 +82,16 @@ public class Loan implements ILoan {
 		}
 		state = ELoanState.COMPLETE;
 	}
-
+	
+	/** Override the isOverDue method */
 	@Override
+	/** The method returns the state of a loan as overdue */
 	public boolean isOverDue() {
 		return (state == ELoanState.OVERDUE);
 	}
 
-	/* A method to check if book is overdue.= */
-	@Override
+	/* A method to check if book is overdue. */
+	@Override	//Override the checkOverDue method
 	public boolean checkOverDue(Date currentDate) {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
 			throw new RuntimeException(String.format("Loan : checkOverDue : incorrect state transition  : %s -> %s\n",
@@ -102,25 +103,25 @@ public class Loan implements ILoan {
 		return isOverDue();
 	}
 
-	/* Get method to return member who borrowed */
-	@Override
+	/* This method to return member who borrowed the book*/
+	@Override	//Override the getBorrower method
 	public IMember getBorrower() {
 		return member;
 	}
 
-	/* Get method to return book which has been borrowed*/
-	@Override
+	/* This method to return book which has been borrowed */
+	@Override	//Override the getBook method
 	public IBook getBook() {
 		return book;
 	}
 
-	/* Get method to return loan ID*/
-	@Override
+	/* This method method to return loan ID */
+	@Override	//Override the getID method 
 	public int getID() {
 		return id;
 	}
 
-	/* Get method to return status of the loan*/
+	/* This method to return status of the loan */
 	public ELoanState getState() {
 		return state;
 	}
@@ -133,4 +134,4 @@ public class Loan implements ILoan {
 				DateFormat.getDateInstance().format(issueDate), DateFormat.getDateInstance().format(dueDate)));
 	}
 
-}
+}//End of Loan class
