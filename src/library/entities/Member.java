@@ -163,7 +163,7 @@ public class Member implements IMember {
 		return state;
 	}
 
-	
+	/** Override the getFirstName method */
 	@Override
 	public String getFirstName() {
 		return firstName;
