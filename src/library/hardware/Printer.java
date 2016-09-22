@@ -67,4 +67,4 @@ public class Printer extends JFrame implements IPrinter {
 		textArea.setText(bld.toString());
 		textArea.setCaretPosition(0);		
 	}
-}
+} // End of the class Printer
