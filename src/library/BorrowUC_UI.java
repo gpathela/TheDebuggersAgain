@@ -61,28 +61,27 @@ public class BorrowUC_UI extends ABorrowPanel {
 	/** The method setState sets the state of EBorrow */
 	public void setState(EBorrowState state) {
 		CardLayout cl = (CardLayout) (this.getLayout());
-
 		switch (state) {
-		case INITIALIZED:
-			cl.show(this, state.toString());
+			case INITIALIZED:
+				cl.show(this, state.toString());
 			break;
-		case SCANNING_BOOKS:
-			cl.show(this, state.toString());
+			case SCANNING_BOOKS:
+				cl.show(this, state.toString());
 			break;
-		case CONFIRMING_LOANS:
-			cl.show(this, state.toString());
+			case CONFIRMING_LOANS:
+				cl.show(this, state.toString());
 			break;
-		case BORROWING_RESTRICTED:
-			cl.show(this, state.toString());
+			case BORROWING_RESTRICTED:
+				cl.show(this, state.toString());
 			break;
-		case COMPLETED:
-			cl.show(this, state.toString());
+			case COMPLETED:
+				cl.show(this, state.toString());
 			break;
-		case CANCELLED:
-			cl.show(this, state.toString());
+			case CANCELLED:
+				cl.show(this, state.toString());
 			break;
-		default:
-			throw new RuntimeException("Unknown state");
+			default:
+				throw new RuntimeException("Unknown state");
 		}
 		this.state = state;
 	}
