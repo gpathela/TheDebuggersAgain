@@ -36,4 +36,4 @@ public class Display extends JFrame implements IDisplay {
         getContentPane().add(panel, null);		
 	}
 	
-}
+}// End of the class Display
