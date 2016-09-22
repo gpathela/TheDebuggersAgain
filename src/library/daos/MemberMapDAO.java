@@ -143,4 +143,4 @@ public class MemberMapDAO implements IMemberDAO {
 	}
 
 
-}
+}// End of the class MemberMapDAO
