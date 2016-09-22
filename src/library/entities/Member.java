@@ -24,7 +24,9 @@ import library.interfaces.entities.EMemberState;
 
 /** Start of the class Member */
 public class Member implements IMember {
-
+	
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private final String firstName;
 	private final String lastName;
 	private final String contactPhone;
