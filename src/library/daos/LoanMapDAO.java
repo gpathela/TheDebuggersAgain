@@ -69,7 +69,8 @@ public class LoanMapDAO implements ILoanDAO {
 		}
 		return null;
 	}
-
+	
+	/** Override the getLoanByBook method */
 	@Override
 	public ILoan getLoanByBook(IBook book) {	//Method to get loan by book
 		if (book == null) {
