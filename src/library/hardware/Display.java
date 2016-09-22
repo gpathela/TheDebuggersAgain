@@ -17,7 +17,9 @@ import library.interfaces.hardware.IDisplay;
 
 /** Start of the class Display */
 public class Display extends JFrame implements IDisplay {
-
+	
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private static final long serialVersionUID = 1L;
 	
 	public Display() {
