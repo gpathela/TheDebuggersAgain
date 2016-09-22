@@ -38,7 +38,8 @@ public class Scanner extends JFrame implements IScanner {
 	private JTextField textField;
 	private JButton btnScan;
 	private IScannerListener listener;
-
+	
+	/** The no args-constructor(default constructor) to create a Scanner object */
 	public Scanner() {
 		setTitle("Scanner");
         setBounds(50, 250, 400, 200);
