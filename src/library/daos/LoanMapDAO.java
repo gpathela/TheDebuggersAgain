@@ -139,6 +139,7 @@ public class LoanMapDAO implements ILoanDAO {
 	
 	/** Override the findOverDueLoans method */
 	@Override
+	/** The findOverDueLoans method returns a collection of overdue loans */
 	public List<ILoan> findOverDueLoans() {	//Method to find all overdue loans
 		List<ILoan> list = new ArrayList<ILoan>();
 		for (ILoan loan : loanMap.values()) {
