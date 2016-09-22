@@ -1,6 +1,7 @@
 /** Import some Java libraries and specify the package in which the classes are organized */
 package library.daos;
 
+/** Import some libraries to be used in the code */
 import java.util.Date;
 
 import library.entities.Loan;
