@@ -12,6 +12,16 @@ import library.interfaces.daos.IMemberDAO;
 import library.interfaces.entities.IMember;
 import library.interfaces.daos.IMemberHelper;
 
+
+/**
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.0
+*/
+
 public class MemberMapDAO implements IMemberDAO {
 
 	private IMemberHelper helper;
