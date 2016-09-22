@@ -1,3 +1,4 @@
+/** Import some Java libraries and specify the package in which the classes resides */
 package library.panels.borrow;
 
 import java.awt.Color;
@@ -14,8 +15,20 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import library.interfaces.IBorrowUIListener;
 
+/**
+* @reviewer Chiranjivi Bashyal
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
 
+/** Start of the class ScanningPanel */
 public class ScanningPanel extends ABorrowPanel {
+	
+	/** Declare and initialize the variable for the class
+		with private visibility */
 
 	private static final long serialVersionUID = 1L;
 	private JLabel lblBorrowerId;
@@ -32,10 +45,9 @@ public class ScanningPanel extends ABorrowPanel {
 	private JTextArea pendingLoanListTA;
 	
 
-	/**
-	 * Create the panel.
-	 */
+	/** Construct an ScanningPanel object with the specified attribute. */
 	public ScanningPanel(IBorrowUIListener listener) {
+		
 		setLayout(null);
 		setBorder(new TitledBorder(null, "Scanning", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		setBounds(12, 23, 460, 640);
@@ -178,7 +190,7 @@ public class ScanningPanel extends ABorrowPanel {
 		
 	}
 
-
+	/** Override the displayMemberDetails method */
 	@Override
 	public void displayMemberDetails(int memberID, String memberName, String memberPhone) {
 		lblBorrowerId.setText(Integer.valueOf(memberID).toString());
@@ -186,25 +198,25 @@ public class ScanningPanel extends ABorrowPanel {
 		lblBorrowerContact.setText(memberPhone);
 	}
 
-
+	/** Override the displayExistingLoan method */
 	@Override
 	public void displayExistingLoan(String loanDetails) {
 		insertStringInTA(loanDetails, existingLoanListTA, true);
 	}
 	
-
+	/** Override the displayOutstandingFineMessage method */
 	@Override
 	public void displayOutstandingFineMessage(float amountOwing) {
 		lblFineLimit.setText(String.format("Borrower has outstanding fines. Amount owing: $%.2f", amountOwing ));
 	}
 	
-
+	/** Override the displayScannedBookDetails method */
 	@Override
 	public void displayScannedBookDetails(String bookDetails) {
 		currentBookTA.setText(bookDetails);
 	}
 
-
+	/** Override the displayPendingLoan method */
 	@Override
 	public void displayPendingLoan(String loanDetails) {
 		pendingLoanListTA.setText(loanDetails);
@@ -223,10 +235,11 @@ public class ScanningPanel extends ABorrowPanel {
 		ta.setCaretPosition(0);		
 	}
 	
+	/** Override the displayErrorMessage method */
 	@Override
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
 	}
 
 
-}
+}// End of the class ScanningPanel
