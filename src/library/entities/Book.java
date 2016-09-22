@@ -104,7 +104,7 @@ public class Book implements IBook {//the Book class implements IBook
 		state = EBookState.LOST;	//set the book state to lost
 	}
 
-	
+	/** Override the repair method */
 	@Override
 	public void repair() {
 		if (!(state == EBookState.DAMAGED)) {	//throws exception if book is not currently damaged
