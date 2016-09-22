@@ -15,7 +15,7 @@ import library.interfaces.entities.ELoanState;
 * @subject Professional Programming Practice
 * @instructor Dr Recep Ulusoy
 * @due date 23.09.2016
-* @version 1.0
+* @version 1.1
 *
 * The Loan class is a program that uses variables having private visibility to create instances
 * with a constructor having specific attributes. The Loan class implements ILoan interface. We use 
