@@ -1,4 +1,4 @@
-/** Specify the package in which the class resides */
+/** Specify the package in which the class resides. */
 package library.daos;
 
 /** Import some libraries to be used in the code */
