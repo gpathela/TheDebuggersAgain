@@ -91,7 +91,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 	}
 
 	/* A method to check if book is overdue. */
-	@Override
+	@Override	//Override the checkOverDue method
 	public boolean checkOverDue(Date currentDate) {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
 			throw new RuntimeException(String.format("Loan : checkOverDue : incorrect state transition  : %s -> %s\n",
