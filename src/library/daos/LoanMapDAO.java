@@ -92,7 +92,8 @@ public class LoanMapDAO implements ILoanDAO {
 		List<ILoan> list = new ArrayList<ILoan>(loanMap.values());
 		return Collections.unmodifiableList(list);
 	}
-
+	
+	/** Override the findLoansByBorrower method */
 	@Override
 	public List<ILoan> findLoansByBorrower(IMember borrower) {	//Method to find all loans by a member
 		if (borrower == null) {
