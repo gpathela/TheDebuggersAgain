@@ -118,7 +118,8 @@ public class Member implements IMember {
 		totalFines += fine;
 		updateState();
 	}
-
+	
+	/** Override the payFine method */
 	@Override
 	public void payFine(float payment) {
 		if (payment < 0 || payment > totalFines) {
