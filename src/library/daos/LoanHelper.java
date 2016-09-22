@@ -33,4 +33,4 @@ public class LoanHelper implements ILoanHelper {
 		return new Loan(book, borrower, borrowDate, dueDate);
 	}
 
-}
+}// End of the LoanHelper class
