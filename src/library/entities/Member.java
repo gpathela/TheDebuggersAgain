@@ -16,6 +16,10 @@ import library.interfaces.entities.EMemberState;
 * @instructor Dr Recep Ulusoy
 * @due date 23.09.2016
 * @version 1.1
+*
+* The class Member contains several variables along with some getters and setters 
+* methods that helps to create the member object.
+*
 */
 
 
