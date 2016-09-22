@@ -26,7 +26,7 @@ import library.interfaces.entities.IBook;
 *the main frame, six text fields with appropriate labels to take user inputs, 
 *two buttons that will be used to trigger actions for calculations.
 */
-public class BookMapDAO implements IBookDAO { //BookMapDAO implements IBookDAO
+public class BookMapDAO implements IBookDAO {
 
 	private int nextId;
 	private Map<Integer, IBook> bookMap;
