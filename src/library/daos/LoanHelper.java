@@ -27,6 +27,7 @@ public class LoanHelper implements ILoanHelper {
 
 	/** Override the makeLoan method */
 	@Override
+	/** The makeLoan method makes a loan and returns the new made loan */
 	public ILoan makeLoan(IBook book, IMember borrower, Date borrowDate, Date dueDate) {
 
 		return new Loan(book, borrower, borrowDate, dueDate);
