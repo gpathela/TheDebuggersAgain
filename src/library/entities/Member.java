@@ -175,7 +175,7 @@ public class Member implements IMember {
 		return lastName;
 	}
 
-	
+	/** Override the getContactPhone method */
 	@Override
 	public String getContactPhone() {
 		return contactPhone;
