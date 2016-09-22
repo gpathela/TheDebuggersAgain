@@ -7,7 +7,7 @@ import library.interfaces.daos.IBookHelper;
 import library.interfaces.entities.IBook;
 
 /**
-* @author Chiranjivi Bashyal
+* @reviewer Chiranjivi Bashyal
 * @course Master of Information Technology
 * @subject Professional Programming Practice
 * @instructor Dr Recep Ulusoy
