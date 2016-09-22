@@ -94,7 +94,7 @@ public class Book implements IBook {//the Book class implements IBook
 		}
 	}
 
-	
+	/** Override the lose method */
 	@Override
 	public void lose() {
 		if (!(state == EBookState.ON_LOAN)) {	//throws an exception if the book is not currently ON_LOAN
