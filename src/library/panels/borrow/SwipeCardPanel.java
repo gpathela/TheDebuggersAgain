@@ -1,3 +1,4 @@
+/** Import some Java libraries and specify the package in which the classes resides */
 package library.panels.borrow;
 
 import javax.swing.SwingConstants;
@@ -13,15 +14,25 @@ import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
 import java.awt.Color;
 
+/**
+* @reviewer Chiranjivi Bashyal
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
 
+/** Start of the class SwipeCardPanel */
 public class SwipeCardPanel extends ABorrowPanel {
+	
+	/** Declare and initialize the variable for the class
+		with private visibility */
 
 	private static final long serialVersionUID = 1L;
 	private JLabel lblErrMesg;
 
-	/**
-	 * Create the panel.
-	 */
+	/** Construct an ScanningPanel object with the specified attribute. */
 	public SwipeCardPanel(IBorrowUIListener listener) {
 		setLayout(null);
 		setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Borrow Book - Initialized", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
@@ -52,10 +63,11 @@ public class SwipeCardPanel extends ABorrowPanel {
 
 	}
 
+	/** Override the displayErrorMessage method */
 	@Override
 	public void displayErrorMessage(String errorMesg) {
 		lblErrMesg.setText(errorMesg);		
 	}
 
 	
-}
+} // End of the class SwipeCardPanel
