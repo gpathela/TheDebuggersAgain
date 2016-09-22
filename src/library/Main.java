@@ -38,8 +38,7 @@ import library.interfaces.entities.IMember;
 public class Main {
 
 	/**
-	 * Declare the variable for the class with private visibility
-	 * modifiers
+	 * Declare the variable for the class with private visibility modifiers
 	 */
 	private static CardReader reader;
 	private static Scanner scanner;
