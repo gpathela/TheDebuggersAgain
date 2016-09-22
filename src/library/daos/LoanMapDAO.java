@@ -112,6 +112,7 @@ public class LoanMapDAO implements ILoanDAO {
 	
 	/** Override the findLoansByBookTitle method */
 	@Override
+	/** The findLoansByBookTitle method returns a list of loans by book title */
 	public List<ILoan> findLoansByBookTitle(String title) {	//Method to find loans on book title
 		if (title == null || title.isEmpty()) {
 			throw new IllegalArgumentException(
