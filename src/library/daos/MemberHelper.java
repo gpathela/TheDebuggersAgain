@@ -25,6 +25,7 @@ public class MemberHelper implements IMemberHelper {
 	
 	/** Override the makeMember method */
 	@Override
+	/** The makeMember method creates and returns a Member object */
 	public IMember makeMember(String firstName, String lastName,
 			String contactPhone, String emailAddress, int id) {
 		
