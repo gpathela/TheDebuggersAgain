@@ -18,6 +18,15 @@ import java.awt.Color;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+/**
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
+
 public class CardReader extends JFrame implements ICardReader {
 
 	private static final long serialVersionUID = 1L;
