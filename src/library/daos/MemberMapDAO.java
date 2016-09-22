@@ -77,7 +77,8 @@ public class MemberMapDAO implements IMemberDAO {
 		}
 		return null;
 	}
-
+	
+	/** Override the listMembers method */
 	@Override
 	public List<IMember> listMembers() {
 		List<IMember> list = new ArrayList<IMember>(memberMap.values());
