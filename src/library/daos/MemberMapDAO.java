@@ -85,7 +85,8 @@ public class MemberMapDAO implements IMemberDAO {
 		List<IMember> list = new ArrayList<IMember>(memberMap.values());
 		return Collections.unmodifiableList(list);
 	}
-
+	
+	/** Override the findMembersByLastName method */
 	@Override
 	public List<IMember> findMembersByLastName(String lastName) {
 		if ( lastName == null || lastName.isEmpty()) {
