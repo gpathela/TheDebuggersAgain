@@ -20,6 +20,10 @@ import library.interfaces.daos.IMemberHelper;
 * @instructor Dr Recep Ulusoy
 * @due date 23.09.2016
 * @version 1.0
+*
+* The class MemberMapDAO creates member map objects and 
+* contains various methods.
+*
 */
 
 public class MemberMapDAO implements IMemberDAO {
