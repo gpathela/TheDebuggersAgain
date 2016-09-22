@@ -128,7 +128,8 @@ public class Member implements IMember {
 		totalFines -= payment;
 		updateState();
 	}
-
+	
+	/** Override the addLoan method */
 	@Override
 	public void addLoan(ILoan loan) {
 		if (!borrowingAllowed()) {
