@@ -169,7 +169,7 @@ public class Member implements IMember {
 		return firstName;
 	}
 
-	
+	/** Override the getLastName method */
 	@Override
 	public String getLastName() {
 		return lastName;
