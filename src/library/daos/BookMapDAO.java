@@ -46,6 +46,7 @@ public class BookMapDAO implements IBookDAO {
 		bookMap = new HashMap<Integer, IBook>();
 	}
 	
+	/** Construct an BookMapDAO object with the specified attribute. */
 	public BookMapDAO(IBookHelper helper, Map<Integer, IBook> bookMap) {
 		this(helper);
 		if (helper == null ) {
