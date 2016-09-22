@@ -50,6 +50,6 @@ public class TestLoan { // A class to test loan class
 		
 		Loan testLoan = new Loan(testBook, testMember, issueDate, dueDate);
 		
-		System.out.println("Made a test Loan using testMember & testBook");
+		System.out.println("Made a test Loan using testMember & testBook"); //Book issued. 
 }
 }
