@@ -52,9 +52,9 @@ public class TestLoan { // A class to test loan class
 		
 		System.out.println("Made a test Loan using testMember & testBook"); //Book issued. 
 		
-		System.out.println("Verifying Loan Member. Result should be testFirstName");
-		System.out.println("Output is : " + testLoan.getBorrower().getFirstName());
-		if (testLoan.getBorrower().getFirstName().equals("testFirstName")){
+		System.out.println("Verifying Loan Book. Result should be testTitle");
+		System.out.println("Output is : " + testLoan.getBook().getTitle());
+		if (testLoan.getBook().getTitle().equals("testTitle")){
 			System.out.println("Result: Succesfull");
 		}else  {
 			System.out.println("Result: Fail");
