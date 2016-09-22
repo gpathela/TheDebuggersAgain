@@ -117,4 +117,4 @@ public class Scanner extends JFrame implements IScanner {
 		
 	}
 
-}
+}// End of the class Scanner
