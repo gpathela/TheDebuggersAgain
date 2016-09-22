@@ -9,16 +9,15 @@ import library.interfaces.entities.IBook;
 import library.interfaces.entities.IMember;
 
 /**
-*@reviewer Chiranjivi Bashyal
-*@course Master of Information Technology
-*@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy
-*@due date 23.09.2016
-*@version 1.0
-*/
-
-/*
-*The TestLoan class is a program that tests all methods of the Loan class.
+* @reviewer Chiranjivi Bashyal
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*
+* The TestLoan class is a program that tests all methods of the Loan class.
+*
 */
 
 /** Start of the class TestLoan */
@@ -28,20 +27,27 @@ public class TestLoan { // A class to test loan class
 	public static void main(String[] args) {
 
 		/*
-		 * Getting issue date i.e. current date and due date i.e. 14 days after issue date
+		 * Getting issue date i.e. current date and due date i.e. 14 days after
+		 * issue date
 		 */
 		Calendar cal = Calendar.getInstance();
 		Date issueDate = cal.getTime();
 		cal.add(Calendar.DATE, 14);
 		Date dueDate = cal.getTime();
 
-		Book testBook = new Book("testAuthor", "testTitle", "testCallNumber", 27); // Creating a test Book
+		Book testBook = new Book("testAuthor", "testTitle", "testCallNumber", 27); // Creating
+																					// a
+																					// test
+																					// Book
 
 		System.out.println("Made a test book");
 
-		Member testMember = new Member("testFirstName", "testLastName", "0424XXX", "test@test.com", 27); // Creating a test member
+		Member testMember = new Member("testFirstName", "testLastName", "0424XXX", "test@test.com", 27); // Creating
+																											// a
+																											// test
+																											// member
 
 		System.out.println("Made a test Member");
-		
+
 	}
 }
