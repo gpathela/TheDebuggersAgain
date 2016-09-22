@@ -1,4 +1,4 @@
-/** Import some Java libraries and specify the package in which the classes are organized. */
+/** Import some Java libraries and specify the package in which the classes are organized */
 package library.entities;
 
 import java.util.Calendar;
@@ -9,15 +9,14 @@ import library.interfaces.entities.IBook;
 import library.interfaces.entities.IMember;
 
 /**
-* @reviewer Chiranjivi Bashyal
-* @course Master of Information Technology
-* @subject Professional Programming Practice
-* @instructor Dr Recep Ulusoy
-* @due date 23.09.2016
-* @version 1.1
+*@reviewer Chiranjivi Bashyal
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.0
 *
-* The TestLoan class is a program that tests all methods of the Loan class.
-*
+*		The TestLoan class is a program that tests all methods of the Loan class.
 */
 
 /** Start of the class TestLoan */
@@ -48,6 +47,17 @@ public class TestLoan { // A class to test loan class
 																											// member
 
 		System.out.println("Made a test Member");
-
-	}
+		
+		Loan testLoan = new Loan(testBook, testMember, issueDate, dueDate);
+		
+		System.out.println("Made a test Loan using testMember & testBook"); //Book issued. 
+		
+		System.out.println("Verifying Loan Member. Result should be testFirstName");
+		System.out.println("Output is : " + testLoan.getBorrower().getFirstName());
+		if (testLoan.getBorrower().getFirstName().equals("testFirstName")){
+			System.out.println("Result: Succesfull");
+		}else  {
+			System.out.println("Result: Fail");
+		}
+}
 }
