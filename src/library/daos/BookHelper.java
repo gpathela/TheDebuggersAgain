@@ -5,6 +5,10 @@ import library.entities.Book;
 import library.interfaces.daos.IBookHelper;
 import library.interfaces.entities.IBook;
 
+
+/** The BookHelper class implements the interface IBookHelper. It displays the details about a 
+*book that it creates.
+*/
 /** start of class BookHelper */
 
 public class BookHelper implements IBookHelper {
