@@ -29,6 +29,7 @@ import javax.swing.JButton;
 * @version 1.1
 */
 
+/** Start of the class Scanner */
 public class Scanner extends JFrame implements IScanner {
 
 	private static final long serialVersionUID = 1L;
