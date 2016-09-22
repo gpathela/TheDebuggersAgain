@@ -146,7 +146,8 @@ public class Member implements IMember {
 	public List<ILoan> getLoans() {
 		return Collections.unmodifiableList(loanList);
 	}
-
+	
+	/** Override the removeLoan method to removes the loan of a Member */
 	@Override
 	public void removeLoan(ILoan loan) {
 		if (loan == null || !loanList.contains(loan)) {
