@@ -78,7 +78,7 @@ public class Book implements IBook {//the Book class implements IBook
 		return loan;
 	}
 
-	
+	/** Override the returnBook method */
 	@Override
 	public void returnBook(boolean damaged) {
 		if (!(state == EBookState.ON_LOAN || state == EBookState.LOST)) { //throw exception if the book is not currently ON_LOAN
