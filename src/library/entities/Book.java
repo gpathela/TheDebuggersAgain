@@ -116,6 +116,7 @@ public class Book implements IBook {//the Book class implements IBook
 
 	/** Override the dispose method */
 	@Override
+	/** The method dispose sets the state of a book to disposed */
 	public void dispose() {	//throws exception if the book is not currently available, damaged or lost
 		if (!(state == EBookState.AVAILABLE || state == EBookState.DAMAGED || state == EBookState.LOST)) {
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
