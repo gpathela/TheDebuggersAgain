@@ -208,7 +208,8 @@ public class Member implements IMember {
 				!hasReachedLoanLimit();
 		return b;
 	}
-
+	
+	/** The updateState method sets the state of a Member to allowed or disallowed */
 	private void updateState() {
 		if (borrowingAllowed()) {
 			state = EMemberState.BORROWING_ALLOWED;
