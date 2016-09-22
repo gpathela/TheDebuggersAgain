@@ -95,6 +95,7 @@ public class LoanMapDAO implements ILoanDAO {
 	
 	/** Override the findLoansByBorrower method */
 	@Override
+	/** The findLoansByBorrower method returns a list of loans by borrower */
 	public List<ILoan> findLoansByBorrower(IMember borrower) {	//Method to find all loans by a member
 		if (borrower == null) {
 			throw new IllegalArgumentException(
@@ -108,7 +109,8 @@ public class LoanMapDAO implements ILoanDAO {
 		}
 		return Collections.unmodifiableList(list);
 	}
-
+	
+	/** Override the findLoansByBookTitle method */
 	@Override
 	public List<ILoan> findLoansByBookTitle(String title) {	//Method to find loans on book title
 		if (title == null || title.isEmpty()) {
