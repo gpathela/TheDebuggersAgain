@@ -102,7 +102,8 @@ public class MemberMapDAO implements IMemberDAO {
 		}
 		return Collections.unmodifiableList(list);
 	}
-
+	
+	/** Override the findMembersByEmailAddress method */
 	@Override
 	public List<IMember> findMembersByEmailAddress(String emailAddress) {
 		if ( emailAddress == null || emailAddress.isEmpty()) {
