@@ -174,54 +174,51 @@ public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBor
 	/** The method setState sets the state of a book */
 	private void setState(EBorrowState state) {
 		System.out.println("Setting state: " + state);
-		
 		this.state = state;
 		ui.setState(state);
-
 		switch (state) {
-		
-		case INITIALIZED:
-			reader.setEnabled(true);
-			scanner.setEnabled(false);
+			case INITIALIZED:
+				reader.setEnabled(true);
+				scanner.setEnabled(false);
 			break;
 			
-		case SCANNING_BOOKS:
-			reader.setEnabled(false);
-			scanner.setEnabled(true);
-			this.bookList = new ArrayList<IBook>();
-			this.loanList = new ArrayList<ILoan>();
+			case SCANNING_BOOKS:
+				reader.setEnabled(false);
+				scanner.setEnabled(true);
+				this.bookList = new ArrayList<IBook>();
+				this.loanList = new ArrayList<ILoan>();
 			break;
 			
-		case CONFIRMING_LOANS:
-			reader.setEnabled(false);
-			scanner.setEnabled(false);
-			/** display pending loans */
-			for (ILoan loan : loanList) {
-				ui.displayConfirmingLoan(loan.toString());
-			}
+			case CONFIRMING_LOANS:
+				reader.setEnabled(false);
+				scanner.setEnabled(false);
+				/** display pending loans */
+				for (ILoan loan : loanList) {
+					ui.displayConfirmingLoan(loan.toString());
+				}
 			break;
 			
-		case COMPLETED:
-			reader.setEnabled(false);
-			scanner.setEnabled(false);
-			for (ILoan loan : loanList) {
-				loanDAO.commitLoan(loan);
-				printer.print(loan.toString()+"\n\n");
-			}
+			case COMPLETED:
+				reader.setEnabled(false);
+				scanner.setEnabled(false);
+				for (ILoan loan : loanList) {
+					loanDAO.commitLoan(loan);
+					printer.print(loan.toString()+"\n\n");
+				}
 			break;
 			
-		case CANCELLED:
-			reader.setEnabled(false);
-			scanner.setEnabled(false);
-			break;
+			case CANCELLED:
+				reader.setEnabled(false);
+				scanner.setEnabled(false);
+				break;
 			
-		case BORROWING_RESTRICTED:
-			reader.setEnabled(false);
-			scanner.setEnabled(false);
-			break;
+			case BORROWING_RESTRICTED:
+				reader.setEnabled(false);
+				scanner.setEnabled(false);
+				break;
 			
-		default:
-			throw new RuntimeException("Unknown state");
+			default:
+				throw new RuntimeException("Unknown state");
 		}
 	}
 	
