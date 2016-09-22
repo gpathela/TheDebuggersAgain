@@ -37,6 +37,7 @@ public class Member implements IMember {
 	private List<ILoan> loanList;
 	private float totalFines;
 	
+	/** Construct an Book object with the specified attribute. */
 	public Member(String firstName, String lastName, String contactPhone,
 			String email, int memberID) {
 		if ( !sane(firstName, lastName, contactPhone, email, memberID)) {
