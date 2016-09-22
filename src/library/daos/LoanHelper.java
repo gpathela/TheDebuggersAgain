@@ -22,7 +22,7 @@ import library.interfaces.entities.IMember;
 *		This class makes a object of ILoanHelper and returns new Loan.  
 */
 
-/** Start of the LoanHelper */
+/** Start of the LoanHelper  class*/
 public class LoanHelper implements ILoanHelper {
 
 	@Override
