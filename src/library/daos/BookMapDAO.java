@@ -57,6 +57,7 @@ public class BookMapDAO implements IBookDAO {
 	
 	/** Override the addBook method */
 	@Override
+	/** The addBook method returns a book that has been added */
 	public IBook addBook(String author, String title, String callNo) {
 		int id = getNextId();
 		IBook book = helper.makeBook(author, title, callNo, id);
