@@ -130,6 +130,7 @@ public class LoanMapDAO implements ILoanDAO {
 	
 	/** Override the updateOverDueStatus method */
 	@Override
+	/** The updateOverDueStatus method updates the status of a loan*/
 	public void updateOverDueStatus(Date currentDate) {	//Method to update status of a loan
 		for (ILoan loan : loanMap.values()) {
 			loan.checkOverDue(currentDate);
