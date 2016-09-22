@@ -23,6 +23,7 @@ import library.interfaces.entities.IBook;
 public class BookHelper implements IBookHelper {
 
 	@Override
+	/** The makeBook method creates the book and return its details*/
 	public IBook makeBook(String author, String title, String callNumber, int id) {
 		return new Book(author, title, callNumber, id);		
 	}
