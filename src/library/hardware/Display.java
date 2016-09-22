@@ -6,6 +6,15 @@ import javax.swing.JPanel;
 
 import library.interfaces.hardware.IDisplay;
 
+/**
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
+*/
+
 public class Display extends JFrame implements IDisplay {
 
 	private static final long serialVersionUID = 1L;
