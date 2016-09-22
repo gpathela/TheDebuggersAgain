@@ -67,7 +67,8 @@ public class MemberMapDAO implements IMemberDAO {
 		memberMap.put(Integer.valueOf(id), mem);
 		return mem;
 	}
-
+	
+	/** Override the getMemberByID method */
 	@Override
 	public IMember getMemberByID(int id) {
 		if (memberMap.keySet().contains(Integer.valueOf(id))) {
