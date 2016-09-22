@@ -53,7 +53,9 @@ public class Member implements IMember {
 		this.state = EMemberState.BORROWING_ALLOWED;
 	}
 
-	
+	/** the method test the variables and throw exception if any of the parameter is null or blank
+	* and the ID is less than or equal to zero
+`	*/
 	private boolean sane(String firstName, String lastName, String contactPhone,
 			String emailAddress, int memberID) {
 		return  ( firstName != null    && !firstName.isEmpty()    &&
