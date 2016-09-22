@@ -66,7 +66,8 @@ public class Member implements IMember {
 				);
 	}
 
-
+	
+	/** Override the hasOverDueLoans method */
 	@Override
 	public boolean hasOverDueLoans() {
 		for (ILoan loan : loanList) {
