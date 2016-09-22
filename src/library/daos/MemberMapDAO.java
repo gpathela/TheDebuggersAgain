@@ -1,3 +1,4 @@
+/** Specify the package in which the class resides */
 package library.daos;
 
 import java.util.ArrayList;
