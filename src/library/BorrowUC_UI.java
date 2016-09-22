@@ -24,12 +24,12 @@ import library.panels.ScanningPanel;
 *@due date 29.09.2016
 *@version 1.2
 *
-*The BorrowUC_UI 
+*The BorrowUC_UI create a UI, adds panels to it, displays details about loans, fines, books, and 
+*error messages. 
 */
 
 /** Start of the class BorrowUC_UI */
 public class BorrowUC_UI extends ABorrowPanel {
-
 	/** Declare and initialise variables with private access modifiers */
 	private static final long serialVersionUID = 1L;
 	@SuppressWarnings("unused")
