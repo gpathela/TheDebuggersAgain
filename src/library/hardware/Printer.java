@@ -26,7 +26,8 @@ public class Printer extends JFrame implements IPrinter {
 		with private visibility */
 	private static final long serialVersionUID = 1L;
 	private JTextArea textArea;
-
+	
+	/** The no args-constructor(default constructor) to create a Printer object */ 
 	public Printer() {
         setBounds(50, 450, 400, 350);
 		setResizable(false);
