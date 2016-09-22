@@ -56,9 +56,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 				&& issueDate.compareTo(dueDate) <= 0);
 	}
 
-	/* 
-	* A method to save the loan. 
-	*/
+	/** Override the commit method */
 	@Override
 	public void commit(int loanId) {
 		if (!(state == ELoanState.PENDING)) {
