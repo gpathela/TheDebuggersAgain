@@ -94,7 +94,8 @@ public class Member implements IMember {
 		boolean b = totalFines > 0.0f;
 		return b;
 	}
-
+	
+	/** Override the hasReachedFineLimit method */
 	@Override
 	public boolean hasReachedFineLimit() {
 		boolean b = totalFines >= IMember.FINE_LIMIT;
