@@ -154,7 +154,8 @@ public class LoanMapDAO implements ILoanDAO {
 	private int getNextId() {
 		return ++nextID;
 	}
-
+	
+	/** Override the  method */
 	@Override
 	public ILoan createLoan(IMember borrower, IBook book) {	//Method to create loan
 		Date borrowDate = new Date();
