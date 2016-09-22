@@ -1,4 +1,4 @@
-
+/** Import some Java libraries and specify the package in which the classes resides */
 package library.entities;
 
 import java.util.ArrayList;
