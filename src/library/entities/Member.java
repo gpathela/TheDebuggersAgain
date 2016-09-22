@@ -187,7 +187,7 @@ public class Member implements IMember {
 		return emailAddress;
 	}
 
-	
+	/** Override the getID method */
 	@Override
 	public int getID() {
 		return id;
