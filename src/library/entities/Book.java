@@ -80,6 +80,7 @@ public class Book implements IBook {//the Book class implements IBook
 
 	/** Override the returnBook method */
 	@Override
+	/** The method returnBook sets the state of a book to available or damaged */
 	public void returnBook(boolean damaged) {
 		if (!(state == EBookState.ON_LOAN || state == EBookState.LOST)) { //throw exception if the book is not currently ON_LOAN
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
