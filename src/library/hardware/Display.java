@@ -1,3 +1,4 @@
+/** Import some Java libraries and specify the package in which the classes resides */
 package library.hardware;
 
 import javax.swing.JFrame;
