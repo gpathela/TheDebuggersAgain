@@ -58,6 +58,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 
 	/** Override the commit method */
 	@Override
+	/** The method commit commit a loan based on its ID */
 	public void commit(int loanId) {
 		if (!(state == ELoanState.PENDING)) {
 			throw new RuntimeException(String.format("Loan : commit : incorrect state transition  : %s -> %s\n", state,
