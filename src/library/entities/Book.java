@@ -96,6 +96,7 @@ public class Book implements IBook {//the Book class implements IBook
 
 	/** Override the lose method */
 	@Override
+	/** The method lose sets the state of a book to lost */
 	public void lose() {
 		if (!(state == EBookState.ON_LOAN)) {	//throws an exception if the book is not currently ON_LOAN
 			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
