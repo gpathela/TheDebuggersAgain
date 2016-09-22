@@ -1,4 +1,4 @@
-/** Import some Java libraries and specify the package in which the classes resides */
+/** Import some Java libraries and specify the package in which the classes resides. */
 package library.panels.borrow;
 
 import javax.swing.JPanel;
