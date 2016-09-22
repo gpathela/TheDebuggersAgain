@@ -37,8 +37,7 @@ import library.interfaces.hardware.IScannerListener;
 */
 
 /** Start of the class BorrowUC_CTL */
-public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBorrowUIListener {
-	
+public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBorrowUIListener {	
 	/** Declare and initialise variables with private access modifiers */
 	private ICardReader reader;
 	private IScanner scanner; 
@@ -131,7 +130,7 @@ public class BorrowUC_CTL implements ICardReaderListener, IScannerListener, IBor
 		scanCount = borrower.getLoans().size();
 	}
 	
-	
+	/** Override the bookScanned method */
 	@Override
 	/** The method bookScanned sets the state of a book */
 	public void bookScanned(int barcode) {
