@@ -150,7 +150,7 @@ public class Book implements IBook {//the Book class implements IBook
 	}
 
 	/** the method return the book's unique id */
-	@Override
+	@Override	//Override the getID method
 	public int getID() {
 		return id;
 	}
