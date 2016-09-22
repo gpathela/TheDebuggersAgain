@@ -22,6 +22,8 @@ import javax.swing.JTextArea;
 /** Start of the class Printer */
 public class Printer extends JFrame implements IPrinter {
 
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private static final long serialVersionUID = 1L;
 	private JTextArea textArea;
 
