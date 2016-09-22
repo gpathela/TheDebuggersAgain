@@ -28,7 +28,10 @@ import library.interfaces.daos.IMemberHelper;
 
 /** Start of the class MemberMapDAO */
 public class MemberMapDAO implements IMemberDAO {
-
+	/** 
+	* Declare and initialize the variable for the class
+	* with private visibility 
+	*/
 	private IMemberHelper helper;
 	private Map<Integer, IMember> memberMap;
 	private int nextID;
