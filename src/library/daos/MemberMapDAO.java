@@ -80,6 +80,7 @@ public class MemberMapDAO implements IMemberDAO {
 	
 	/** Override the listMembers method */
 	@Override
+	/** The listMembers method returns an unmodifiable list of members */
 	public List<IMember> listMembers() {
 		List<IMember> list = new ArrayList<IMember>(memberMap.values());
 		return Collections.unmodifiableList(list);
