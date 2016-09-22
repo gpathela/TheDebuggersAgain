@@ -181,7 +181,7 @@ public class Member implements IMember {
 		return contactPhone;
 	}
 
-	
+	/** Override the getEmailAddress method */
 	@Override
 	public String getEmailAddress() {
 		return emailAddress;
