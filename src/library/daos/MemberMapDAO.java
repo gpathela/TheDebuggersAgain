@@ -57,7 +57,7 @@ public class MemberMapDAO implements IMemberDAO {
 		this.memberMap = memberMap;
 	}
 
-	
+	/** Override the addMember method */
 	@Override
 	public IMember addMember(String firstName, String lastName,
 			String contactPhone, String emailAddress) {
