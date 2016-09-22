@@ -157,7 +157,7 @@ public class Member implements IMember {
 		updateState();
 	}
 
-	
+	/** Override the getState method */
 	@Override
 	public EMemberState getState() {
 		return state;
