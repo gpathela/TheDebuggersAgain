@@ -27,4 +27,4 @@ public class BookHelper implements IBookHelper {
 		return new Book(author, title, callNumber, id);		
 	}
 
-}
+}// End of the class BookHelper
