@@ -97,6 +97,7 @@ public class Member implements IMember {
 	
 	/** Override the hasReachedFineLimit method */
 	@Override
+	/** The method hasReachedFineLimit returns true or false if a member has reached their limit */
 	public boolean hasReachedFineLimit() {
 		boolean b = totalFines >= IMember.FINE_LIMIT;
 		return b;
