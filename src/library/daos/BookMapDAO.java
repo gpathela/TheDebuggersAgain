@@ -74,7 +74,8 @@ public class BookMapDAO implements IBookDAO {
 		}
 		return null;
 	}
-
+	
+	/** Override the listBooks method */
 	@Override
 	public List<IBook> listBooks() {
 		List<IBook> list = new ArrayList<IBook>(bookMap.values());
