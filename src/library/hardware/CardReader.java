@@ -27,6 +27,7 @@ import java.awt.event.KeyEvent;
 * @version 1.1
 */
 
+/** Start of the class CardReader */
 public class CardReader extends JFrame implements ICardReader {
 
 	private static final long serialVersionUID = 1L;
