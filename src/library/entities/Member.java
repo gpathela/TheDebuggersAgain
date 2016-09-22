@@ -102,7 +102,8 @@ public class Member implements IMember {
 		boolean b = totalFines >= IMember.FINE_LIMIT;
 		return b;
 	}
-
+	
+	/** Override the getFineAmount method */
 	@Override
 	public float getFineAmount() {
 		return totalFines;
