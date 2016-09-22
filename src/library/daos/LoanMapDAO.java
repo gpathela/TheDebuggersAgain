@@ -87,6 +87,7 @@ public class LoanMapDAO implements ILoanDAO {
 	
 	/** Override the listLoans method */
 	@Override
+	/** The listLoans method creates list of all loans */
 	public List<ILoan> listLoans() {	//Method to generate list of all loans
 		List<ILoan> list = new ArrayList<ILoan>(loanMap.values());
 		return Collections.unmodifiableList(list);
