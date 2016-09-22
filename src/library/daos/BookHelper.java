@@ -1,6 +1,8 @@
 /** Import some Java libraries and specify the package in which the classes are organized */
 package library.daos;
 import library.entities.Book;
+
+/** Import some libraries */
 import library.interfaces.daos.IBookHelper;
 import library.interfaces.entities.IBook;
 
