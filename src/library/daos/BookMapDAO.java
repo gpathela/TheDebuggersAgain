@@ -119,6 +119,7 @@ public class BookMapDAO implements IBookDAO {
 	
 	/** Override the findBooksByAuthorTitle method  */
 	@Override
+	/** The findBooksByAuthorTitle method returns a list of books by author title */
 	public List<IBook> findBooksByAuthorTitle(String author, String title) {
 		if ( title == null || title.isEmpty() ||  author == null || author.isEmpty()) {
 			throw new IllegalArgumentException(
