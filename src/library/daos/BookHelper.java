@@ -6,6 +6,15 @@ import library.entities.Book;
 import library.interfaces.daos.IBookHelper;
 import library.interfaces.entities.IBook;
 
+/**
+*@reviewer Chiranjivi Bashyal
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 23.09.2016
+*@version 1.0
+*/
+
 /** The BookHelper class implements the interface IBookHelper. It displays the details about a 
 *book that it creates.
 */
