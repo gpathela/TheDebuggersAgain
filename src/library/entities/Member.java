@@ -221,4 +221,4 @@ public class Member implements IMember {
 	}
 
 
-}
+} // End of the class Member
