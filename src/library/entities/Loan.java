@@ -74,7 +74,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 	}
 
 	/* A method to release the loan. This method is called when book is returned. */
-	@Override
+	@Override	// Override the complete method 
 	public void complete() {
 		if (!(state == ELoanState.CURRENT || state == ELoanState.OVERDUE)) {
 			throw new RuntimeException(String.format("Loan : complete : incorrect state transition  : %s -> %s\n",
@@ -82,7 +82,8 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 		}
 		state = ELoanState.COMPLETE;
 	}
-
+	
+	/** Override the isOverDue method */
 	@Override
 	public boolean isOverDue() {
 		return (state == ELoanState.OVERDUE);
