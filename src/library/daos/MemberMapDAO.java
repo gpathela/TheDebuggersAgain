@@ -26,6 +26,7 @@ import library.interfaces.daos.IMemberHelper;
 *
 */
 
+/** Start of the class MemberMapDAO */
 public class MemberMapDAO implements IMemberDAO {
 
 	private IMemberHelper helper;
