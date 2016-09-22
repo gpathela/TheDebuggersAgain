@@ -38,7 +38,8 @@ public class LoanMapDAO implements ILoanDAO {
 	private Map<Integer, ILoan> loanMap;
 	private ILoanHelper helper;
 	private Calendar cal;
-
+	
+	/** Construct an LoanMapDAO object with the specified attribute. */
 	public LoanMapDAO(ILoanHelper helper) { // Public constructor that take
 											// object of ILoanHelper class
 		if (helper == null) {
