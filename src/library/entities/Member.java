@@ -103,7 +103,7 @@ public class Member implements IMember {
 		return b;
 	}
 	
-	/** Override the getFineAmount method */ 
+	/** Override the getFineAmount method to return the amount of fine paid by a member */ 
 	@Override
 	public float getFineAmount() {
 		return totalFines;
@@ -121,7 +121,7 @@ public class Member implements IMember {
 		updateState();
 	}
 	
-	/** Override the payFine method */
+	/** Override the payFine method add the total of fines depending on the payment made by a member  */
 	@Override
 	public void payFine(float payment) {
 		if (payment < 0 || payment > totalFines) {
