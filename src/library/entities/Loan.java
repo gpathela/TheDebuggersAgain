@@ -85,6 +85,7 @@ public class Loan implements ILoan {//the Loan class implements ILoan
 	
 	/** Override the isOverDue method */
 	@Override
+	/** The method returns the state of a loan as overdue */
 	public boolean isOverDue() {
 		return (state == ELoanState.OVERDUE);
 	}
