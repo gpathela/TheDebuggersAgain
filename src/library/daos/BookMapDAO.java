@@ -64,8 +64,10 @@ public class BookMapDAO implements IBookDAO {
 		bookMap.put(Integer.valueOf(id), book);
 		return book;
 	}
-
+	
+	/** Override the getBookByID method */
 	@Override
+	/** The getBookByID method returns a list of books by ID */
 	public IBook getBookByID(int id) {
 		if (bookMap.containsKey(Integer.valueOf(id))) {
 			return bookMap.get(Integer.valueOf(id));
