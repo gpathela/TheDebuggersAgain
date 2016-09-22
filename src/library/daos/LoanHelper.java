@@ -1,4 +1,4 @@
-/** Specify the package in which the class resides */
+/** Import some Java libraries and specify the package in which the classes are organized */
 package library.daos;
 
 import java.util.Date;
@@ -17,9 +17,8 @@ import library.interfaces.entities.IMember;
 * @due date 23.09.2016
 * @version 1.0
 *
-* The BookHelper class implements the IBookHelper interface. 
-* This class shows the details of the book.
-*
+*		The LoanHelper class is a class that implements ILoanHelper. 
+*		This class makes a object of ILoanHelper and returns new Loan.  
 */
 
 /** Start of the LoanHelper */
