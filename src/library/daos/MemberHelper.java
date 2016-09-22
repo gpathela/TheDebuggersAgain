@@ -32,4 +32,4 @@ public class MemberHelper implements IMemberHelper {
 		return new Member(firstName, lastName, contactPhone, emailAddress, id);
 	}
 
-}
+}// End of the class MemberHelper
