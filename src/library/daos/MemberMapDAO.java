@@ -46,7 +46,8 @@ public class MemberMapDAO implements IMemberDAO {
 		this.memberMap = new HashMap<Integer, IMember>();
 		this.nextID = 1;
 	}
-
+	
+	/** Construct an MemberMapDAO object with the specified attribute. */
 	public MemberMapDAO(IMemberHelper helper, Map<Integer,IMember> memberMap) {
 		this(helper);
 		if (memberMap == null ) {
