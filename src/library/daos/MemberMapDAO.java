@@ -33,6 +33,7 @@ public class MemberMapDAO implements IMemberDAO {
 	private Map<Integer, IMember> memberMap;
 	private int nextID;
 	
+	/** Construct an MemberMapDAO object with the specified attribute. */
 	public MemberMapDAO(IMemberHelper helper) {
 		if (helper == null ) {
 			throw new IllegalArgumentException(
