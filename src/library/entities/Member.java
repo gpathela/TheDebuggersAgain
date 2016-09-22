@@ -140,7 +140,8 @@ public class Member implements IMember {
 		loanList.add(loan);
 		updateState();
 	}
-
+	
+	/** Override the getLoans method */
 	@Override
 	public List<ILoan> getLoans() {
 		return Collections.unmodifiableList(loanList);
