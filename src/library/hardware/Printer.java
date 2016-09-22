@@ -55,6 +55,7 @@ public class Printer extends JFrame implements IPrinter {
 		panel.add(textArea);		
 	}
 
+	/** Override the print method  to displays texts to the screen*/
 	@Override
 	public void print(String printData) {
 		StringBuilder bld = new StringBuilder();
