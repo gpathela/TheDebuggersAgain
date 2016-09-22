@@ -22,7 +22,7 @@ import library.interfaces.entities.EMemberState;
 *
 */
 
-
+/** Start of the class Member */
 public class Member implements IMember {
 
 	private final String firstName;
