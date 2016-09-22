@@ -37,6 +37,7 @@ public class CardReader extends JFrame implements ICardReader {
 	private JButton btnReadCard;
 	private ICardReaderListener listener;
 
+	/** The no args-constructor(default constructor) to create a CardReader object  */
 	public CardReader() {
 		setTitle("Card Reader");
         setBounds(50, 50, 400, 200);
