@@ -16,13 +16,12 @@ import library.interfaces.entities.ILoan;
 import library.interfaces.entities.IMember;
 
 /**
-*@author Gourav Pathela
-*@course Master of Information Technology
-*@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy
-*@due date 23.09.2016
-*@version 1.0
-*
+* @author Ramanpreet Kaur
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.0
 *		The LoanMapDAO class is the class that handle all loans. It check if loan is overdue, it find all loans by member,
 *		it finds all loans for the book etc. 
 */
