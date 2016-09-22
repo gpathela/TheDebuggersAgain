@@ -193,8 +193,9 @@ public class Member implements IMember {
 		return id;
 	}
 
-	
+	/** Override the toString method */
 	@Override
+	/* To String method to display & return results in desired format. */
 	public String toString() {
 		return String.format(
 				"Id: %d\nName: %s %s\nContact Phone: %s\nEmail: %s\nOutstanding Charges: %0.2f", id,
