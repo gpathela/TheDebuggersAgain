@@ -16,7 +16,7 @@ import java.util.List;
 */
 
 public interface IMember {
-	/** Declare and initialise a variable with private access modifiers */
+	/** Declare and initialise variables with private access modifiers */
 	public static final int   LOAN_LIMIT = 5;
 	public static final float FINE_LIMIT = 10.0f;	
 	
@@ -25,16 +25,16 @@ public interface IMember {
 	public boolean hasReachedLoanLimit();
 	public boolean hasFinesPayable();
 	public boolean hasReachedFineLimit();
-	public float   getFineAmount();
-	public void    addFine(float fine);
-	public void    payFine(float payment);
-	public void    addLoan(ILoan loan);
+	public float getFineAmount();
+	public void addFine(float fine);
+	public void payFine(float payment);
+	public void addLoan(ILoan loan);
 	public List<ILoan> getLoans();
-	public void    removeLoan(ILoan loan);
-	public EMemberState   getState();
-	public String  getFirstName();
-	public String  getLastName();
-	public String  getContactPhone();
-	public String  getEmailAddress();
+	public void removeLoan(ILoan loan);
+	public EMemberState getState();
+	public String getFirstName();
+	public String getLastName();
+	public String getContactPhone();
+	public String getEmailAddress();
 	public int getID();
 }
