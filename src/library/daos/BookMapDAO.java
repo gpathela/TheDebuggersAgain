@@ -116,7 +116,8 @@ public class BookMapDAO implements IBookDAO {
 		}
 		return Collections.unmodifiableList(list);
 	}
-
+	
+	/** Override the findBooksByAuthorTitle method  */
 	@Override
 	public List<IBook> findBooksByAuthorTitle(String author, String title) {
 		if ( title == null || title.isEmpty() ||  author == null || author.isEmpty()) {
