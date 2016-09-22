@@ -102,6 +102,7 @@ public class Scanner extends JFrame implements IScanner {
 		//pack();
 	}
 
+	/** Override the setEnabled method */
 	@Override
 	public void setEnabled(boolean enabled) {
 		btnScan.setEnabled(enabled);
