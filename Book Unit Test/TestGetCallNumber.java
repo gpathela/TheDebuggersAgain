@@ -24,7 +24,7 @@ public class TestGetCallNumber{
 		System.out.println("The callNumber of the first created book is:");
 		System.out.println(b0.getCallNumber());
 		System.out.println("The program will not be able to display the callNumber for the second created book, b1.");
-		System.out.println("The reason is that an integer has been inserted instead of a string for the call number attrbute.");
+		System.out.println("The reason is that an integer has been inserted instead of a string for the call number attribute.");
 		System.out.println("The callNumber of the second created book is going to fail cos of int value:");
 		System.out.println(b1.getCallNumber() + "\n");
 	} // End of the main method 
