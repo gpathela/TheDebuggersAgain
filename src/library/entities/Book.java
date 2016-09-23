@@ -1,36 +1,40 @@
-/** Specify the package in which this code resides */
-//package library.entities;
+/** Import some Java libraries and specify the package in which the classes resides */
+package library.entities;
 
-/** Import some libraries to be used in the code */
-//import library.interfaces.entities.EBookState;
-//import library.interfaces.entities.IBook;
-//import library.interfaces.entities.ILoan;
+import library.interfaces.entities.EBookState;
+import library.interfaces.entities.IBook;
+import library.interfaces.entities.ILoan;
 
 /**
-*@reviewer Chiranjivi Bashyal
-*@course Master of Information Technology
-*@subject Professional Programming Practice
-*@lecturer Dr Recep Ulusoy
-*@due date 29.09.2016
-*@version 1.2
+* @reviewer Chiranjivi Bashyal
+* @student ID: 11582726
+* @course Master of Information Technology
+* @subject Professional Programming Practice
+* @instructor Dr Recep Ulusoy
+* @due date 23.09.2016
+* @version 1.1
 *
-*The Book class implements the interface IBook. It contains the variables to create a book.
-*The object book created can use all the methods that reside in the class to help a user 
-*accomplish their tasks.
+*
+* The Book class is a program that uses variables having private visibility to create instances
+* with a constructor having specific attributes. The Book class implements IBook interface. We use 
+* different method to check the availability or the status of the book. 
+*
 */
 
-/** Start of the class Book */
-//public class Book implements IBook
-public class Book {
-	/** Declare and initialise variables with private access modifiers */
+/** Start of the Book Class */
+public class Book implements IBook {//the Book class implements IBook
+
+	/** Declare and initialize the variable for the class
+		with private visibility */
 	private String author;
 	private String title;
 	private String callNumber;
 	private int id;
-	//private ILoan loan;
-	//private EBookState state;
 	
-	/** The constructor for a Book object which takes a parameter of variables */
+	private ILoan loan;
+	private EBookState state;
+	
+	/** Construct an Book object with the specified attribute. */
 	public Book(String author, String title, String callNumber, int bookID) {
 		if ( !sane(author, title, callNumber, bookID)) {
 			throw new IllegalArgumentException("Member: constructor : bad parameters");
@@ -39,11 +43,13 @@ public class Book {
 		this.title = title;
 		this.callNumber = callNumber;
 		this.id = bookID;
-		//this.state = EBookState.AVAILABLE;
-		//this.loan = null;
-	}
+		this.state = EBookState.AVAILABLE;
+		this.loan = null;
+	}//End of the constructor
 
-	/** The method sane returns true or false if the parameter does not contain the right variables */
+	/** the method test the variables and throw exception if any of the parameter is null or blank
+	* and the ID is less than or equal to zero
+`	*/
 	private boolean sane(String author, String title, String callNumber, int bookID) {
 		return  ( author != null     && !author.isEmpty()     &&
 				  title != null      && !title.isEmpty()      &&
@@ -52,113 +58,109 @@ public class Book {
 				);
 	}
 
-	/** Override the borrow method */
-	//@Override
-	/** The method borrow sets the state of a book to on loan */
-	//public void borrow(ILoan loan) {
-		//if (loan == null) {
-		//	throw new IllegalArgumentException(String.format("Book: borrow : Bad parameter: loan cannot be null"));
-		//}
-		//if (!(state == EBookState.AVAILABLE)) {
-		//	throw new RuntimeException(String.format("Illegal operation in state : %s", state));
-		//}
-		//this.loan = loan;
-		//state = EBookState.ON_LOAN;
-	//}
+	/** the method associates the loan with the book and throws exception if the book is not available */
+	@Override
+	public void borrow(ILoan loan) {
+		if (loan == null) {
+			throw new IllegalArgumentException(String.format("Book: borrow : Bad parameter: loan cannot be null"));
+		}
+		if (!(state == EBookState.AVAILABLE)) {
+			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
+		}
+		this.loan = loan;
+		state = EBookState.ON_LOAN;
 
+	}
+	
 	/** Override the getLoan method */
-	//@Override
-	/** The method getLoan returns the laon of a book */
-	//public ILoan getLoan() {
-		//return loan;
-	//}
+	@Override
+	/** the method return the loan associated with the book and return null if the book is not current ON_LOAN */
+	public ILoan getLoan() {
+		return loan;
+	}
 
 	/** Override the returnBook method */
-	//@Override
+	@Override
 	/** The method returnBook sets the state of a book to available or damaged */
-	//public void returnBook(boolean damaged) {
-		//if (!(state == EBookState.ON_LOAN || state == EBookState.LOST)) {
-		//	throw new RuntimeException(String.format("Illegal operation in state : %s", state));
-		//}
-		//loan = null;
-		//if (damaged) {
-		//	state = EBookState.DAMAGED;
-		//}
-		//else {
-		//	state = EBookState.AVAILABLE;
-		//}
-	//}
+	public void returnBook(boolean damaged) {
+		if (!(state == EBookState.ON_LOAN || state == EBookState.LOST)) { //throw exception if the book is not currently ON_LOAN
+			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
+		}
+		loan = null;
+		if (damaged) {
+			state = EBookState.DAMAGED;	//set the book state to damaged
+		}
+		else {
+			state = EBookState.AVAILABLE;	//set the book state to available 
+		}
+	}
 
 	/** Override the lose method */
-	//@Override
+	@Override
 	/** The method lose sets the state of a book to lost */
-	//public void lose() {
-		//if (!(state == EBookState.ON_LOAN)) {
-		//	throw new RuntimeException(String.format("Illegal operation in state : %s", state));
-		//}
-		//state = EBookState.LOST;
-	//}
+	public void lose() {
+		if (!(state == EBookState.ON_LOAN)) {	//throws an exception if the book is not currently ON_LOAN
+			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
+		}
+		state = EBookState.LOST;	//set the book state to lost
+	}
 
 	/** Override the repair method */
-	//@Override
+	@Override
 	/** The method repair sets the state of a book to available */
-	//public void repair() {
-		//if (!(state == EBookState.DAMAGED)) {
-		//	throw new RuntimeException(String.format("Illegal operation in state : %s", state));
-		//}
-		//state = EBookState.AVAILABLE;
-	//}
+	public void repair() {
+		if (!(state == EBookState.DAMAGED)) {	//throws exception if book is not currently damaged
+			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
+		}
+		state = EBookState.AVAILABLE;	//set the book state to available
+	}
 
 	/** Override the dispose method */
-	//@Override
+	@Override
 	/** The method dispose sets the state of a book to disposed */
-	//public void dispose() {
-		//if (!(state == EBookState.AVAILABLE || state == EBookState.DAMAGED || state == EBookState.LOST)) {
-		//	throw new RuntimeException(String.format("Illegal operation in state : %s", state));
-		//}
-		//state = EBookState.DISPOSED;
-	//}
-
+	public void dispose() {	//throws exception if the book is not currently available, damaged or lost
+		if (!(state == EBookState.AVAILABLE || state == EBookState.DAMAGED || state == EBookState.LOST)) {
+			throw new RuntimeException(String.format("Illegal operation in state : %s", state));
+		}
+		state = EBookState.DISPOSED;	//set the book state to disposed
+	}
+	
 	/** Override the getState method */
-	//@Override
-	/** The method getState returns the state of a book */
-	//public EBookState getState() {
-	//	return state;
-	//}
+	@Override
+	/** get method return the current book state */
+	public EBookState getState() {
+		return state;
+	}
 
-	/** Override the getAuthor method */
-	//@Override
-	/** The method getAuthor returns the author of a book */
+	/** the method return the author of the book */
+	@Override	//Override the getAuthor method
 	public String getAuthor() {
 		return author;
 	}
 
-	/** Override the getTitle method */
-	//@Override
-	/** The method getTitle returns the title of a book */
+	/** the method return the title of the book */
+	@Override	//Override the getTitle method
 	public String getTitle() {
 		return title;
 	}
 
-	/** Override the getCallNumber method */
-	//@Override
-	/** The method getCallNumber returns the call number of a book */
+	/** the method return the callNumber of the book */
+	@Override	//Override the getCallNumber method
 	public String getCallNumber() {
 		return callNumber;
 	}
 
-	/** Override the getID method */
-	//@Override
-	/** The method getID returns the id of a book */
+	/** the method return the book's unique id */
+	@Override	//Override the getID method
 	public int getID() {
 		return id;
 	}
 
-	/** Override the toString method */
-	@Override
-	/** The method toString returns the details of a book object */
+	/* To String method to display & return results in desired format. */
+	@Override	//Override the toString method
 	public String toString() {
 		return String.format("Id: %d\nAuthor: %s\nTitle: %s\nCall Number %s",
 				id, author, title, callNumber);
 	}
-} // End of the class Book
+
+}//End of Book class
