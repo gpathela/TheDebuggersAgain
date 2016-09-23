@@ -1,3 +1,14 @@
+/**
+*@Author Jean Claude Jino Rousseau
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy
+*@due date 29.09.2016
+*@version 1.2
+*
+*The TestBook class is a program that tests the methods that are written in the Book class.
+*/
+
 /** Start of the class TestBook */
 public class TestBook {
 	/** Start of the main method */
