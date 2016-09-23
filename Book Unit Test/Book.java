@@ -1,11 +1,3 @@
-/** Specify the package in which this code resides */
-//package library.entities;
-
-/** Import some libraries to be used in the code */
-//import library.interfaces.entities.EBookState;
-//import library.interfaces.entities.IBook;
-//import library.interfaces.entities.ILoan;
-
 /**
 *@reviewer Jean Claude Jino Rousseau
 *@course Master of Information Technology
@@ -20,7 +12,6 @@
 */
 
 /** Start of the class Book */
-//public class Book implements IBook
 public class Book {
 	/** Declare and initialise variables with private access modifiers */
 	private String author;
