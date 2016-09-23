@@ -8,6 +8,8 @@
 *
 *The TestGetAuthor class is a program that tests the method that returns the author of a book.
 */
+
+/** Start of the class TestGetAuthor */
 public class TestGetAuthor {
 	public static void main(String[] args) {
 		/** Create a book with a functional parameter */
@@ -23,5 +25,5 @@ public class TestGetAuthor {
 		System.out.println("The program will not be able to display the author for book b1.");
 		System.out.println("The reason is that an integer has been inserted instead of a string for the author name.");
 		System.out.println(b1.getAuthor());
-	}
-}
+	} // End of the main method 
+} // End of the TestGetAuthor class 
