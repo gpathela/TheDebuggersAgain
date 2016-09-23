@@ -49,6 +49,8 @@ public class TestLoan { // A class to test loan class
 																											// member
 
 		System.out.println("Made a test Member");
+		
+		System.out.println(testBook.getAuthor());
 
 	}
 }
