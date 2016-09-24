@@ -18,6 +18,7 @@ public class TestBook {
 		Book b3 = new Book("Kipling", "The Jungle Book", "R444", 444);
 		
 		/** Testing the getAuthor() method from the class Book */
+		
 		System.out.println("\nTesting the getAuthor() method from the book class.");
 		System.out.println("******************************************************");
 		System.out.println("");
@@ -33,6 +34,7 @@ public class TestBook {
 		System.out.println("");
 		
 		/** Testing the getTitle() method from the class Book */
+		
 		System.out.println("\nTesting the getTitle() method from the book class.");
 		System.out.println("******************************************************");
 		System.out.println("");
@@ -48,6 +50,7 @@ public class TestBook {
 		System.out.println("");
 		
 		/** Testing the getCallNumber() method from the class Book */
+
 		System.out.println("\nTesting the getCallNumber() method from the book class.");
 		System.out.println("******************************************************");
 		System.out.println("");
@@ -63,6 +66,7 @@ public class TestBook {
 		System.out.println("");
 		
 		/** Testing the getID() method from the class Book */
+		
 		System.out.println("\nTesting the getID() method from the book class.");
 		System.out.println("******************************************************");
 		System.out.println("");
@@ -78,7 +82,9 @@ public class TestBook {
 		System.out.println("");
 		
 		/** Testing the toString() method from the class Book */
+		
 		System.out.println("\nTesting the toString() method from the book class.");
+		System.out.println("******************************************************");
 		/** Display the results */
 		System.out.println("The description of the created books are:");
 		System.out.println(b0.toString() + "\n"); 
