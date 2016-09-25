@@ -5,13 +5,13 @@ package library.interfaces.entities;
 import java.util.Date;
 
 /**
-*@reviewer Jean Claude Jino Rousseau
+*@reviewer Chiranjivi Bashyal
 *@course Master of Information Technology
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
 *@due date 29.09.2016
 *@version 1.2
-*
+* 
 *The interface ILoan contains several static methods to enable the display of a panel
 */
 

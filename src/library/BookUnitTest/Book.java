@@ -7,7 +7,7 @@
 //import library.interfaces.entities.ILoan;
 
 /**
-*@reviewer Jean Claude Jino Rousseau
+*@reviewer Chiranjivi Bashyal
 *@course Master of Information Technology
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy

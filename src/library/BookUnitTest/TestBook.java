@@ -1,3 +1,11 @@
+/**
+*@reviewer Chiranjivi Bashyal
+*@course Master of Information Technology
+*@subject Professional Programming Practice
+*@lecturer Dr Recep Ulusoy (who has been remarkably helpful)
+*@due date 29.09.2016
+*@version 1.2
+*/
 /** Start of the class TestBook */
 public class TestBook {
 	/** Start of the main method */
