@@ -21,21 +21,22 @@ public class TestFindBookByAuthor {
 
 	public static void main(String[] args) {
 		
-		IBookDAO bookMapDAO = new BookMapDAO(new BookHelper());
+		IBookDAO bookMapDAO = new BookMapDAO(new BookHelper());	
+
+		bookMapDAO.addBook("Nelson", "Murder In Paris", "R111");
+		bookMapDAO.addBook("David", "Duck on a Bike", "R222");
+		bookMapDAO.addBook("Potter", "The Tale of Peter Rabbit", "R333");
+		bookMapDAO.addBook("Kipling", "The Jungle Book", "R444");
+		System.out.println("Books are Added!");
 		System.out.println("");
+		
+		
+		//Testing findBooksByAuthor() Method
+		System.out.println("Testing findBooksByAuthor() Method.");
 		System.out.println("***************************************************");
 		System.out.println("");
-		IBook b1 = bookMapDAO.getBookByID("R333");
-		//System.out.println(bookMapDAO.listBooks());
-		//System.out.println("Result: " +bookMapDAO.findBooksByAuthor("Potter"));
-		//System.out.println(bookMapDAO.findBooksByTitle(b1.getTitle()));
-		//System.out.println(b1.getBookByID());
-		//System.out.println(bookMapDAO.getBookByID(3));
-		//System.out.println(bookMapDAO.getBookByID(3));
-		//System.out.println("");
-		//System.out.println("***************************************************");
-		//System.out.println("");
-
+		
+		System.out.println("Output: "+bookMapDAO.findBooksByAuthor("Nelson"));
 	}
 
 }
