@@ -15,7 +15,7 @@ import library.interfaces.entities.IMember;
 *@subject Professional Programming Practice
 *@lecturer Dr Recep Ulusoy
 *@due date 23.09.2016
-*@version 1.0
+*@version 2.0
 *
 *		The LoanHelper class is a class that implements ILoanHelper. 
 *		This class makes a object of ILoanHelper and returns new Loan.  
